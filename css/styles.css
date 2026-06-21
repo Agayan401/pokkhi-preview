@@ -974,7 +974,7 @@ p {
 }
 
 /* ==========================================
-   CALLOUT POSITIONING (ORTHOGONAL / 90-DEGREE)
+   CALLOUT POSITIONING (REFERENCE IMAGE MATCH)
 ========================================== */
 
 /* Ensure vertical elbows are visible */
@@ -986,81 +986,87 @@ p {
    LEFT-SIDE LABELS
 ---------------------------------- */
 
-/* 1. CROWN (Top grey tuft) */
-.crown-callout { top: 17%; left: 60%; }
-.crown-callout .elbow-v { bottom: 0; left: 0; height: 35px; }
-.crown-callout .elbow-h { top: -35px; right: 0; width: 60px; }
-.crown-callout .label { top: -55px; right: 60px; }
+/* 1. CROWN/CREST (Tip of the crest) */
+.crown-callout { top: 12%; left: 57%; }
+.crown-callout .elbow-v { bottom: 0; left: 0; height: 30px; }
+.crown-callout .elbow-h { top: -30px; right: 0; width: 80px; }
+.crown-callout .label { top: -50px; right: 80px; }
 
 /* 2. SUPERCILIUM (White stripe above eye) */
-.supercilium-callout { top: 22%; left: 58.5%; }
+.supercilium-callout { top: 19%; left: 56.5%; }
 .supercilium-callout .elbow-v { display: none; }
-.supercilium-callout .elbow-h { top: 0; right: 0; width: 100px; }
-.supercilium-callout .label { top: -20px; right: 100px; }
+.supercilium-callout .elbow-h { top: 0; right: 0; width: 110px; }
+.supercilium-callout .label { top: -20px; right: 110px; }
 
-/* 3. BILL (Beak) */
-.bill-callout { top: 27.5%; left: 52%; }
+/* 3. EYE RING (Lower white arc below eye) - Routed Left */
+.eyering-callout { top: 23.5%; left: 56.5%; }
+.eyering-callout .elbow-v { top: 0; left: 0; height: 15px; }
+.eyering-callout .elbow-h { top: 15px; right: 0; width: 130px; }
+.eyering-callout .label { top: -5px; right: 130px; }
+
+/* 4. BILL (Tip of beak) */
+.bill-callout { top: 26%; left: 48%; }
 .bill-callout .elbow-v { display: none; }
 .bill-callout .elbow-h { top: 0; right: 0; width: 60px; }
 .bill-callout .label { top: -20px; right: 60px; }
 
-/* 4. THROAT (White area under beak) */
-.throat-callout { top: 35%; left: 57%; }
-.throat-callout .elbow-v { display: none; }
-.throat-callout .elbow-h { top: 0; right: 0; width: 80px; }
-.throat-callout .label { top: -20px; right: 80px; }
+/* 5. THROAT (White area under beak) */
+.throat-callout { top: 33%; left: 54%; }
+.throat-callout .elbow-v { top: 0; left: 0; height: 20px; }
+.throat-callout .elbow-h { top: 20px; right: 0; width: 80px; }
+.throat-callout .label { top: 0px; right: 80px; }
 
-/* 5. BREAST (Orange chest area) */
-.breast-callout { top: 45%; left: 60%; }
-.breast-callout .elbow-v { top: 0; left: 0; height: 25px; }
-.breast-callout .elbow-h { top: 25px; right: 0; width: 90px; }
-.breast-callout .label { top: 5px; right: 90px; }
+/* 6. BREAST (Orange chest area) */
+.breast-callout { top: 43%; left: 58%; }
+.breast-callout .elbow-v { top: 0; left: 0; height: 35px; }
+.breast-callout .elbow-h { top: 35px; right: 0; width: 100px; }
+.breast-callout .label { top: 15px; right: 100px; }
 
-/* 6. BELLY (Lower white/pale abdomen) */
+/* 7. BELLY (Lower white abdomen) */
 .belly-callout { top: 58%; left: 63%; }
-.belly-callout .elbow-v { top: 0; left: 0; height: 35px; }
-.belly-callout .elbow-h { top: 35px; right: 0; width: 110px; }
-.belly-callout .label { top: 15px; right: 110px; }
+.belly-callout .elbow-v { top: 0; left: 0; height: 45px; }
+.belly-callout .elbow-h { top: 45px; right: 0; width: 120px; }
+.belly-callout .label { top: 25px; right: 120px; }
 
 
 /* ----------------------------------
    RIGHT-SIDE LABELS
 ---------------------------------- */
 
-/* 7. EYE RING (Small white arc below the pupil) */
-.eyering-callout { top: 25.5%; left: 58.5%; }
-.eyering-callout .elbow-v { bottom: 0; left: 0; height: 35px; }
-.eyering-callout .elbow-h { top: -35px; left: 0; width: 70px; }
-.eyering-callout .label { top: -55px; left: 70px; }
-
-/* 8. NAPE (Grey area at back of neck) */
-.nape-callout { top: 29%; left: 64%; }
+/* 8. NAPE (Grey area back of neck) */
+.nape-callout { top: 23%; left: 63%; }
 .nape-callout .elbow-v { display: none; }
-.nape-callout .elbow-h { top: 0; left: 0; width: 70px; }
-.nape-callout .label { top: -20px; left: 70px; }
+.nape-callout .elbow-h { top: 0; left: 0; width: 80px; }
+.nape-callout .label { top: -20px; left: 80px; }
 
-/* 9. WING BAR (White stripes on folded wing) */
-.wingbar-callout { top: 42%; left: 68%; }
-.wingbar-callout .anchor-1 { top: -8px; left: -15px; display: block; }
-.wingbar-callout .anchor-2 { top: 8px; left: 15px; display: block; }
-.wingbar-callout .elbow-v { top: 0; left: 0; height: 30px; }
-.wingbar-callout .elbow-h { top: 30px; left: 0; width: 60px; }
-.wingbar-callout .label { top: 10px; left: 60px; }
+/* 9. WING BARS (Two white stripes) */
+.wingbar-callout { top: 40%; left: 66%; }
+.wingbar-callout .anchor-1 { top: -6px; left: -18px; display: block; }
+.wingbar-callout .anchor-2 { top: 6px; left: 18px; display: block; }
+.wingbar-callout .elbow-v { display: none; }
+.wingbar-callout .elbow-h { top: 0; left: 0; width: 100px; }
+.wingbar-callout .label { top: -20px; left: 100px; }
 
-/* 10. TAIL (Dark tail feathers) */
-.tail-callout { top: 64%; left: 83%; }
+/* 10. TARSUS (Upper leg/shin) */
+.tarsus-callout { top: 68%; left: 65%; }
+.tarsus-callout .elbow-v { top: 0; left: 0; height: 25px; }
+.tarsus-callout .elbow-h { top: 25px; left: 0; width: 60px; }
+.tarsus-callout .label { top: 5px; left: 60px; }
+
+/* 11. TOES (Feet gripping branch) */
+.toes-callout { top: 76%; left: 69%; }
+.toes-callout .elbow-v { top: 0; left: 0; height: 40px; }
+.toes-callout .elbow-h { top: 40px; left: 0; width: 80px; }
+.toes-callout .label { top: 20px; left: 80px; }
+
+/* 12. TAIL (End of tail feathers) */
+.tail-callout { top: 74%; left: 86%; }
 .tail-callout .elbow-v { display: none; }
 .tail-callout .elbow-h { top: 0; left: 0; width: 60px; }
 .tail-callout .label { top: -20px; left: 60px; }
 
-/* 11. TARSUS (The physical leg above the branch) */
-.tarsus-callout { top: 67%; left: 68%; }
-.tarsus-callout .elbow-v { top: 0; left: 0; height: 30px; }
-.tarsus-callout .elbow-h { top: 30px; left: 0; width: 50px; }
-.tarsus-callout .label { top: 10px; left: 50px; }
-
 /* ==========================================
-   RESET TRANSFORMS (Cleans up previous angled lines)
+   RESET TRANSFORMS
 ========================================== */
 .elbow-h { transform: none !important; }
 

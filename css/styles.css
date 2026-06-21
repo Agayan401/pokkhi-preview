@@ -1080,6 +1080,126 @@ p {
     left: 70px;
 }
 
+/* --- 6. EYE RING (Routed Up and RIGHT) --- */
+.eyering-callout {
+    top: 25.5%;
+    left: 56%;
+}
+.eyering-callout .elbow-v {
+    bottom: 0;
+    left: 0;
+    height: 35px;
+}
+.eyering-callout .elbow-h {
+    top: -35px;
+    left: 0;
+    width: 90px; 
+}
+.eyering-callout .label {
+    top: -55px;
+    left: 90px;
+}
+
+/* --- 7. NAPE (Routed Up and RIGHT) --- */
+.nape-callout {
+    top: 30%;
+    left: 63.5%;
+}
+.nape-callout .elbow-v {
+    bottom: 0;
+    left: 0;
+    height: 25px;
+}
+.nape-callout .elbow-h {
+    top: -25px;
+    left: 0;
+    width: 85px;
+}
+.nape-callout .label {
+    top: -45px;
+    left: 85px;
+}
+
+/* --- 8. BREAST (Routed Down and LEFT) --- */
+.breast-callout {
+    top: 46%;
+    left: 54%;
+}
+.breast-callout .elbow-v {
+    top: 0;
+    left: 0;
+    height: 25px;
+}
+.breast-callout .elbow-h {
+    top: 25px;
+    right: 0;
+    width: 110px;
+}
+.breast-callout .label {
+    top: 5px;
+    right: 110px;
+}
+
+/* --- 9. BELLY (Routed Down and LEFT) --- */
+.belly-callout {
+    top: 62%;
+    left: 56%;
+}
+.belly-callout .elbow-v {
+    top: 0;
+    left: 0;
+    height: 35px;
+}
+.belly-callout .elbow-h {
+    top: 35px;
+    right: 0;
+    width: 120px;
+}
+.belly-callout .label {
+    top: 15px;
+    right: 120px;
+}
+
+/* --- 10. TAIL (Routed Down and RIGHT) --- */
+.tail-callout {
+    top: 68%;
+    left: 81%;
+}
+.tail-callout .elbow-v {
+    top: 0;
+    left: 0;
+    height: 30px;
+}
+.tail-callout .elbow-h {
+    top: 30px;
+    left: 0;
+    width: 70px;
+}
+.tail-callout .label {
+    top: 10px;
+    left: 70px;
+}
+
+/* --- 11. TARSUS (Routed Down and RIGHT) --- */
+.tarsus-callout {
+    top: 78%;
+    left: 64%;
+}
+.tarsus-callout .elbow-v {
+    top: 0;
+    left: 0;
+    height: 30px;
+}
+.tarsus-callout .elbow-h {
+    top: 30px;
+    left: 0;
+    width: 100px;
+}
+.tarsus-callout .label {
+    top: 10px;
+    left: 100px;
+}
+
 /* ==========================================
    ANATOMY GUIDE (PAGE LAYOUT)
 ========================================== */

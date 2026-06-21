@@ -916,43 +916,88 @@ p {
 }
 
 /* ==========================================
-   ANATOMY GUIDE - CALLOUT POSITIONING
+   ANATOMY GUIDE - REFINED STYLING
 ========================================== */
 
-/* Centers the 8px anchors perfectly on the callout coordinates */
+/* Slightly smaller, shadowed anchors */
 .anchor {
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
     background: #145c2e;
     border: 2px solid white;
     border-radius: 50%;
     position: absolute;
-    top: -4px; 
-    left: -4px; 
+    top: -3px; 
+    left: -3px; 
     z-index: 2;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
 }
 
-/* --- 1. BILL --- */
+/* Thinner, elegant lines */
+.elbow-h {
+    position: absolute;
+    height: 1.5px;
+    background: #145c2e;
+    cursor: pointer;
+}
+.elbow-v {
+    position: absolute;
+    width: 1.5px;
+    background: #145c2e;
+    cursor: pointer;
+}
+
+/* Softer labels with depth */
+.label {
+    position: absolute;
+    background: white;
+    border: 1px solid rgba(20, 92, 46, 0.25);
+    border-radius: 12px;
+    padding: 8px 16px;
+    color: #145c2e;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.2s ease;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.label:hover {
+    background: #145c2e;
+    color: white;
+    box-shadow: 0 6px 20px rgba(20, 92, 46, 0.2);
+}
+
+/* ==========================================
+   CALLOUT POSITIONING (FANNED OUT)
+========================================== */
+
+/* --- 1. BILL (Left) --- */
 .bill-callout {
     top: 27%;
     left: 50.5%;
 }
 .bill-callout .elbow-v {
-    bottom: 0;
+    top: 0; /* Drops down slightly to avoid face */
     left: 0;
-    height: 18px;
+    height: 12px;
 }
 .bill-callout .elbow-h {
-    top: -18px;
+    top: 12px;
     right: 0;
-    width: 90px;
+    width: 110px; /* Pushed further left */
 }
 .bill-callout .label {
-    top: -38px;
-    right: 90px;
+    top: -8px;
+    right: 110px;
 }
 
-/* --- 2. CROWN --- */
+/* --- 2. CROWN (Routed Up and RIGHT) --- */
 .crown-callout {
     top: 18.9%;
     left: 59%;
@@ -960,19 +1005,19 @@ p {
 .crown-callout .elbow-v {
     bottom: 0;
     left: 0;
-    height: 25px;
+    height: 45px;
 }
 .crown-callout .elbow-h {
-    top: -25px;
-    right: 0;
+    top: -45px;
+    left: 0; /* Left: 0 forces the line to draw towards the right */
     width: 60px;
 }
 .crown-callout .label {
-    top: -45px;
-    right: 60px;
+    top: -65px;
+    left: 60px;
 }
 
-/* --- 3. SUPERCILIUM --- */
+/* --- 3. SUPERCILIUM (Routed Up and LEFT) --- */
 .supercilium-callout {
     top: 23.3%;
     left: 57.5%;
@@ -980,64 +1025,59 @@ p {
 .supercilium-callout .elbow-v {
     bottom: 0;
     left: 0;
-    height: 35px;
+    height: 40px;
 }
 .supercilium-callout .elbow-h {
-    top: -35px;
+    top: -40px;
     right: 0;
     width: 110px;
 }
 .supercilium-callout .label {
-    top: -55px;
+    top: -60px;
     right: 110px;
 }
 
-/* --- 4. THROAT --- */
+/* --- 4. THROAT (Routed Down and LEFT) --- */
 .throat-callout {
     top: 34%;
     left: 56%;
 }
 .throat-callout .elbow-v {
-    bottom: 0;
+    top: 0;
     left: 0;
-    height: 20px;
+    height: 40px;
 }
 .throat-callout .elbow-h {
-    top: -20px;
+    top: 40px;
     right: 0;
-    width: 95px;
+    width: 90px;
 }
 .throat-callout .label {
-    top: -40px;
-    right: 95px;
+    top: 20px;
+    right: 90px;
 }
 
-/* --- 5. WING BAR --- */
+/* --- 5. WING BAR (Routed Up and RIGHT) --- */
 .wingbar-callout {
     top: 41%;
     left: 67%;
 }
-.wingbar-callout .anchor-1 {
-    top: -11px;
-    left: -18px;
-}
-.wingbar-callout .anchor-2 {
-    top: 14px;
-    left: 27px;
-}
+.wingbar-callout .anchor-1 { top: -11px; left: -18px; }
+.wingbar-callout .anchor-2 { top: 14px; left: 27px; }
+
 .wingbar-callout .elbow-v {
     bottom: 0;
     left: 0;
-    height: 30px;
+    height: 55px; /* Lifts it completely off the bird body */
 }
 .wingbar-callout .elbow-h {
-    top: -30px;
-    left: 0; 
-    width: 60px;
+    top: -55px;
+    left: 0;
+    width: 70px;
 }
 .wingbar-callout .label {
-    top: -50px;
-    left: 60px;
+    top: -75px;
+    left: 70px;
 }
 
 /* ==========================================

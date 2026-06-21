@@ -934,110 +934,110 @@ p {
 
 /* --- 1. BILL --- */
 .bill-callout {
-    top: 35%;
-    left: 24%;
+    top: 27%;
+    left: 50.5%;
 }
 .bill-callout .elbow-v {
     bottom: 0;
     left: 0;
-    height: 15px;
+    height: 18px;
 }
 .bill-callout .elbow-h {
-    top: -15px;
+    top: -18px;
     right: 0;
-    width: 60px;
+    width: 90px;
 }
 .bill-callout .label {
-    top: -35px;
-    right: 60px;
+    top: -38px;
+    right: 90px;
 }
 
 /* --- 2. CROWN --- */
 .crown-callout {
-    top: 16%;
-    left: 35%;
+    top: 18.9%;
+    left: 59%;
 }
 .crown-callout .elbow-v {
     bottom: 0;
     left: 0;
-    height: 30px;
+    height: 25px;
 }
 .crown-callout .elbow-h {
-    top: -30px;
-    left: 0;
+    top: -25px;
+    right: 0;
     width: 60px;
 }
 .crown-callout .label {
-    top: -50px;
-    left: 60px;
+    top: -45px;
+    right: 60px;
 }
 
 /* --- 3. SUPERCILIUM --- */
 .supercilium-callout {
-    top: 25%;
-    left: 32%;
+    top: 23.3%;
+    left: 57.5%;
 }
 .supercilium-callout .elbow-v {
     bottom: 0;
     left: 0;
-    height: 40px;
+    height: 35px;
 }
 .supercilium-callout .elbow-h {
-    top: -40px;
+    top: -35px;
     right: 0;
-    width: 70px;
+    width: 110px;
 }
 .supercilium-callout .label {
-    top: -60px;
-    right: 70px;
+    top: -55px;
+    right: 110px;
 }
 
 /* --- 4. THROAT --- */
 .throat-callout {
-    top: 45%;
-    left: 31%;
+    top: 34%;
+    left: 56%;
 }
 .throat-callout .elbow-v {
-    top: 0;
+    bottom: 0;
     left: 0;
-    height: 35px;
+    height: 20px;
 }
 .throat-callout .elbow-h {
-    top: 35px;
+    top: -20px;
     right: 0;
-    width: 50px;
+    width: 95px;
 }
 .throat-callout .label {
-    top: 15px;
-    right: 50px;
+    top: -40px;
+    right: 95px;
 }
 
 /* --- 5. WING BAR --- */
 .wingbar-callout {
-    top: 47%;
-    left: 48%;
+    top: 41%;
+    left: 67%;
 }
 .wingbar-callout .anchor-1 {
-    top: -10px;
-    left: -20px;
+    top: -11px;
+    left: -18px;
 }
 .wingbar-callout .anchor-2 {
-    top: 15px;
-    left: 25px;
+    top: 14px;
+    left: 27px;
 }
 .wingbar-callout .elbow-v {
     bottom: 0;
     left: 0;
-    height: 50px;
+    height: 30px;
 }
 .wingbar-callout .elbow-h {
-    top: -50px;
-    left: 0;
-    width: 80px;
+    top: -30px;
+    left: 0; 
+    width: 60px;
 }
 .wingbar-callout .label {
-    top: -70px;
-    left: 80px;
+    top: -50px;
+    left: 60px;
 }
 
 /* ==========================================

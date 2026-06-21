@@ -974,231 +974,85 @@ p {
 }
 
 /* ==========================================
-   CALLOUT POSITIONING (FANNED OUT)
+   CALLOUT POSITIONING (RECALIBRATED & FANNED)
 ========================================== */
 
-/* --- 1. BILL (Left) --- */
-.bill-callout {
-    top: 27%;
-    left: 50.5%;
-}
-.bill-callout .elbow-v {
-    top: 0; /* Drops down slightly to avoid face */
-    left: 0;
-    height: 12px;
-}
-.bill-callout .elbow-h {
-    top: 12px;
-    right: 0;
-    width: 110px; /* Pushed further left */
-}
-.bill-callout .label {
-    top: -8px;
-    right: 110px;
-}
+/* ----------------------------------
+   LEFT-SIDE LABELS
+---------------------------------- */
 
-/* --- 2. CROWN (Routed Up and RIGHT) --- */
-.crown-callout {
-    top: 18.9%;
-    left: 59%;
-}
-.crown-callout .elbow-v {
-    bottom: 0;
-    left: 0;
-    height: 45px;
-}
-.crown-callout .elbow-h {
-    top: -45px;
-    left: 0; /* Left: 0 forces the line to draw towards the right */
-    width: 60px;
-}
-.crown-callout .label {
-    top: -65px;
-    left: 60px;
-}
+/* 1. SUPERCILIUM (Eyebrow stripe) */
+.supercilium-callout { top: 22%; left: 56%; }
+.supercilium-callout .elbow-v { bottom: 0; left: 0; height: 30px; }
+.supercilium-callout .elbow-h { top: -30px; right: 0; width: 110px; }
+.supercilium-callout .label { top: -50px; right: 110px; }
 
-/* --- 3. SUPERCILIUM (Routed Up and LEFT) --- */
-.supercilium-callout {
-    top: 23.3%;
-    left: 57.5%;
-}
-.supercilium-callout .elbow-v {
-    bottom: 0;
-    left: 0;
-    height: 40px;
-}
-.supercilium-callout .elbow-h {
-    top: -40px;
-    right: 0;
-    width: 110px;
-}
-.supercilium-callout .label {
-    top: -60px;
-    right: 110px;
-}
+/* 2. BILL (Beak) */
+.bill-callout { top: 28%; left: 51%; }
+.bill-callout .elbow-v { bottom: 0; left: 0; height: 10px; }
+.bill-callout .elbow-h { top: -10px; right: 0; width: 80px; }
+.bill-callout .label { top: -30px; right: 80px; }
 
-/* --- 4. THROAT (Routed Down and LEFT) --- */
-.throat-callout {
-    top: 34%;
-    left: 56%;
-}
-.throat-callout .elbow-v {
-    top: 0;
-    left: 0;
-    height: 40px;
-}
-.throat-callout .elbow-h {
-    top: 40px;
-    right: 0;
-    width: 90px;
-}
-.throat-callout .label {
-    top: 20px;
-    right: 90px;
-}
+/* 3. THROAT (Under beak) */
+.throat-callout { top: 36%; left: 55%; }
+.throat-callout .elbow-v { top: 0; left: 0; height: 15px; } 
+.throat-callout .elbow-h { top: 15px; right: 0; width: 90px; }
+.throat-callout .label { top: -5px; right: 90px; }
 
-/* --- 5. WING BAR (Routed Up and RIGHT) --- */
-.wingbar-callout {
-    top: 41%;
-    left: 67%;
-}
+/* 4. BREAST (Upper chest) - Moved off branch! */
+.breast-callout { top: 48%; left: 56%; }
+.breast-callout .elbow-v { top: 0; left: 0; height: 35px; }
+.breast-callout .elbow-h { top: 35px; right: 0; width: 100px; }
+.breast-callout .label { top: 15px; right: 100px; }
+
+/* 5. BELLY (Lower abdomen) - Moved off branch! */
+.belly-callout { top: 61%; left: 60%; }
+.belly-callout .elbow-v { top: 0; left: 0; height: 55px; }
+.belly-callout .elbow-h { top: 55px; right: 0; width: 120px; }
+.belly-callout .label { top: 35px; right: 120px; }
+
+
+/* ----------------------------------
+   RIGHT-SIDE LABELS
+---------------------------------- */
+
+/* 6. CROWN (Top of head) - Routed extremely high to avoid Eye Ring */
+.crown-callout { top: 17%; left: 58%; }
+.crown-callout .elbow-v { bottom: 0; left: 0; height: 55px; }
+.crown-callout .elbow-h { top: -55px; left: 0; width: 60px; }
+.crown-callout .label { top: -75px; left: 60px; }
+
+/* 7. EYE RING (Around the eye) - Routed low below the Crown line */
+.eyering-callout { top: 24%; left: 57.5%; }
+.eyering-callout .elbow-v { bottom: 0; left: 0; height: 25px; } 
+.eyering-callout .elbow-h { top: -25px; left: 0; width: 90px; }
+.eyering-callout .label { top: -45px; left: 90px; }
+
+/* 8. NAPE (Back of neck) */
+.nape-callout { top: 29%; left: 63%; }
+.nape-callout .elbow-v { bottom: 0; left: 0; height: 15px; }
+.nape-callout .elbow-h { top: -15px; left: 0; width: 85px; }
+.nape-callout .label { top: -35px; left: 85px; }
+
+/* 9. WING BAR (Folded wing stripes) - Routed down & right for better spacing */
+.wingbar-callout { top: 41%; left: 67%; }
 .wingbar-callout .anchor-1 { top: -11px; left: -18px; }
 .wingbar-callout .anchor-2 { top: 14px; left: 27px; }
+.wingbar-callout .elbow-v { top: 0; left: 0; height: 35px; } 
+.wingbar-callout .elbow-h { top: 35px; left: 0; width: 80px; }
+.wingbar-callout .label { top: 15px; left: 80px; }
 
-.wingbar-callout .elbow-v {
-    bottom: 0;
-    left: 0;
-    height: 55px; /* Lifts it completely off the bird body */
-}
-.wingbar-callout .elbow-h {
-    top: -55px;
-    left: 0;
-    width: 70px;
-}
-.wingbar-callout .label {
-    top: -75px;
-    left: 70px;
-}
+/* 10. TAIL (Tail feathers) - Moved off branch! */
+.tail-callout { top: 66%; left: 82%; }
+.tail-callout .elbow-v { top: 0; left: 0; height: 20px; }
+.tail-callout .elbow-h { top: 20px; left: 0; width: 60px; }
+.tail-callout .label { top: 0px; left: 60px; }
 
-/* --- 6. EYE RING (Routed Up and RIGHT) --- */
-.eyering-callout {
-    top: 25.5%;
-    left: 56%;
-}
-.eyering-callout .elbow-v {
-    bottom: 0;
-    left: 0;
-    height: 35px;
-}
-.eyering-callout .elbow-h {
-    top: -35px;
-    left: 0;
-    width: 90px; 
-}
-.eyering-callout .label {
-    top: -55px;
-    left: 90px;
-}
-
-/* --- 7. NAPE (Routed Up and RIGHT) --- */
-.nape-callout {
-    top: 30%;
-    left: 63.5%;
-}
-.nape-callout .elbow-v {
-    bottom: 0;
-    left: 0;
-    height: 25px;
-}
-.nape-callout .elbow-h {
-    top: -25px;
-    left: 0;
-    width: 85px;
-}
-.nape-callout .label {
-    top: -45px;
-    left: 85px;
-}
-
-/* --- 8. BREAST (Routed Down and LEFT) --- */
-.breast-callout {
-    top: 46%;
-    left: 54%;
-}
-.breast-callout .elbow-v {
-    top: 0;
-    left: 0;
-    height: 25px;
-}
-.breast-callout .elbow-h {
-    top: 25px;
-    right: 0;
-    width: 110px;
-}
-.breast-callout .label {
-    top: 5px;
-    right: 110px;
-}
-
-/* --- 9. BELLY (Routed Down and LEFT) --- */
-.belly-callout {
-    top: 62%;
-    left: 56%;
-}
-.belly-callout .elbow-v {
-    top: 0;
-    left: 0;
-    height: 35px;
-}
-.belly-callout .elbow-h {
-    top: 35px;
-    right: 0;
-    width: 120px;
-}
-.belly-callout .label {
-    top: 15px;
-    right: 120px;
-}
-
-/* --- 10. TAIL (Routed Down and RIGHT) --- */
-.tail-callout {
-    top: 68%;
-    left: 81%;
-}
-.tail-callout .elbow-v {
-    top: 0;
-    left: 0;
-    height: 30px;
-}
-.tail-callout .elbow-h {
-    top: 30px;
-    left: 0;
-    width: 70px;
-}
-.tail-callout .label {
-    top: 10px;
-    left: 70px;
-}
-
-/* --- 11. TARSUS (Routed Down and RIGHT) --- */
-.tarsus-callout {
-    top: 78%;
-    left: 64%;
-}
-.tarsus-callout .elbow-v {
-    top: 0;
-    left: 0;
-    height: 30px;
-}
-.tarsus-callout .elbow-h {
-    top: 30px;
-    left: 0;
-    width: 100px;
-}
-.tarsus-callout .label {
-    top: 10px;
-    left: 100px;
-}
+/* 11. TARSUS (Leg) */
+.tarsus-callout { top: 74%; left: 67%; }
+.tarsus-callout .elbow-v { top: 0; left: 0; height: 50px; }
+.tarsus-callout .elbow-h { top: 50px; left: 0; width: 80px; }
+.tarsus-callout .label { top: 30px; left: 80px; }
 
 /* ==========================================
    ANATOMY GUIDE (PAGE LAYOUT)

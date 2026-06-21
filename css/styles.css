@@ -16,7 +16,7 @@ html {
 
 body {
     font-family: Inter, Arial, sans-serif;
-}
+} /* <-- This is the bracket that was missing! */
 
 p {
     text-align: justify;
@@ -228,3 +228,251 @@ p {
 .status-bar {
     display: flex;
     height: 26px;
+    border-radius: 999px;
+    overflow: hidden;
+    background: #e5e7eb;
+    margin-bottom: 1rem;
+}
+
+.status-segment {
+    transition: .3s ease;
+}
+
+.lc { background: #22c55e; }
+.nt { background: #eab308; }
+.vu { background: #f97316; }
+.en { background: #ef4444; }
+.cr { background: #7f1d1d; }
+
+.status-legend {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .8rem;
+}
+
+.status-legend span {
+    padding: .45rem .85rem;
+    border-radius: 999px;
+    font-weight: 700;
+    color: white;
+}
+
+#countLC { background: #22c55e; }
+#countNT { background: #eab308; color: #111827; }
+#countVU { background: #f97316; }
+#countEN { background: #ef4444; }
+#countCR { background: #7f1d1d; }
+
+/* =========================
+   HOMEPAGE PANELS
+========================= */
+.homepage-panels {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1rem 4rem;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 2rem;
+}
+
+.about-panel,
+.bird-of-day-panel {
+    background: white;
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.about-panel h2,
+.bird-of-day-panel h2 {
+    color: #14532d;
+    margin-bottom: 1rem;
+}
+
+.about-panel p {
+    line-height: 1.9;
+    margin-bottom: 1rem;
+    color: #374151;
+}
+
+.about-mini-stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.about-stat {
+    flex: 1;
+    text-align: center;
+}
+
+.about-stat strong {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #14532d;
+    line-height: 1.2;
+}
+
+.about-stat span {
+    font-size: .9rem;
+    color: #6b7280;
+}
+
+/* =========================
+   FEATURED BIRD
+========================= */
+#birdOfDay {
+    display: flex;
+    justify-content: center;
+}
+
+.featured-bird {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 12px 30px rgba(0,0,0,.12);
+    transition: transform .25s ease, box-shadow .25s ease;
+    cursor: pointer;
+}
+
+.featured-bird:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(0,0,0,.16);
+}
+
+.featured-image-wrapper {
+    position: relative;
+}
+
+.featured-image-wrapper img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+}
+
+.featured-tag {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba(20,83,45,.92);
+    color: white;
+    padding: .45rem .9rem;
+    border-radius: 999px;
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.featured-description {
+    margin-top: 1rem;
+    color: #4b5563;
+    line-height: 1.7;
+    font-size: .95rem;
+}
+
+.featured-btn {
+    margin-top: 1rem;
+    border: none;
+    border-radius: 12px;
+    padding: .8rem 1.2rem;
+    background: #14532d;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.featured-btn:hover {
+    opacity: .9;
+}
+
+/* =========================
+   DIRECTORY
+========================= */
+.directory {
+    max-width: 1200px;
+    margin: auto;
+    padding: 4rem 1rem;
+}
+
+.directory h2 {
+    color: #14532d;
+    margin-bottom: 1rem;
+}
+
+/* =========================
+   DIRECTORY SEARCH
+========================= */
+.directory-search {
+    margin: 1.5rem 0 1rem;
+}
+
+#directorySearchInput {
+    width: 100%;
+    padding: 14px 20px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    font-size: 1rem;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,.05);
+    transition: .2s;
+}
+
+#directorySearchInput:focus {
+    outline: none;
+    border-color: #14532d;
+    box-shadow: 0 0 0 3px rgba(20,83,45,.15);
+}
+
+#statusFilter {
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    background: white;
+    margin-bottom: 1rem;
+}
+
+.reset-search-btn {
+    margin-bottom: 1.5rem;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 10px;
+    background: #14532d;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#birdGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.75rem;
+}
+
+/* =========================
+   BIRD CARDS
+========================= */
+.bird-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    height: 100%;
+    box-shadow: 0 8px 24px rgba(0,0,0,.08);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.bird-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(0,0,0,.14);
+}
+
+.bird-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;

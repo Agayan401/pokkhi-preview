@@ -974,85 +974,104 @@ p {
 }
 
 /* ==========================================
-   CALLOUT POSITIONING (FINAL CALIBRATION)
+   CALLOUT POSITIONING (RADIAL STRAIGHT LINES)
 ========================================== */
 
+/* Hide all vertical lines globally to create clean, straight pointers */
+.elbow-v { 
+    display: none !important; 
+}
+
 /* ----------------------------------
-   LEFT-SIDE LABELS
+   LEFT-SIDE LABELS (Lines point left)
 ---------------------------------- */
 
-/* 1. CROWN (Routed Up and Left to avoid right-side traffic) */
+/* Anchor the left-pointing lines to the right edge (the dot) */
+.crown-callout .elbow-h,
+.supercilium-callout .elbow-h,
+.bill-callout .elbow-h,
+.throat-callout .elbow-h,
+.breast-callout .elbow-h,
+.belly-callout .elbow-h {
+    top: 0;
+    right: 0;
+    transform-origin: right center;
+}
+
+/* 1. CROWN (Angled Up-Left) */
 .crown-callout { top: 17%; left: 59%; }
-.crown-callout .elbow-v { bottom: 0; left: 0; height: 30px; }
-.crown-callout .elbow-h { top: -30px; right: 0; width: 60px; }
-.crown-callout .label { top: -50px; right: 60px; }
+.crown-callout .elbow-h { width: 75px; transform: rotate(35deg); }
+.crown-callout .label { top: -65px; right: 80px; }
 
-/* 2. SUPERCILIUM (Routed Left, tucked below Crown) */
+/* 2. SUPERCILIUM (Straight Horizontal Left) */
 .supercilium-callout { top: 22%; left: 56.5%; }
-.supercilium-callout .elbow-v { bottom: 0; left: 0; height: 15px; }
-.supercilium-callout .elbow-h { top: -15px; right: 0; width: 90px; }
-.supercilium-callout .label { top: -35px; right: 90px; }
+.supercilium-callout .elbow-h { width: 95px; transform: rotate(0deg); }
+.supercilium-callout .label { top: -20px; right: 100px; }
 
-/* 3. BILL (Routed Down and Left) */
+/* 3. BILL (Straight Horizontal Left) */
 .bill-callout { top: 28%; left: 50.5%; }
-.bill-callout .elbow-v { top: 0; left: 0; height: 15px; }
-.bill-callout .elbow-h { top: 15px; right: 0; width: 80px; }
-.bill-callout .label { top: -5px; right: 80px; }
+.bill-callout .elbow-h { width: 85px; transform: rotate(0deg); }
+.bill-callout .label { top: -20px; right: 90px; }
 
-/* 4. THROAT (Routed Down and Left) */
+/* 4. THROAT (Angled Down-Left) */
 .throat-callout { top: 36%; left: 55%; }
-.throat-callout .elbow-v { top: 0; left: 0; height: 25px; }
-.throat-callout .elbow-h { top: 25px; right: 0; width: 90px; }
-.throat-callout .label { top: 5px; right: 90px; }
+.throat-callout .elbow-h { width: 85px; transform: rotate(-20deg); }
+.throat-callout .label { top: 10px; right: 90px; }
 
-/* 5. BREAST (Pushed Right onto bird, Routed Left) */
+/* 5. BREAST (Angled Down-Left) */
 .breast-callout { top: 48%; left: 59%; }
-.breast-callout .elbow-v { top: 0; left: 0; height: 35px; }
-.breast-callout .elbow-h { top: 35px; right: 0; width: 120px; }
-.breast-callout .label { top: 15px; right: 120px; }
+.breast-callout .elbow-h { width: 110px; transform: rotate(-25deg); }
+.breast-callout .label { top: 26px; right: 115px; }
 
-/* 6. BELLY (Pushed Right onto bird, Routed Left) */
+/* 6. BELLY (Angled Down-Left) */
 .belly-callout { top: 61%; left: 62%; }
-.belly-callout .elbow-v { top: 0; left: 0; height: 45px; }
-.belly-callout .elbow-h { top: 45px; right: 0; width: 140px; }
-.belly-callout .label { top: 25px; right: 140px; }
+.belly-callout .elbow-h { width: 130px; transform: rotate(-18deg); }
+.belly-callout .label { top: 20px; right: 135px; }
 
 
 /* ----------------------------------
-   RIGHT-SIDE LABELS
+   RIGHT-SIDE LABELS (Lines point right)
 ---------------------------------- */
 
-/* 7. EYE RING (Routed Up and Right) */
+/* Anchor the right-pointing lines to the left edge (the dot) */
+.eyering-callout .elbow-h,
+.nape-callout .elbow-h,
+.wingbar-callout .elbow-h,
+.tail-callout .elbow-h,
+.tarsus-callout .elbow-h {
+    top: 0;
+    left: 0;
+    transform-origin: left center;
+}
+
+/* 7. EYE RING (Angled Up-Right) */
 .eyering-callout { top: 24%; left: 57.5%; }
-.eyering-callout .elbow-v { bottom: 0; left: 0; height: 35px; }
-.eyering-callout .elbow-h { top: -35px; left: 0; width: 70px; }
-.eyering-callout .label { top: -55px; left: 70px; }
+.eyering-callout .elbow-h { width: 70px; transform: rotate(-30deg); }
+.eyering-callout .label { top: -55px; left: 75px; }
 
-/* 8. NAPE (Routed Up and Right, staggered below Eye Ring) */
+/* 8. NAPE (Straight Horizontal Right) */
 .nape-callout { top: 29%; left: 63%; }
-.nape-callout .elbow-v { bottom: 0; left: 0; height: 15px; }
-.nape-callout .elbow-h { top: -15px; left: 0; width: 85px; }
-.nape-callout .label { top: -35px; left: 85px; }
+.nape-callout .elbow-h { width: 80px; transform: rotate(0deg); }
+.nape-callout .label { top: -20px; left: 85px; }
 
-/* 9. WING BAR (Routed Down and Right) */
+/* 9. WING BAR (Angled Down-Right) */
 .wingbar-callout { top: 42%; left: 67%; }
-.wingbar-callout .anchor-1 { top: -11px; left: -18px; }
-.wingbar-callout .anchor-2 { top: 14px; left: 27px; }
-.wingbar-callout .elbow-v { top: 0; left: 0; height: 30px; }
-.wingbar-callout .elbow-h { top: 30px; left: 0; width: 70px; }
-.wingbar-callout .label { top: 10px; left: 70px; }
+.wingbar-callout .elbow-h { width: 80px; transform: rotate(20deg); }
+.wingbar-callout .label { top: 7px; left: 85px; }
 
-/* 10. TAIL (Pushed Up and Right onto tail feathers) */
+/* Wing Bar Anchor Cleanup (Reverts double dots to a single clean dot) */
+.wingbar-callout .anchor-2 { display: none; }
+.wingbar-callout .anchor-1 { top: -3px; left: -3px; }
+
+/* 10. TAIL (Angled Down-Right) */
 .tail-callout { top: 65%; left: 81%; }
-.tail-callout .elbow-v { bottom: 0; left: 0; height: 15px; }
-.tail-callout .elbow-h { top: -15px; left: 0; width: 50px; }
-.tail-callout .label { top: -35px; left: 50px; }
+.tail-callout .elbow-h { width: 60px; transform: rotate(15deg); }
+.tail-callout .label { top: -5px; left: 65px; }
 
-/* 11. TARSUS (Pushed Up onto the leg) */
+/* 11. TARSUS (Angled Down-Right) */
 .tarsus-callout { top: 69%; left: 66%; }
-.tarsus-callout .elbow-v { top: 0; left: 0; height: 40px; }
-.tarsus-callout .elbow-h { top: 40px; left: 0; width: 60px; }
-.tarsus-callout .label { top: 20px; left: 60px; }
+.tarsus-callout .elbow-h { width: 70px; transform: rotate(35deg); }
+.tarsus-callout .label { top: 20px; left: 75px; }
 
 /* ==========================================
    ANATOMY GUIDE (PAGE LAYOUT)

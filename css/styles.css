@@ -1489,7 +1489,7 @@ p {
 
 .crown-callout .label {
 
-    left: 45px;
+    left: 55px;
     top: -55px;
 }
 
@@ -1510,8 +1510,8 @@ p {
 
 .supercilium-callout .label {
 
-    left: -215px;
-    top: -16px;
+    left: -225px;
+    top: -22px;
 }
 
 .throat-callout {
@@ -1531,8 +1531,8 @@ p {
 
 .throat-callout .label {
 
-    left: -165px;
-    top: -12px;
+    left: -170px;
+    top: -5px;
 }
 
 .wingbar-callout {
@@ -1566,8 +1566,8 @@ p {
 
 .wingbar-callout .label {
 
-    left: 70px;
-    top: -35px;
+    left: 110px;
+    top: -40px;
 }    
     
 /* ==========================================
@@ -1668,6 +1668,14 @@ p {
     white-space: nowrap;
 
     transition: 0.2s;
+
+    min-height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
 }
 
 .label:hover {

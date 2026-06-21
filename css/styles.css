@@ -977,7 +977,7 @@ p {
    CALLOUT POSITIONING (ORTHOGONAL / 90-DEGREE)
 ========================================== */
 
-/* Ensure vertical elbows are visible again */
+/* Ensure vertical elbows are visible */
 .elbow-v { 
     display: block; 
 }
@@ -986,75 +986,75 @@ p {
    LEFT-SIDE LABELS
 ---------------------------------- */
 
-/* 1. CROWN (Routed Up & Left) */
-.crown-callout { top: 18%; left: 58%; }
+/* 1. CROWN (Top grey tuft) */
+.crown-callout { top: 17%; left: 60%; }
 .crown-callout .elbow-v { bottom: 0; left: 0; height: 35px; }
 .crown-callout .elbow-h { top: -35px; right: 0; width: 60px; }
 .crown-callout .label { top: -55px; right: 60px; }
 
-/* 2. SUPERCILIUM (Straight Horizontal Left) */
-.supercilium-callout { top: 22%; left: 56%; }
+/* 2. SUPERCILIUM (White stripe above eye) */
+.supercilium-callout { top: 22%; left: 58.5%; }
 .supercilium-callout .elbow-v { display: none; }
-.supercilium-callout .elbow-h { top: 0; right: 0; width: 90px; }
-.supercilium-callout .label { top: -20px; right: 90px; }
+.supercilium-callout .elbow-h { top: 0; right: 0; width: 100px; }
+.supercilium-callout .label { top: -20px; right: 100px; }
 
-/* 3. BILL (Straight Horizontal Left) */
-.bill-callout { top: 27.5%; left: 50.5%; }
+/* 3. BILL (Beak) */
+.bill-callout { top: 27.5%; left: 52%; }
 .bill-callout .elbow-v { display: none; }
 .bill-callout .elbow-h { top: 0; right: 0; width: 60px; }
 .bill-callout .label { top: -20px; right: 60px; }
 
-/* 4. THROAT (Straight Horizontal Left - Staggered width) */
-.throat-callout { top: 34%; left: 55%; }
+/* 4. THROAT (White area under beak) */
+.throat-callout { top: 35%; left: 57%; }
 .throat-callout .elbow-v { display: none; }
 .throat-callout .elbow-h { top: 0; right: 0; width: 80px; }
 .throat-callout .label { top: -20px; right: 80px; }
 
-/* 5. BREAST (Routed Down & Left) */
-.breast-callout { top: 46%; left: 56%; }
-.breast-callout .elbow-v { top: 0; left: 0; height: 30px; }
-.breast-callout .elbow-h { top: 30px; right: 0; width: 90px; }
-.breast-callout .label { top: 10px; right: 90px; }
+/* 5. BREAST (Orange chest area) */
+.breast-callout { top: 45%; left: 60%; }
+.breast-callout .elbow-v { top: 0; left: 0; height: 25px; }
+.breast-callout .elbow-h { top: 25px; right: 0; width: 90px; }
+.breast-callout .label { top: 5px; right: 90px; }
 
-/* 6. BELLY (Routed Down & Left) */
-.belly-callout { top: 60%; left: 58%; }
-.belly-callout .elbow-v { top: 0; left: 0; height: 40px; }
-.belly-callout .elbow-h { top: 40px; right: 0; width: 110px; }
-.belly-callout .label { top: 20px; right: 110px; }
+/* 6. BELLY (Lower white/pale abdomen) */
+.belly-callout { top: 58%; left: 63%; }
+.belly-callout .elbow-v { top: 0; left: 0; height: 35px; }
+.belly-callout .elbow-h { top: 35px; right: 0; width: 110px; }
+.belly-callout .label { top: 15px; right: 110px; }
 
 
 /* ----------------------------------
    RIGHT-SIDE LABELS
 ---------------------------------- */
 
-/* 7. EYE RING (Routed Up & Right) */
-.eyering-callout { top: 24%; left: 57.5%; }
-.eyering-callout .elbow-v { bottom: 0; left: 0; height: 30px; }
-.eyering-callout .elbow-h { top: -30px; left: 0; width: 60px; }
-.eyering-callout .label { top: -50px; left: 60px; }
+/* 7. EYE RING (Small white arc below the pupil) */
+.eyering-callout { top: 25.5%; left: 58.5%; }
+.eyering-callout .elbow-v { bottom: 0; left: 0; height: 35px; }
+.eyering-callout .elbow-h { top: -35px; left: 0; width: 70px; }
+.eyering-callout .label { top: -55px; left: 70px; }
 
-/* 8. NAPE (Straight Horizontal Right) */
-.nape-callout { top: 28%; left: 63%; }
+/* 8. NAPE (Grey area at back of neck) */
+.nape-callout { top: 29%; left: 64%; }
 .nape-callout .elbow-v { display: none; }
 .nape-callout .elbow-h { top: 0; left: 0; width: 70px; }
 .nape-callout .label { top: -20px; left: 70px; }
 
-/* 9. WING BAR (Routed Down & Right) */
-.wingbar-callout { top: 42%; left: 67%; }
+/* 9. WING BAR (White stripes on folded wing) */
+.wingbar-callout { top: 42%; left: 68%; }
 .wingbar-callout .anchor-1 { top: -8px; left: -15px; display: block; }
 .wingbar-callout .anchor-2 { top: 8px; left: 15px; display: block; }
 .wingbar-callout .elbow-v { top: 0; left: 0; height: 30px; }
 .wingbar-callout .elbow-h { top: 30px; left: 0; width: 60px; }
 .wingbar-callout .label { top: 10px; left: 60px; }
 
-/* 10. TAIL (Straight Horizontal Right) */
-.tail-callout { top: 66%; left: 81%; }
+/* 10. TAIL (Dark tail feathers) */
+.tail-callout { top: 64%; left: 83%; }
 .tail-callout .elbow-v { display: none; }
 .tail-callout .elbow-h { top: 0; left: 0; width: 60px; }
 .tail-callout .label { top: -20px; left: 60px; }
 
-/* 11. TARSUS (Routed Down & Right) */
-.tarsus-callout { top: 69%; left: 65%; }
+/* 11. TARSUS (The physical leg above the branch) */
+.tarsus-callout { top: 67%; left: 68%; }
 .tarsus-callout .elbow-v { top: 0; left: 0; height: 30px; }
 .tarsus-callout .elbow-h { top: 30px; left: 0; width: 50px; }
 .tarsus-callout .label { top: 10px; left: 50px; }

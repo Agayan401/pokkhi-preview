@@ -1455,13 +1455,22 @@ p {
     top: 27%;
 }
 
-.bill-callout .leader {
+.bill-callout .elbow-h {
 
     width: 90px;
 
-    left: -95px;
+    left: -90px;
 
     top: 4px;
+}
+
+.bill-callout .elbow-v {
+
+    height: 18px;
+
+    left: -90px;
+
+    top: -14px;
 }
 
 .bill-callout .label {
@@ -1634,11 +1643,22 @@ p {
     z-index: 2;
 }
 
-.leader {
+.elbow-h {
 
     position: absolute;
 
     height: 2px;
+
+    background: #145c2e;
+
+    cursor: pointer;
+}
+
+.elbow-v {
+
+    position: absolute;
+
+    width: 2px;
 
     background: #145c2e;
 

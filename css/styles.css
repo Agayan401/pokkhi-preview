@@ -974,85 +974,85 @@ p {
 }
 
 /* ==========================================
-   CALLOUT POSITIONING (RESTORED ANCHORS + FANNED)
+   CALLOUT POSITIONING (FINAL CALIBRATION)
 ========================================== */
 
 /* ----------------------------------
    LEFT-SIDE LABELS
 ---------------------------------- */
 
-/* 1. SUPERCILIUM (Routed Up and Left) */
-.supercilium-callout { top: 23.3%; left: 57.5%; }
-.supercilium-callout .elbow-v { bottom: 0; left: 0; height: 35px; }
-.supercilium-callout .elbow-h { top: -35px; right: 0; width: 110px; }
-.supercilium-callout .label { top: -55px; right: 110px; }
+/* 1. CROWN (Routed Up and Left to avoid right-side traffic) */
+.crown-callout { top: 17%; left: 59%; }
+.crown-callout .elbow-v { bottom: 0; left: 0; height: 30px; }
+.crown-callout .elbow-h { top: -30px; right: 0; width: 60px; }
+.crown-callout .label { top: -50px; right: 60px; }
 
-/* 2. BILL (Routed Left) */
-.bill-callout { top: 27%; left: 50.5%; }
-.bill-callout .elbow-v { top: 0; left: 0; height: 12px; }
-.bill-callout .elbow-h { top: 12px; right: 0; width: 100px; }
-.bill-callout .label { top: -8px; right: 100px; }
+/* 2. SUPERCILIUM (Routed Left, tucked below Crown) */
+.supercilium-callout { top: 22%; left: 56.5%; }
+.supercilium-callout .elbow-v { bottom: 0; left: 0; height: 15px; }
+.supercilium-callout .elbow-h { top: -15px; right: 0; width: 90px; }
+.supercilium-callout .label { top: -35px; right: 90px; }
 
-/* 3. THROAT (Routed Down and Left) */
-.throat-callout { top: 34%; left: 56%; }
-.throat-callout .elbow-v { top: 0; left: 0; height: 20px; }
-.throat-callout .elbow-h { top: 20px; right: 0; width: 90px; }
-.throat-callout .label { top: 0px; right: 90px; }
+/* 3. BILL (Routed Down and Left) */
+.bill-callout { top: 28%; left: 50.5%; }
+.bill-callout .elbow-v { top: 0; left: 0; height: 15px; }
+.bill-callout .elbow-h { top: 15px; right: 0; width: 80px; }
+.bill-callout .label { top: -5px; right: 80px; }
 
-/* 4. BREAST (Routed Down and Left) */
-.breast-callout { top: 48%; left: 54%; }
-.breast-callout .elbow-v { top: 0; left: 0; height: 30px; }
-.breast-callout .elbow-h { top: 30px; right: 0; width: 100px; }
-.breast-callout .label { top: 10px; right: 100px; }
+/* 4. THROAT (Routed Down and Left) */
+.throat-callout { top: 36%; left: 55%; }
+.throat-callout .elbow-v { top: 0; left: 0; height: 25px; }
+.throat-callout .elbow-h { top: 25px; right: 0; width: 90px; }
+.throat-callout .label { top: 5px; right: 90px; }
 
-/* 5. BELLY (Routed Down and Left) */
-.belly-callout { top: 62%; left: 55%; }
-.belly-callout .elbow-v { top: 0; left: 0; height: 40px; }
-.belly-callout .elbow-h { top: 40px; right: 0; width: 120px; }
-.belly-callout .label { top: 20px; right: 120px; }
+/* 5. BREAST (Pushed Right onto bird, Routed Left) */
+.breast-callout { top: 48%; left: 59%; }
+.breast-callout .elbow-v { top: 0; left: 0; height: 35px; }
+.breast-callout .elbow-h { top: 35px; right: 0; width: 120px; }
+.breast-callout .label { top: 15px; right: 120px; }
+
+/* 6. BELLY (Pushed Right onto bird, Routed Left) */
+.belly-callout { top: 61%; left: 62%; }
+.belly-callout .elbow-v { top: 0; left: 0; height: 45px; }
+.belly-callout .elbow-h { top: 45px; right: 0; width: 140px; }
+.belly-callout .label { top: 25px; right: 140px; }
 
 
 /* ----------------------------------
    RIGHT-SIDE LABELS
 ---------------------------------- */
 
-/* 6. CROWN (Routed Up and Right - High to clear Eye Ring) */
-.crown-callout { top: 18.9%; left: 59%; }
-.crown-callout .elbow-v { bottom: 0; left: 0; height: 45px; }
-.crown-callout .elbow-h { top: -45px; left: 0; width: 60px; }
-.crown-callout .label { top: -65px; left: 60px; }
+/* 7. EYE RING (Routed Up and Right) */
+.eyering-callout { top: 24%; left: 57.5%; }
+.eyering-callout .elbow-v { bottom: 0; left: 0; height: 35px; }
+.eyering-callout .elbow-h { top: -35px; left: 0; width: 70px; }
+.eyering-callout .label { top: -55px; left: 70px; }
 
-/* 7. EYE RING (Routed Up and Right - Low to avoid Crown) */
-.eyering-callout { top: 25.5%; left: 58.5%; }
-.eyering-callout .elbow-v { bottom: 0; left: 0; height: 20px; }
-.eyering-callout .elbow-h { top: -20px; left: 0; width: 90px; }
-.eyering-callout .label { top: -40px; left: 90px; }
-
-/* 8. NAPE (Routed Up and Right) */
-.nape-callout { top: 28%; left: 62%; }
+/* 8. NAPE (Routed Up and Right, staggered below Eye Ring) */
+.nape-callout { top: 29%; left: 63%; }
 .nape-callout .elbow-v { bottom: 0; left: 0; height: 15px; }
 .nape-callout .elbow-h { top: -15px; left: 0; width: 85px; }
 .nape-callout .label { top: -35px; left: 85px; }
 
 /* 9. WING BAR (Routed Down and Right) */
-.wingbar-callout { top: 41%; left: 67%; }
+.wingbar-callout { top: 42%; left: 67%; }
 .wingbar-callout .anchor-1 { top: -11px; left: -18px; }
 .wingbar-callout .anchor-2 { top: 14px; left: 27px; }
-.wingbar-callout .elbow-v { top: 0; left: 0; height: 35px; }
-.wingbar-callout .elbow-h { top: 35px; left: 0; width: 80px; }
-.wingbar-callout .label { top: 15px; left: 80px; }
+.wingbar-callout .elbow-v { top: 0; left: 0; height: 30px; }
+.wingbar-callout .elbow-h { top: 30px; left: 0; width: 70px; }
+.wingbar-callout .label { top: 10px; left: 70px; }
 
-/* 10. TAIL (Routed Down and Right) */
-.tail-callout { top: 68%; left: 78%; }
-.tail-callout .elbow-v { top: 0; left: 0; height: 20px; }
-.tail-callout .elbow-h { top: 20px; left: 0; width: 60px; }
-.tail-callout .label { top: 0px; left: 60px; }
+/* 10. TAIL (Pushed Up and Right onto tail feathers) */
+.tail-callout { top: 65%; left: 81%; }
+.tail-callout .elbow-v { bottom: 0; left: 0; height: 15px; }
+.tail-callout .elbow-h { top: -15px; left: 0; width: 50px; }
+.tail-callout .label { top: -35px; left: 50px; }
 
-/* 11. TARSUS (Routed Down and Right) */
-.tarsus-callout { top: 76%; left: 63%; }
+/* 11. TARSUS (Pushed Up onto the leg) */
+.tarsus-callout { top: 69%; left: 66%; }
 .tarsus-callout .elbow-v { top: 0; left: 0; height: 40px; }
-.tarsus-callout .elbow-h { top: 40px; left: 0; width: 80px; }
-.tarsus-callout .label { top: 20px; left: 80px; }
+.tarsus-callout .elbow-h { top: 40px; left: 0; width: 60px; }
+.tarsus-callout .label { top: 20px; left: 60px; }
 
 /* ==========================================
    ANATOMY GUIDE (PAGE LAYOUT)

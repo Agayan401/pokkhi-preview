@@ -1449,135 +1449,7 @@ p {
         translateY(-2px);
 }
 
-.bill-callout {
 
-    left: 50.5%;
-    top: 27%;
-}
-
-.bill-callout .elbow-h {
-
-    width: 90px;
-
-    left: -90px;
-
-    top: 4px;
-}
-
-.bill-callout .elbow-v {
-
-    height: 18px;
-
-    left: -90px;
-
-    top: -14px;
-}
-
-.bill-callout .label {
-
-    left: -155px;
-    top: -12px;
-}
-
-.crown-callout {
-
-    left: 59%;
-    top: 18.9%;
-}
-
-.crown-callout .leader {
-
-    width: 55px;
-
-    left: 10px;
-
-    top: -35px;
-
-    transform: rotate(-55deg);
-}
-
-.crown-callout .label {
-
-    left: 95px;
-    top: -20px;
-}
-
-.supercilium-callout {
-
-    left: 57.5%;
-    top: 23.3%;
-}
-
-.supercilium-callout .leader {
-
-    width: 110px;
-
-    left: -115px;
-
-    top: 3px;
-}
-
-.supercilium-callout .label {
-
-    left: -225px;
-    top: -30px;
-}
-
-.throat-callout {
-
-    left: 56%;
-    top: 34%;
-}
-
-.throat-callout .leader {
-
-    width: 90px;
-
-    left: -95px;
-
-    top: 4px;
-}
-
-.throat-callout .label {
-
-    left: -170px;
-    top: -5px;
-}
-
-.wingbar-callout {
-
-    left: 67%;
-    top: 41%;
-}
-
-.anchor-1 {
-
-    left: -18px;
-    top: -11px;
-}
-
-.anchor-2 {
-
-    left: 27px;
-    top: 14px;
-}
-
-.wingbar-callout .leader {
-
-    width: 80px;
-
-    left: 10px;
-
-    top: -25px;
-
-    transform: rotate(-35deg);
-}
-
-.wingbar-callout .label {
-
-    left: 90px;
-    top: -90px;
-}    
     
 /* ==========================================
    ANATOMY GUIDE
@@ -1622,88 +1494,52 @@ p {
     gap: 40px;
 }
 
-.callout {
-    position: absolute;
-}
-
-.anchor {
-
-    width: 8px;
-
-    height: 8px;
-
-    background: #145c2e;
-
-    border: 2px solid white;
-
-    border-radius: 50%;
+.hotspot {
 
     position: absolute;
 
-    z-index: 2;
-}
+    background: transparent;
 
-.elbow-h {
-
-    position: absolute;
-
-    height: 2px;
-
-    background: #145c2e;
-
-    cursor: pointer;
-}
-
-.elbow-v {
-
-    position: absolute;
-
-    width: 2px;
-
-    background: #145c2e;
-
-    cursor: pointer;
-}
-
-.label {
-
-    position: absolute;
-
-    background: white;
-
-    border: 1px solid #145c2e;
-
-    border-radius: 12px;
-
-    padding: 8px 14px;
-
-    color: #145c2e;
-
-    font-weight: 600;
-
-    font-size: 0.95rem;
+    border: none;
 
     cursor: pointer;
 
-    white-space: nowrap;
-
-    transition: 0.2s;
-
-    min-height: 40px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
+    z-index: 20;
 }
 
-.label:hover {
+.bill {
 
-    background: #145c2e;
+    left: 43%;
+    top: 24%;
 
-    color: white;
+    width: 110px;
+    height: 50px;
 }
+
+.supercilium {
+
+    left: 48%;
+    top: 4%;
+
+    width: 220px;
+    height: 55px;
+}
+
+.crest {
+
+    left: 73%;
+    top: 8%;
+
+    width: 120px;
+    height: 55px;
+}
+
+.hotspot {
+
+    background: rgba(255,0,0,.25);
+}
+
+
 
 /* ---------- Bird Area ---------- */
 

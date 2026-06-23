@@ -1498,8 +1498,8 @@ p {
 .hotspot{
     position:absolute;
     cursor:pointer;
-    background:rgba(255,0,0,.25);
-    border:1px solid red;
+    background:transparent;
+    border:none;
     z-index:20;
 }
 
@@ -1524,6 +1524,7 @@ p {
     position:relative;
     width:100%;
     max-width:950px;
+    line-height: 0;
 }
 
 .image-container img{
@@ -1536,9 +1537,9 @@ p {
 
 .info-panel {
 
-    width: 420px;
+    width: 350px;
 
-    min-width: 420px;
+    min-width: 350px;
 
     background: white;
 

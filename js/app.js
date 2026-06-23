@@ -902,44 +902,158 @@ if (suggestionForm) {
     );
 }
 
-const anatomyData = {
+const anatomyInfo = {
 
     "Bill": {
         title: "Bill",
-        description: `
-            The bill is the hard external mouthpart of a bird.
-            It is used for feeding, preening, carrying nesting material,
-            and many other tasks.
-        `,
+        description: "The bill is the hard, beak-like structure used for feeding, preening, nest building, and many other tasks. Bill shape often reflects a bird's diet and lifestyle.",
         examples: [
             "Red-billed Blue Magpie",
-            "Black-billed Thrush"
+            "Large-billed Crow"
+        ]
+    },
+
+    "Chin": {
+        title: "Chin",
+        description: "The chin is the small area immediately below the bill. Its colour and markings can help distinguish similar species.",
+        examples: [
+            "Black-chinned Yuhina",
+            "Black-chinned Babbler"
+        ]
+    },
+
+    "Lore": {
+        title: "Lore",
+        description: "The lore is the area between the eye and the base of the bill. It may be bare, feathered, or brightly coloured and is often important for identification.",
+        examples: [
+            "Yellow-lored Tit",
+            "White-lored Warbler"
+        ]
+    },
+
+    "Eye Ring": {
+        title: "Eye Ring",
+        description: "An eye ring is a ring of feathers or bare skin surrounding the eye. Its presence, colour, and thickness are useful identification features.",
+        examples: [
+            "Oriental White-eye",
+            "Indian White-eye"
+        ]
+    },
+
+    "Throat": {
+        title: "Throat",
+        description: "The throat is the feathered area below the chin and above the breast. Distinct throat patches or colours often help identify birds.",
+        examples: [
+            "White-throated Kingfisher",
+            "White-throated Fantail"
+        ]
+    },
+
+    "Breast": {
+        title: "Breast",
+        description: "The breast is the front part of the body below the throat. Breast colour, streaking, and patterns are commonly used in field identification.",
+        examples: [
+            "Chestnut-breasted Partridge",
+            "Spot-breasted Scimitar Babbler"
+        ]
+    },
+
+    "Belly": {
+        title: "Belly",
+        description: "The belly is the lower underside of a bird. Belly colour often contrasts with the breast and can be a key field mark.",
+        examples: [
+            "White-bellied Heron",
+            "White-bellied Yuhina"
+        ]
+    },
+
+    "Tarsus": {
+        title: "Tarsus",
+        description: "The tarsus is the lower leg segment between the toes and the feathered part of the leg. Its length and colour vary among species.",
+        examples: [
+            "Herons",
+            "Egrets"
+        ]
+    },
+
+    "Toe": {
+        title: "Toe",
+        description: "Birds use their toes for walking, climbing, grasping branches, and capturing prey. Toe arrangement differs among bird groups.",
+        examples: [
+            "Woodpeckers",
+            "Kingfishers"
         ]
     },
 
     "Supercilium": {
         title: "Supercilium",
-        description: `
-            The supercilium is the stripe above the eye,
-            often called the eyebrow.
-            It is one of the most useful identification features
-            in many small birds.
-        `,
+        description: "The supercilium is the stripe running above a bird's eye, often called the eyebrow. It is one of the most useful field marks for identifying many species.",
         examples: [
-            "White-browed Wagtail",
-            "White-browed Scimitar Babbler"
+            "Yellow-browed Warbler",
+            "White-browed Fantail"
         ]
     },
 
     "Crest": {
         title: "Crest",
-        description: `
-            A crest is a group of elongated feathers on top of the head.
-            It can be raised or lowered and is often important for identification.
-        `,
+        description: "A crest is a tuft or crown of feathers on the head that can be raised or lowered. It is often used for display and communication.",
         examples: [
             "Crested Serpent Eagle",
             "Greater Racket-tailed Drongo"
+        ]
+    },
+
+    "Nape": {
+        title: "Nape",
+        description: "The nape is the back of the neck. Many species have distinctive nape colours, stripes, or patches that help with identification.",
+        examples: [
+            "Black-naped Monarch",
+            "Rufous-naped Tit"
+        ]
+    },
+
+    "Wing Bars": {
+        title: "Wing Bars",
+        description: "Wing bars are contrasting bands formed by the tips of wing feathers. They are among the most useful field marks for identifying small birds.",
+        examples: [
+            "Yellow-browed Warbler",
+            "Various Flycatchers"
+        ]
+    },
+
+    "Vent": {
+        title: "Vent",
+        description: "The vent is the area surrounding the cloaca beneath the tail. Its colour can be an important identification feature in some species.",
+        examples: [
+            "Yellow-vented Warbler",
+            "Yellow-vented Bulbul"
+        ]
+    },
+
+    "Rump": {
+        title: "Rump",
+        description: "The rump is the area between the back and the tail. Bright rump colours often become visible when a bird takes flight.",
+        examples: [
+            "White-rumped Shama",
+            "White-rumped Vulture"
+        ]
+    },
+
+    "Claw": {
+        title: "Claw",
+        description: "Claws are the curved tips of the toes. Their size and shape reflect how a bird moves, hunts, perches, or grips surfaces.",
+        examples: [
+            "Owls",
+            "Eagles"
+        ]
+    },
+
+    "Tail": {
+        title: "Tail",
+        description: "The tail helps with balance, steering, braking, and display. Tail length, shape, and pattern are often important identification features.",
+        examples: [
+            "Long-tailed Shrike",
+            "Fork-tailed Drongo"
         ]
     }
 

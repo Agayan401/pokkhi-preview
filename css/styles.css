@@ -1488,6 +1488,7 @@ p {
     display: flex;
     align-items: flex-start;
     gap: 40px;
+    border: 4px solid red;
 }
 
 .hotspot{
@@ -1512,6 +1513,7 @@ p {
 
 .bird-panel {
     flex: 0 0 820px;
+    border: 4px solid blue;
 }
 
 .image-container{
@@ -1541,6 +1543,7 @@ p {
 
     position: sticky;
     top: 180px;
+    border: 4px solid green;
 }
 
 .info-panel h2 {

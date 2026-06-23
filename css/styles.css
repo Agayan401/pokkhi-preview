@@ -1515,6 +1515,7 @@ p {
 }
 
 .image-container {
+    margin-top: 20px;
     position: relative;
     width: 820px;
     border: 1px solid #d6e4d8;

@@ -1530,15 +1530,14 @@ p {
 /* ---------- Information Panel ---------- */
 
 .info-panel {
-
-    width: 300px;
-    min-width: 300px;
+    width: 320px;
+    min-width: 320px;
 
     background: white;
     border-radius: 24px;
     padding: 24px;
 
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 24px rgba(0,0,0,.08);
 
     position: sticky;
     top: 180px;

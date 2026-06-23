@@ -74,9 +74,15 @@ birds.sort((a, b) =>
 filteredBirds = [...birds];
 
 updateStatistics();
-renderBirdOfDay();
-renderBirds(filteredBirds);
-updateResultCount();
+
+if (document.getElementById("birdOfDay")) {
+    renderBirdOfDay();
+}
+
+if (document.getElementById("birdGrid")) {
+    renderBirds(filteredBirds);
+    updateResultCount();
+}
 
     } catch (error) {
 
@@ -88,6 +94,12 @@ updateResultCount();
 }
 
 function updateStatistics() {
+
+    if (
+        !document.getElementById("speciesCount")
+    ) {
+        return;
+    }
 
     const speciesCount =
         birds.length;
@@ -985,4 +997,9 @@ hotspots.forEach(spot => {
     );
 
 });
+if (document.getElementById("birdGrid")) {
+
+    loadBirds();
+
+}
 loadBirds();

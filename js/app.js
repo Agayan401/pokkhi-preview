@@ -1092,25 +1092,20 @@ hotspots.forEach(spot => {
     const part =
         spot.dataset.part;
 
+    spot.addEventListener(
+        "click",
+        () => {
 
+            document
+                .querySelectorAll(".hotspot")
+                .forEach(h =>
+                    h.classList.remove("active")
+                );
 
-spot.addEventListener(
-    "click",
-    () => {
+            spot.classList.add("active");
 
-        document
-            .querySelectorAll(".hotspot")
-            .forEach(h =>
-                h.classList.remove("active")
-            );
+            updateInfoPanel(part);
+        }
+    );
 
-        spot.classList.add("active");
-
-        updateInfoPanel(part);
-    }
-);
-if (document.getElementById("birdGrid")) {
-
-    loadBirds();
-
-}
+});

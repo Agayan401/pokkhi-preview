@@ -1521,8 +1521,7 @@ p {
 
 .image-container{
     position:relative;
-    width:100%;
-    max-width:950px;
+    width:820px;
     margin-left:-80px;
     line-height:0;
 }

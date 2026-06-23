@@ -1002,4 +1002,3 @@ if (document.getElementById("birdGrid")) {
     loadBirds();
 
 }
-loadBirds();

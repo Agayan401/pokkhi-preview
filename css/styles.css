@@ -1486,13 +1486,13 @@ p {
 
 .anatomy-layout {
 
-    display:grid;
+    display:flex;
 
-    grid-template-columns: minmax(0,1fr) 320px;
+    align-items:flex-start;
 
-    gap:20px;
+    justify-content:space-between;
 
-    align-items:start;
+    gap:40px;
 }
 
 .hotspot{
@@ -1523,7 +1523,8 @@ p {
 .image-container{
     position:relative;
     width:100%;
-    max-width:950px;
+    max-width:1100px;
+    margin-left:-80px;
     line-height: 0;
 }
 

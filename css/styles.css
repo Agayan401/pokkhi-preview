@@ -1500,6 +1500,7 @@ p {
 
 .hotspot:hover{
     background: rgba(20,92,46,.15);
+    border: 1px dashed rgba(20,92,46,.4);
     border-radius: 10px;
 }
 

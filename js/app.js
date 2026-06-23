@@ -602,19 +602,27 @@ directorySearchInput.addEventListener(
 );
 }
 
-searchInput.addEventListener(
-    "keydown",
-    event => {
+if (searchInput) {
 
-        if (event.key === "Enter") {
+    searchInput.addEventListener(
+        "keydown",
+        event => {
 
-            suggestionsBox.style.display =
-                "none";
+            if (event.key === "Enter") {
 
-            performSearch();
+                if (suggestionsBox) {
+
+                    suggestionsBox.style.display =
+                        "none";
+
+                }
+
+                performSearch();
+            }
         }
-    }
-);
+    );
+
+}
 
 if (statusFilter) {
 
@@ -639,7 +647,11 @@ if (resetSearchBtn) {
 
             updateResultCount();
 
-            searchInput.value = "";
+            if (searchInput) {
+
+    searchInput.value = "";
+
+}
 
             if (directorySearchInput) {
 
@@ -746,7 +758,12 @@ document.addEventListener(
             )
         ) {
 
-            suggestionsBox.style.display = "none";
+            if (suggestionsBox) {
+
+    suggestionsBox.style.display =
+        "none";
+
+}
 
 if (directorySuggestionsBox) {
 

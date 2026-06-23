@@ -1537,7 +1537,7 @@ p {
     width: 100%;
     min-width: 0%;
 
-    background: white;
+    background: red !important;
     border-radius: 24px;
     padding: 24px;
 

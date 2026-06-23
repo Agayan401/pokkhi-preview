@@ -1094,15 +1094,21 @@ hotspots.forEach(spot => {
 
 
 
-    spot.addEventListener(
-        "click",
-        () => {
+spot.addEventListener(
+    "click",
+    () => {
 
-            updateInfoPanel(part);
-        }
-    );
+        document
+            .querySelectorAll(".hotspot")
+            .forEach(h =>
+                h.classList.remove("active")
+            );
 
-});
+        spot.classList.add("active");
+
+        updateInfoPanel(part);
+    }
+);
 if (document.getElementById("birdGrid")) {
 
     loadBirds();

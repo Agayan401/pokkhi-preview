@@ -855,128 +855,99 @@ if (suggestionForm) {
     );
 }
 
-function showPart(part) {
+const anatomyData = {
+
+    "Bill": {
+        title: "Bill",
+        description: `
+            The bill is the hard external mouthpart of a bird.
+            It is used for feeding, preening, carrying nesting material,
+            and many other tasks.
+        `,
+        examples: [
+            "Red-billed Blue Magpie",
+            "Black-billed Thrush"
+        ]
+    },
+
+    "Supercilium": {
+        title: "Supercilium",
+        description: `
+            The supercilium is the stripe above the eye,
+            often called the eyebrow.
+            It is one of the most useful identification features
+            in many small birds.
+        `,
+        examples: [
+            "White-browed Wagtail",
+            "White-browed Scimitar Babbler"
+        ]
+    },
+
+    "Crest": {
+        title: "Crest",
+        description: `
+            A crest is a group of elongated feathers on top of the head.
+            It can be raised or lowered and is often important for identification.
+        `,
+        examples: [
+            "Crested Serpent Eagle",
+            "Greater Racket-tailed Drongo"
+        ]
+    }
+
+};
+function updateInfoPanel(part) {
 
     const panel =
-        document.getElementById(
-            "infoPanel"
-        );
+        document.getElementById("infoPanel");
 
-    if (!panel) return;
+    const data =
+        anatomyData[part];
 
-    switch (part) {
+    if (!data) return;
 
-        case "bill":
+    panel.innerHTML = `
+        <h2>${data.title}</h2>
 
-            panel.innerHTML = `
-                <h2>Bill</h2>
+        <p>${data.description}</p>
 
-                <p>
-                    The bill is the hard external mouthpart of a bird.
-                    It is often called a beak.
-                </p>
+        <h3>Examples in Pokhi</h3>
 
-                <p>
-                    Bill shape and size are important clues for identification.
-                </p>
-
-                <h3>Examples in Pokhi</h3>
-
-                <ul>
-                    <li>Red-billed Blue Magpie</li>
-                    <li>Black-billed Thrush</li>
-                </ul>
-            `;
-            break;
-
-        case "crown":
-
-            panel.innerHTML = `
-                <h2>Crown</h2>
-
-                <p>
-                    The crown is the top of a bird's head.
-                </p>
-
-                <p>
-                    Many species are identified by crown colour or markings.
-                </p>
-
-                <h3>Examples in Pokhi</h3>
-
-                <ul>
-                    <li>Yellow-crowned Woodpecker</li>
-                    <li>Grey-crowned Prinia</li>
-                </ul>
-            `;
-            break;
-
-        case "supercilium":
-
-            panel.innerHTML = `
-                <h2>Supercilium</h2>
-
-                <p>
-                    The supercilium is the stripe above the eye, often called the eyebrow.
-                </p>
-
-                <p>
-                    It is one of the most useful features for identifying small birds.
-                </p>
-
-                <h3>Examples in Pokhi</h3>
-
-                <ul>
-                    <li>White-browed Wagtail</li>
-                    <li>White-browed Scimitar Babbler</li>
-                </ul>
-            `;
-            break;
-
-        case "throat":
-
-            panel.innerHTML = `
-                <h2>Throat</h2>
-
-                <p>
-                    The throat is the area below the bill and above the breast.
-                </p>
-
-                <p>
-                    Many birds are named after throat colour or patterns.
-                </p>
-
-                <h3>Examples in Pokhi</h3>
-
-                <ul>
-                    <li>Black-throated Tit</li>
-                    <li>White-throated Fantail</li>
-                </ul>
-            `;
-            break;
-
-        case "wingbar":
-
-            panel.innerHTML = `
-                <h2>Wing Bar</h2>
-
-                <p>
-                    Wing bars are contrasting bands formed by feather tips across the wing.
-                </p>
-
-                <p>
-                    They are important field marks for identifying many species.
-                </p>
-
-                <h3>Examples in Pokhi</h3>
-
-                <ul>
-                    <li>Yellow-browed Warbler</li>
-                    <li>Greenish Warbler</li>
-                </ul>
-            `;
-            break;
-    }
+        <ul>
+            ${data.examples
+                .map(
+                    bird => `<li>${bird}</li>`
+                )
+                .join("")}
+        </ul>
+    `;
 }
+const hotspots =
+    document.querySelectorAll(".hotspot");
 
+hotspots.forEach(spot => {
+
+    const part =
+        spot.dataset.part;
+
+    spot.addEventListener(
+        "mouseenter",
+        () => {
+
+            if (window.innerWidth > 768) {
+                updateInfoPanel(part);
+            }
+        }
+    );
+
+    spot.addEventListener(
+        "click",
+        () => {
+
+            updateInfoPanel(part);
+        }
+    );
+
+});
 loadBirds();

@@ -1539,8 +1539,7 @@ p {
 
     box-shadow: 0 8px 24px rgba(0,0,0,.08);
 
-    position: sticky;
-    top: 180px;
+    position: relative;
 }
 
 .info-panel h2 {

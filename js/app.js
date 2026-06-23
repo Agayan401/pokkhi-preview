@@ -542,30 +542,34 @@ if (directorySearchInput) {
 }
 }
 
-searchInput.addEventListener(
-    "input",
-    filterBirds
-);
+if (searchInput) {
 
-searchInput.addEventListener(
-    "focus",
-    () => {
+    searchInput.addEventListener(
+        "input",
+        filterBirds
+    );
 
-        if (window.innerWidth <= 768) {
+    searchInput.addEventListener(
+        "focus",
+        () => {
 
-            setTimeout(() => {
+            if (window.innerWidth <= 768) {
 
-                searchInput.scrollIntoView({
-                    behavior: "smooth",
-                    block: "center"
-                });
+                setTimeout(() => {
 
-            }, 300);
+                    searchInput.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center"
+                    });
+
+                }, 300);
+
+            }
 
         }
+    );
 
-    }
-);
+}
 
 if (directorySearchInput) {
 
@@ -612,10 +616,14 @@ searchInput.addEventListener(
     }
 );
 
-statusFilter.addEventListener(
-    "change",
-    filterBirds
-);
+if (statusFilter) {
+
+    statusFilter.addEventListener(
+        "change",
+        filterBirds
+    );
+
+}
 
 if (resetSearchBtn) {
 
@@ -691,9 +699,14 @@ function openModal(bird) {
         "flex";
 }
 
-document
-    .getElementById("closeModal")
-    .addEventListener(
+const closeModalBtn =
+    document.getElementById(
+        "closeModal"
+    );
+
+if (closeModalBtn) {
+
+    closeModalBtn.addEventListener(
         "click",
         () => {
 
@@ -703,6 +716,8 @@ document
                 "none";
         }
     );
+
+}
 
 window.addEventListener(
     "click",
@@ -742,18 +757,21 @@ if (directorySuggestionsBox) {
     }
 );
 
-loadMoreBtn.addEventListener(
-    "click",
-    () => {
+if (loadMoreBtn) {
 
-        visibleBirds +=
-            birdsPerPage;
+    loadMoreBtn.addEventListener(
+        "click",
+        () => {
 
-        renderBirds(
-            filteredBirds
-        );
-    }
-);
+            visibleBirds += birdsPerPage;
+
+            renderBirds(
+                filteredBirds
+            );
+        }
+    );
+
+}
 const suggestionForm =
     document.getElementById(
         "birdSuggestionForm"

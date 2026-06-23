@@ -1494,47 +1494,16 @@ p {
     gap: 40px;
 }
 
-.hotspot {
-
-    position: absolute;
-
-    background: transparent;
-
-    border: none;
-
-    cursor: pointer;
-
-    z-index: 20;
+.hotspot{
+    position:absolute;
+    cursor:pointer;
+    background:transparent;
+    z-index:20;
 }
 
-.bill {
 
-    left: 37%;
-    top: 33%;
-    width: 120px;
-    height: 55px;
-}
 
-.supercilium {
 
-    left: 41%;
-    top: 18%;
-    width: 190px;
-    height: 55px;
-}
-
-.crest {
-
-    left: 61%;
-    top: 22%;
-    width: 120px;
-    height: 55px;
-}
-
-.hotspot {
-    background: rgba(255,0,0,.15);
-    border: 1px dashed red;
-}
 
 
 
@@ -1579,6 +1548,16 @@ p {
     display: block;
 }
 
+.image-container{
+    position:relative;
+    width:100%;
+    max-width:950px;
+}
+
+.image-container img{
+    width:100%;
+    display:block;
+}
 
 
 /* ---------- Information Panel ---------- */

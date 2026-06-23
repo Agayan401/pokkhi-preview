@@ -1064,7 +1064,7 @@ function updateInfoPanel(part) {
         document.getElementById("infoPanel");
 
     const data =
-        anatomyData[part];
+        anatomyInfo[part];
 
     if (!data) return;
 
@@ -1092,15 +1092,7 @@ hotspots.forEach(spot => {
     const part =
         spot.dataset.part;
 
-    spot.addEventListener(
-        "mouseenter",
-        () => {
 
-            if (window.innerWidth > 768) {
-                updateInfoPanel(part);
-            }
-        }
-    );
 
     spot.addEventListener(
         "click",

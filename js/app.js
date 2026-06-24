@@ -1096,11 +1096,28 @@ hotspots.forEach(spot => {
         "click",
         () => {
 
-            document
-                .querySelectorAll(".hotspot")
-                .forEach(h =>
-                    h.classList.remove("active")
-                );
+const labels =
+    document.querySelectorAll(".anatomy-label");
+
+labels.forEach(label => {
+
+    label.addEventListener(
+        "click",
+        () => {
+
+            labels.forEach(l =>
+                l.classList.remove("active")
+            );
+
+            label.classList.add("active");
+
+            updateInfoPanel(
+                label.dataset.part
+            );
+        }
+    );
+
+});
 
             spot.classList.add("active");
 

@@ -1085,7 +1085,7 @@ function updateInfoPanel(part) {
     `;
 }
 const hotspots =
-    document.querySelectorAll(".hotspot");
+    document.querySelectorAll(".anatomy-label");
 
 hotspots.forEach(spot => {
 

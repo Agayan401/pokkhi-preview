@@ -1574,7 +1574,7 @@ p {
 
 
 .image-container img {
-    transform: translateX(-60px);
+    transform: translateX(-100px);
     transform: translateY(20px);
     width:100%;
     display:block;

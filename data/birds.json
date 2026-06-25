@@ -2056,12 +2056,12 @@
     "image": "images/birds/painted-stork.avif"
   },
   {
-    "id": "paddyfield-warble",
-    "name": "Paddyfield Warble",
+    "id": "paddyfield-warbler",
+    "name": "Paddyfield Warbler",
     "assameseName": "চট্‌চটী",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Common winter visitor foraging low in dense reeds, marshy grasses, and agricultural edges. The size of the bird is 12-13 cm. Small, pale rufous-brown warbler with a prominent whitish supercilium and short bill. Dimorphism: Monomorphic; sexes identical in their subtle non-breeding plumage.",
-    "image": "images/birds/paddyfield-warble.avif"
+    "image": "images/birds/paddyfield-warbler.avif"
   },
   {
     "id": "peregrine-falcon",

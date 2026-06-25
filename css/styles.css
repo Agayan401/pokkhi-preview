@@ -1493,9 +1493,26 @@ p {
     margin-bottom: .8rem;
 }
 
+.anatomy-header h1::after {
+
+    content: "";
+
+    display: block;
+
+    width: 80px;
+
+    height: 4px;
+
+    background: #145c2e;
+
+    border-radius: 999px;
+
+    margin: 14px auto 0;
+}
+
 .anatomy-header p {
 
-    max-width: 760px;
+    max-width: 900px;
 
     margin: 0 auto;
 

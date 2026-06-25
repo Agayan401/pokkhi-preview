@@ -1486,7 +1486,7 @@ p {
 .anatomy-layout {
     display: flex;
     align-items: flex-start;
-    gap: 25px;
+    gap: 20px;
 }
 
 .anatomy-label {
@@ -1614,7 +1614,7 @@ p {
 /* ---------- Information Panel ---------- */
 
 .info-panel {
-    flex: 0 0 5650px;
+    flex: 0 0 565px;
     position: sticky;
     top: 0px;
    

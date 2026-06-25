@@ -1534,11 +1534,9 @@ p {
     margin:20px 0;
 }
 
-.anatomy-example img{
+.anatomy-example img {
 
     width:100%;
-
-    max-width:340px;
 
     border-radius:12px;
 
@@ -1597,7 +1595,7 @@ p {
 
 .image-container {
     position: relative;
-    width: 700px;
+    width: 760px;
 
     border-left: 6px solid rgba(33, 94, 55, 0.35);
     border-right: 6px solid rgba(33, 94, 55, 0.35);
@@ -1616,7 +1614,7 @@ p {
 /* ---------- Information Panel ---------- */
 
 .info-panel {
-    flex: 0 0 380px;
+    flex: 0 0 430px;
     position: sticky;
     top: 70px;
 
@@ -1624,6 +1622,8 @@ p {
     border-radius: 24px;
     padding: 30px;
     box-shadow: 0 8px 24px rgba(0,0,0,.08);
+
+    font-size: 1.08rem;
 }
 
 .info-panel h2 {
@@ -1631,6 +1631,8 @@ p {
     color: #145c2e;
 
     margin-bottom: 1rem;
+
+    font-size: 2.2rem;
 }
 
 .info-panel ul {
@@ -1652,7 +1654,7 @@ p {
 
     justify-content:space-between;
 
-    gap:40px;
+    gap:36px;
 
     flex-wrap: nowrap;   /* ADD THIS */
 

@@ -334,13 +334,17 @@ function renderBirds(birdList) {
             "bird-card";
 
         card.innerHTML = `
+        <div class="bird-image">
+
             <img
                 src="${bird.image}"
                 alt="${bird.name}"
                 onerror="this.src='images/placeholder.jpg'"
             >
 
-            <div class="bird-info">
+        </div>
+
+        <div class="bird-info">
 
                 <h3>${bird.name}</h3>
 

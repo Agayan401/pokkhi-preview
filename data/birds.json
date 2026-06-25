@@ -2632,12 +2632,12 @@
     "image": "images/birds/sarus-crane.avif"
   },
   {
-    "id": "short-toed-eagle",
-    "name": "Short-toed Eagle",
+    "id": "short-toed-snack-eagle",
+    "name": "Short-toed Snack Eagle",
     "assameseName": "সাপখোৱা ঈগল",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Resident and local migrant in open scrub, dry hillsides, and lightly wooded plains. The size of the bird is 62-73 cm. Large raptor with a distinct owl-like head, pale underparts, and unfeathered legs for hunting snakes. Dimorphism: Monomorphic; sexes are virtually identical in their pale, barred plumage.",
-    "image": "images/birds/short-toed-eagle.avif"
+    "image": "images/birds/short-toed-snack-eagle.avif"
   },
   {
     "id": "short-eared-owl",

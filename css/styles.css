@@ -1803,19 +1803,19 @@ p {
     .anatomy-container{
 
     overflow-x:visible;
-}
+    }
     .anatomy-header h1{
 
     font-size:1.8rem;
-}
+    }
     .anatomy-header p{
 
     font-size:1rem;
 
     line-height:1.6;
-}
+    }
     
-.bird-panel{
+    .bird-panel{
 
     flex:none;
 
@@ -1824,9 +1824,9 @@ p {
     min-width:0;
 
     max-width:none;
-}
+    }
 
-.image-container{
+    .image-container{
 
     width:100%;
 
@@ -1838,11 +1838,11 @@ p {
 
     border-radius:18px;
 }
-    .anatomy-label{
+.anatomy-label{
 
-    font-size:.72rem;
+    transform: translate(-50%, -50%) scale(0.75);
 
-    padding:3px 8px;
+    transform-origin: center;
 }
 
     .hotspot{

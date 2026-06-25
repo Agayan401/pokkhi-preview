@@ -1253,39 +1253,21 @@ function updateInfoPanel(part) {
 
     `;
 }
-const hotspots =
-    document.querySelectorAll(".anatomy-label");
-
-hotspots.forEach(spot => {
-
-    const part =
-        spot.dataset.part;
-
-    spot.addEventListener(
-        "click",
-        () => {
-
-const labels =
-    document.querySelectorAll(".anatomy-label");
+const labels = document.querySelectorAll(".anatomy-label");
 
 labels.forEach(label => {
 
-    label.addEventListener(
-        "click",
-        () => {
+    label.addEventListener("click", () => {
 
-            labels.forEach(l =>
-                l.classList.remove("active")
-            );
+        labels.forEach(l =>
+            l.classList.remove("active")
+        );
 
-            label.classList.add("active");
+        label.classList.add("active");
 
-            updateInfoPanel(
-                label.dataset.part
-            );
+        updateInfoPanel(label.dataset.part);
 
-        }
-    );
+    });
 
 });
 

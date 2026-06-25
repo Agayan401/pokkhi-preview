@@ -1835,12 +1835,14 @@ p {
 
     border-radius:18px;
 }
-.anatomy-label{
+    .anatomy-label{
 
-    transform: translate(-50%, -50%) scale(0.50);
+        font-size:0.78rem;
 
-    transform-origin: center;
-}
+        padding:5px 10px;
+
+        border-radius:8px;
+    }
 
     .hotspot{
 
@@ -1870,8 +1872,13 @@ p {
 }
 @media (max-width: 480px) {
 
-    .anatomy-label {
-        transform: translate(-50%, -50%) scale(0.65);
+    .anatomy-label{
+
+        font-size:0.65rem;
+
+        padding:4px 8px;
+
+        border-width:1.5px;
     }
 
 }

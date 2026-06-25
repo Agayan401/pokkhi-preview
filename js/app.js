@@ -1271,11 +1271,6 @@ labels.forEach(label => {
 
 });
 
-            spot.classList.add("active");
-
-            updateInfoPanel(part);
-        }
-    );
 
 });
 document.addEventListener("DOMContentLoaded", () => {

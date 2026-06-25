@@ -904,158 +904,310 @@ if (suggestionForm) {
 
 const anatomyInfo = {
 
-    "Bill": {
-        title: "Bill",
-        description: "The bill is the hard, beak-like structure used for feeding, preening, nest building, and many other tasks. Bill shape often reflects a bird's diet and lifestyle.",
-        examples: [
-            "Red-billed Blue Magpie",
-            "Large-billed Crow"
-        ]
-    },
+"Bill": {
+    title: "Bill",
 
-    "Chin": {
-        title: "Chin",
-        description: "The chin is the small area immediately below the bill. Its colour and markings can help distinguish similar species.",
-        examples: [
-            "Black-chinned Yuhina",
-            "Black-chinned Babbler"
-        ]
-    },
+    description:
+        "The bill is the hard, beak-like structure used for feeding, preening, nest building and many other tasks. Bill shape often reflects a bird's diet and lifestyle.",
 
-    "Lore": {
-        title: "Lore",
-        description: "The lore is the area between the eye and the base of the bill. It may be bare, feathered, or brightly coloured and is often important for identification.",
-        examples: [
-            "Yellow-lored Tit",
-            "White-lored Warbler"
-        ]
-    },
+    image:
+        "images/bill.webp",
 
-    "Eye Ring": {
-        title: "Eye Ring",
-        description: "An eye ring is a ring of feathers or bare skin surrounding the eye. Its presence, colour, and thickness are useful identification features.",
-        examples: [
-            "Oriental White-eye",
-            "Indian White-eye"
-        ]
-    },
+    caption:
+        "Bill of a Stork-billed Kingfisher.",
 
-    "Throat": {
-        title: "Throat",
-        description: "The throat is the feathered area below the chin and above the breast. Distinct throat patches or colours often help identify birds.",
-        examples: [
-            "White-throated Kingfisher",
-            "White-throated Fantail"
-        ]
-    },
+    examples: [
+        "Stork-billed Kingfisher",
+        "Large-billed Crow"
+    ]
+}
+"Chin": {
+    title: "Chin",
 
-    "Breast": {
-        title: "Breast",
-        description: "The breast is the front part of the body below the throat. Breast colour, streaking, and patterns are commonly used in field identification.",
-        examples: [
-            "Chestnut-breasted Partridge",
-            "Spot-breasted Scimitar Babbler"
-        ]
-    },
+    description:
+        "The chin is the small area immediately below the bill. Its colour and markings can help distinguish similar species.",
 
-    "Belly": {
-        title: "Belly",
-        description: "The belly is the lower underside of a bird. Belly colour often contrasts with the breast and can be a key field mark.",
-        examples: [
-            "White-bellied Heron",
-            "White-bellied Yuhina"
-        ]
-    },
+    image:
+        "images/chin.webp",
 
-    "Tarsus": {
-        title: "Tarsus",
-        description: "The tarsus is the lower leg segment between the toes and the feathered part of the leg. Its length and colour vary among species.",
-        examples: [
-            "Herons",
-            "Egrets"
-        ]
-    },
+    caption:
+        "Chin of a Pale-chinned Flycatcher.",
 
-    "Toe": {
-        title: "Toe",
-        description: "Birds use their toes for walking, climbing, grasping branches, and capturing prey. Toe arrangement differs among bird groups.",
-        examples: [
-            "Woodpeckers",
-            "Kingfishers"
-        ]
-    },
+    examples: [
+        "Pale-chinned Flycatcher",
+        "Gray-chinned Minivet"
+    ]
+}
 
-    "Supercilium": {
-        title: "Supercilium",
-        description: "The supercilium is the stripe running above a bird's eye, often called the eyebrow. It is one of the most useful field marks for identifying many species.",
-        examples: [
-            "Yellow-browed Warbler",
-            "White-browed Fantail"
-        ]
-    },
+"Lore": {
+    title: "Lore",
 
-    "Crest": {
-        title: "Crest",
-        description: "A crest is a tuft or crown of feathers on the head that can be raised or lowered. It is often used for display and communication.",
-        examples: [
-            "Crested Serpent Eagle",
-            "Greater Racket-tailed Drongo"
-        ]
-    },
+    description:
+        "The lore is the area between the eye and the base of the bill. It may be bare, feathered, or brightly coloured and is often important for identification.",
 
-    "Nape": {
-        title: "Nape",
-        description: "The nape is the back of the neck. Many species have distinctive nape colours, stripes, or patches that help with identification.",
-        examples: [
-            "Black-naped Monarch",
-            "Rufous-naped Tit"
-        ]
-    },
+    image:
+        "images/lore.webp",
 
-    "Wing Bars": {
-        title: "Wing Bars",
-        description: "Wing bars are contrasting bands formed by the tips of wing feathers. They are among the most useful field marks for identifying small birds.",
-        examples: [
-            "Yellow-browed Warbler",
-            "Various Flycatchers"
-        ]
-    },
+    caption:
+        "Lore of a Grey-lored Broadbill.",
 
-    "Vent": {
-        title: "Vent",
-        description: "The vent is the area surrounding the cloaca beneath the tail. Its colour can be an important identification feature in some species.",
-        examples: [
-            "Yellow-vented Warbler",
-            "Yellow-vented Bulbul"
-        ]
-    },
+    examples: [
+        "Grey-lored Broadbill",
+        "Himalayan Black-lored Tit"
+    ]
+}
 
-    "Rump": {
-        title: "Rump",
-        description: "The rump is the area between the back and the tail. Bright rump colours often become visible when a bird takes flight.",
-        examples: [
-            "White-rumped Shama",
-            "White-rumped Vulture"
-        ]
-    },
+"Eye Ring": {
+    title: "Eye Ring",
 
-    "Claw": {
-        title: "Claw",
-        description: "Claws are the curved tips of the toes. Their size and shape reflect how a bird moves, hunts, perches, or grips surfaces.",
-        examples: [
-            "Owls",
-            "Eagles"
-        ]
-    },
+    description:
+        "An eye ring is a ring of feathers or bare skin surrounding the eye. Its presence, colour, and thickness are useful identification features.",
 
-    "Tail": {
-        title: "Tail",
-        description: "The tail helps with balance, steering, braking, and display. Tail length, shape, and pattern are often important identification features.",
-        examples: [
-            "Long-tailed Shrike",
-            "Fork-tailed Drongo"
-        ]
-    }
+    image:
+        "images/eye_ring.webp",
+
+    caption:
+        "Eye ring of an Indian White Eye.",
+
+    examples: [
+        "Indian White Eye",
+        "Yellow-eyed Babbler"
+    ]
+}
+
+"Throat": {
+    title: "Throat",
+
+    description:
+        "The throat is the feathered area below the chin and above the breast. Distinct throat patches or colours often help identify birds.",
+
+    image:
+        "images/throat.webp",
+
+    caption:
+        "Throat of a White-throated Kingfisher.",
+
+    examples: [
+        "White-throated Kingfisher",
+        "White-throated Fantail"
+    ]
+}
+
+"Breast": {
+    title: "Breast",
+
+    description:
+        "The breast is the front part of the body below the throat. Breast colour, streaking and patterns are commonly used in field identification.",
+
+    image:
+        "images/breast.webp",
+
+    caption:
+        "Breast of a White-breasted Waterhen.",
+
+    examples: [
+        "White-breasted Waterhen",
+        "Yellow-breasted Bunting"
+    ]
+}
+
+"Belly": {
+    title: "Belly",
+
+    description:
+        "The belly is the lower underside of a bird. Belly colour often contrasts with the breast and can be a key field mark.",
+
+    image:
+        "images/belly.webp",
+
+    caption:
+        "Belly of a Yellow-bellied Prinia.",
+
+    examples: [
+        "Yellow-bellied Prinia",
+        "Spot-bellied Eagle-Owl"
+    ]
+}
+
+"Tarsus": {
+    title: "Tarsus",
+
+    description:
+        "The tarsus is the lower leg segment between the toes and the feathered part of the leg. Its length and colour vary among species.",
+
+    image:
+        "images/tarsus.webp",
+
+    caption:
+        "Tarsus of a Purple Heron.",
+
+    examples: [
+        "Herons",
+        "Egrets"
+    ]
+}
+
+"Toe": {
+    title: "Toe",
+
+    description:
+        "Birds use their toes for walking, climbing, grasping branches and capturing prey. Toe arrangement differs among bird groups.",
+
+    image:
+        "images/toe.webp",
+
+    caption:
+        "Toes of a Short-toed Snake-Eagle.",
+
+    examples: [
+        "Short-toed Snake-Eagle",
+        "Greater Short-toed Lark"
+    ]
+}
+
+"Supercilium": {
+    title: "Supercilium",
+
+    description:
+        "The supercilium/brow is the stripe running above a bird's eye, often called the eyebrow. It is one of the most useful field marks for identifying many species.",
+
+    image:
+        "images/supercilium.webp",
+
+    caption:
+        "Supercilium of a Snowy-browed Flycatcher.",
+
+    examples: [
+        "Snowy-browed Flycatcher",
+        "Yellow-browed Warbler"
+    ]
+}
+
+"Crest": {
+    title: "Crest",
+
+    description:
+        "A crest is a tuft or crown of feathers on the head that can be raised or lowered. It is often used for display and communication.",
+
+    image:
+        "images/crest.webp",
+
+    caption:
+        "Crest of a Black-crested Bulbul.",
+
+    examples: [
+        "Black-crested Bulbul",
+        "Crested Serpent Eagle"
+    ]
+}
+
+"Nape": {
+    title: "Nape",
+
+    description:
+        "The nape is the back of the neck. Many species have distinctive nape colours, stripes, or patches that help with identification.",
+
+    image:
+        "images/nape.webp",
+
+    caption:
+        "Nape of a Black-naped Monarch.",
+
+    examples: [
+        "Black-naped Monarch",
+        "Black-naped Pitta"
+    ]
+}
+
+"Wing Bars": {
+    title: "Wing Bars",
+
+    description:
+        "Wing bars are contrasting bands formed by the tips of wing feathers. They are among the most useful field marks for identifying small birds.",
+
+    image:
+        "images/wing_bar.webp",
+
+    caption:
+        "Wing bar of a Chestnut-crowned Warbler.",
+
+    examples: [
+        "Chestnut-crowned Warbler",
+        "Blyth's Leaf Warbler"
+    ]
+}
+
+"Vent": {
+    title: "Vent",
+
+    description:
+        "The vent is the area surrounding the cloaca beneath the tail. Its colour can be an important identification feature in some species.",
+
+    image:
+        "images/vent.webp",
+
+    caption:
+        "Vent of a Red-vented Bulbul.",
+
+    examples: [
+        "Red-vented Bulbul",
+        "Yellow-vented Warbler"
+    ]
+}
+
+"Rump": {
+    title: "Rump",
+
+    description:
+        "The rump is the area between the back and the tail. Bright rump colours often become visible when a bird takes flight.",
+
+    image:
+        "images/rump.webp",
+
+    caption:
+        "Rump of a White-rumped Shama.",
+
+    examples: [
+        "White-rumped Shama",
+        "White-rumped Vulture"
+    ]
+}
+
+"Claw": {
+    title: "Claw",
+
+    description:
+        "Claws are the curved tips of the toes. Their size and shape reflect how a bird moves, hunts, perches, or grips surfaces.",
+
+    image:
+        "images/claw.webp",
+
+    caption:
+        "Claws of an Asian Barred Owlet.",
+
+    examples: [
+        "Owls",
+        "Eagles"
+    ]
+}
+
+"Tail": {
+    title: "Tail",
+
+    description:
+        "The tail helps with balance, steering, braking, and display. Tail length, shape, and pattern are often important identification features.",
+
+    image:
+        "images/tail.webp",
+
+    caption:
+        "Tail of a Long-tailed Shrike.",
+
+    examples: [
+        "Long-tailed Shrike",
+        "Fork-tailed Drongo"
+    ]
+}
 
 };
 function updateInfoPanel(part) {

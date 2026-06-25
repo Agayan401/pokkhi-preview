@@ -1346,7 +1346,7 @@
   {
     "id": "grey-backed-shrike",
     "name": "Grey-backed Shrike",
-    "assameseName": "কচাই চৰাই",
+    "assameseName": "কচাই চৰাই / বাঘ চৰাই",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Widespread; some are winter visitors (Oct-April). The size of the bird is 24-26 cm. Hooked carnivorous bill, distinct black eye-mask. Dimorphism: Males have starker, darker masks; females often show faint scalloping on underparts.",
     "image": "images/birds/grey-backed-shrike.avif"
@@ -1438,14 +1438,6 @@
     "iucnStatus": "LC",
     "description": "Assam Seasonality: A rare Winter Migrant on inland water bodies. The size of the bird is 140-180 cm. Distinctive local avian species with regional field marks. Dimorphism: Sexes vary; males frequently show brighter plumage during the spring breeding cycle.",
     "image": "images/birds/great-white-pelican.avif"
-  },
-  {
-    "id": "grey-backed-shrike",
-    "name": "Grey-backed Shrike",
-    "assameseName": "বাঘ চৰাই",
-    "iucnStatus": "LC",
-    "description": "Assam Seasonality: Widespread; some are winter visitors (Oct-April). The size of the bird is 21-25 cm. Hooked carnivorous bill, distinct black eye-mask. Dimorphism: Males have starker, darker masks; females often show faint scalloping on underparts.",
-    "image": "images/birds/grey-backed-shrike.avif"
   },
   {
     "id": "hair-crested-drongo",

@@ -1840,7 +1840,7 @@ p {
 }
 .anatomy-label{
 
-    transform: translate(-50%, -50%) scale(0.5);
+    transform: translate(-50%, -50%) scale(0.75);
 
     transform-origin: center;
 }

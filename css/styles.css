@@ -763,22 +763,10 @@ p {
 }
 
 .bird-card img {
-
     width: 100%;
-
-    aspect-ratio: 4 / 3;
-
-    height: auto;
-
+    height: 300px;
     object-fit: cover;
-
     display: block;
-
-    image-rendering: auto;
-
-    backface-visibility: hidden;
-
-    transform: translateZ(0);
 }
 
 .bird-info {
@@ -1357,14 +1345,6 @@ p {
     }
 
     .featured-image-wrapper img {
-
-        height: 260px;
-    }
-
-
-    }
-
-    .modal-content img {
 
         height: 260px;
     }

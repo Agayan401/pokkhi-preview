@@ -1617,6 +1617,7 @@ p {
     flex: 0 0 430px;
     position: sticky;
     top: 70px;
+    margin-top: -18px;
 
     background: white;
     border-radius: 24px;

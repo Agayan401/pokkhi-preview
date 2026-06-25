@@ -1283,6 +1283,7 @@ labels.forEach(label => {
             updateInfoPanel(
                 label.dataset.part
             );
+
         }
     );
 

@@ -920,7 +920,8 @@ const anatomyInfo = {
         "Stork-billed Kingfisher",
         "Large-billed Crow"
     ]
-}
+},
+    
 "Chin": {
     title: "Chin",
 
@@ -937,7 +938,7 @@ const anatomyInfo = {
         "Pale-chinned Flycatcher",
         "Gray-chinned Minivet"
     ]
-}
+},
 
 "Lore": {
     title: "Lore",
@@ -955,7 +956,7 @@ const anatomyInfo = {
         "Grey-lored Broadbill",
         "Himalayan Black-lored Tit"
     ]
-}
+},
 
 "Eye Ring": {
     title: "Eye Ring",
@@ -973,7 +974,7 @@ const anatomyInfo = {
         "Indian White Eye",
         "Yellow-eyed Babbler"
     ]
-}
+},
 
 "Throat": {
     title: "Throat",
@@ -991,7 +992,7 @@ const anatomyInfo = {
         "White-throated Kingfisher",
         "White-throated Fantail"
     ]
-}
+},
 
 "Breast": {
     title: "Breast",
@@ -1009,7 +1010,7 @@ const anatomyInfo = {
         "White-breasted Waterhen",
         "Yellow-breasted Bunting"
     ]
-}
+},
 
 "Belly": {
     title: "Belly",
@@ -1027,7 +1028,7 @@ const anatomyInfo = {
         "Yellow-bellied Prinia",
         "Spot-bellied Eagle-Owl"
     ]
-}
+},
 
 "Tarsus": {
     title: "Tarsus",
@@ -1045,7 +1046,7 @@ const anatomyInfo = {
         "Herons",
         "Egrets"
     ]
-}
+},
 
 "Toe": {
     title: "Toe",
@@ -1063,7 +1064,7 @@ const anatomyInfo = {
         "Short-toed Snake-Eagle",
         "Greater Short-toed Lark"
     ]
-}
+},
 
 "Supercilium": {
     title: "Supercilium",
@@ -1081,7 +1082,7 @@ const anatomyInfo = {
         "Snowy-browed Flycatcher",
         "Yellow-browed Warbler"
     ]
-}
+},
 
 "Crest": {
     title: "Crest",
@@ -1099,7 +1100,7 @@ const anatomyInfo = {
         "Black-crested Bulbul",
         "Crested Serpent Eagle"
     ]
-}
+},
 
 "Nape": {
     title: "Nape",
@@ -1117,7 +1118,7 @@ const anatomyInfo = {
         "Black-naped Monarch",
         "Black-naped Pitta"
     ]
-}
+},
 
 "Wing Bars": {
     title: "Wing Bars",
@@ -1135,7 +1136,7 @@ const anatomyInfo = {
         "Chestnut-crowned Warbler",
         "Blyth's Leaf Warbler"
     ]
-}
+},
 
 "Vent": {
     title: "Vent",
@@ -1153,7 +1154,7 @@ const anatomyInfo = {
         "Red-vented Bulbul",
         "Yellow-vented Warbler"
     ]
-}
+},
 
 "Rump": {
     title: "Rump",
@@ -1171,7 +1172,7 @@ const anatomyInfo = {
         "White-rumped Shama",
         "White-rumped Vulture"
     ]
-}
+},
 
 "Claw": {
     title: "Claw",
@@ -1189,7 +1190,7 @@ const anatomyInfo = {
         "Owls",
         "Eagles"
     ]
-}
+},
 
 "Tail": {
     title: "Tail",
@@ -1221,19 +1222,35 @@ function updateInfoPanel(part) {
     if (!data) return;
 
     panel.innerHTML = `
+
         <h2>${data.title}</h2>
 
         <p>${data.description}</p>
 
+        <div class="anatomy-example">
+
+            <img
+                src="${data.image}"
+                alt="${data.title}">
+
+            <p class="example-caption">
+                ${data.caption}
+            </p>
+
+        </div>
+
         <h3>Examples in Pokhi</h3>
 
         <ul>
+
             ${data.examples
                 .map(
                     bird => `<li>${bird}</li>`
                 )
                 .join("")}
+
         </ul>
+
     `;
 }
 const hotspots =

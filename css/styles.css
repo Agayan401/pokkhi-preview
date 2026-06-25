@@ -1482,15 +1482,15 @@ p {
 
     color: #145c2e;
 
-    font-size: 2.7rem;
+    font-size: 2.45rem;
 
     font-weight: 800;
 
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
 
-    line-height: 1.1;
+    line-height: 1.15;
 
-    margin-bottom: .8rem;
+    margin-bottom: .75rem;
 }
 
 .anatomy-header h1::after {
@@ -1690,13 +1690,13 @@ p {
     font-size: 1.08rem;
 }
 
-.info-panel h2 {
+.info-panel h2{
 
-    color: #145c2e;
+    color:#145c2e;
 
-    margin-bottom: 1rem;
+    font-size:2rem;
 
-    font-size: 2.2rem;
+    margin-bottom:18px;
 }
 
 .info-panel ul {
@@ -1704,6 +1704,64 @@ p {
     margin-top: 1rem;
 
     padding-left: 1.2rem;
+}
+
+.guide-features{
+
+    margin:24px 0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+}
+
+.guide-feature{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    font-size:1.05rem;
+
+    line-height:1.5;
+}
+
+.guide-icon{
+
+    width:36px;
+
+    height:36px;
+
+    border-radius:50%;
+
+    background:#eef7f0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:1.1rem;
+
+    flex-shrink:0;
+}
+
+.guide-tip{
+
+    margin-top:24px;
+
+    color:#145c2e;
+
+    font-style:italic;
+
+    font-weight:600;
+
+    text-align:center;
 }
 
 /* ---------- Mobile ---------- */

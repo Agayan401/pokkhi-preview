@@ -1837,7 +1837,7 @@ p {
 }
 .anatomy-label{
 
-    transform: translate(-50%, -50%) scale(0.75);
+    transform: translate(-50%, -50%) scale(0.60);
 
     transform-origin: center;
 }

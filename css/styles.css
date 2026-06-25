@@ -762,12 +762,26 @@ p {
         0 16px 36px rgba(0,0,0,.14);
 }
 
-.bird-card img {
+.bird-image {
+
     width: 100%;
+
     height: 300px;
-    object-fit: contain;
-    display: block;
+
+    overflow: hidden;
+
     background: #f5f5f5;
+}
+
+.bird-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
 }
 
 .bird-info {

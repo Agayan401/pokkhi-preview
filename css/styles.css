@@ -1458,7 +1458,7 @@ p {
 
 .anatomy-page {
 
-    max-width: 1500px;
+    max-width: 1600px;
 
     margin: 0 auto;
 
@@ -1542,7 +1542,7 @@ p {
 .anatomy-layout {
     display: flex;
     align-items: flex-start;
-    gap: 20px;
+    gap: 28px;
 }
 
 .anatomy-label {
@@ -1646,11 +1646,12 @@ p {
 /* ---------- Bird Area ---------- */
 
 .bird-panel {
-    flex: 1 1 760px;
-    
-    min-width: 680px;
 
-    max-width: 820px;
+    flex: 0 1 760px;
+
+    min-width: 660px;
+
+    max-width: 760px;
 }
 
 .image-container {
@@ -1679,11 +1680,11 @@ p {
 
 .info-panel {
 
-    flex: 0 1 500px;
+    flex: 1 1 560px;
 
-    min-width: 420px;
+    min-width: 470px;
 
-    max-width: 565px;
+    max-width: 620px;
 
     position: sticky;
 

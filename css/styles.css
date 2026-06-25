@@ -1680,7 +1680,9 @@ p {
 
 .info-panel {
 
-    flex: 1 1 560px;
+    flex:none;
+
+    width:100%;
 
     min-width: 470px;
 
@@ -1779,6 +1781,11 @@ p {
 
 @media (max-width: 768px) {
 
+    .anatomy-page{
+
+    padding:1rem;
+    }
+    
     .anatomy-layout {
 
     display:flex;
@@ -1810,16 +1817,20 @@ p {
     
 .bird-panel{
 
-    min-width:0;
-
-    max-width:100%;
+    flex:none;
 
     width:100%;
+
+    min-width:0;
+
+    max-width:none;
 }
 
 .image-container{
 
-    max-width:100%;
+    width:100%;
+
+    max-width:none;
     
     border-left:4px solid rgba(33,94,55,.35);
 
@@ -1841,18 +1852,22 @@ p {
     min-height:36px;
 }
     
-    .info-panel {
+.info-panel {
 
-        width: 100%;
+    position: relative;
 
-        margin-top:20px;
+    top: auto;
 
-        padding:22px;
+    width: 100%;
 
-        border-radius:20px;
+    min-width: 0;
 
-        min-width: auto;
+    max-width: 100%;
 
-        position: static;
-    }
+    margin: 20px 0 0;
+
+    padding: 22px;
+
+    border-radius: 20px;
+}
 }

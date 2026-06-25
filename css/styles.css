@@ -1542,7 +1542,7 @@ p {
 .anatomy-layout {
     display: flex;
     align-items: flex-start;
-    gap: 28px;
+    gap: 40px;
 }
 
 .anatomy-label {

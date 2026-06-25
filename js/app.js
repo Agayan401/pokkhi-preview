@@ -1112,11 +1112,11 @@ const anatomyInfo = {
         "images/nape.webp",
 
     caption:
-        "Nape of a Black-naped Monarch.",
+        "Nape of a White-naped Yuhina.",
 
     examples: [
-        "Black-naped Monarch",
-        "Black-naped Pitta"
+        "White-naped Yuhina",
+        "Black-naped Monarch"
     ]
 },
 

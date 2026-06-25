@@ -2680,12 +2680,12 @@
     "image": "images/birds/slaty-blue-flycatcher.avif"
   },
   {
-    "id": "slender-billed-babblert",
-    "name": "Slender billed Babblert",
+    "id": "slender-billed-babbler",
+    "name": "Slender billed Babbler",
     "assameseName": "নল ঢাপলিকা",
     "iucnStatus": "VU",
     "description": "Assam Seasonality: Highly sedentary year-round resident. The size of the bird is 20-23 cm. Gregarious forest/undergrowth bird with strong legs, operating in noisy social flocks. Dimorphism: Sexes are identical.",
-    "image": "images/birds/slender-billed-babblert.avif"
+    "image": "images/birds/slender-billed-babbler.avif"
   },
   {
     "id": "swamp-grass-babbler",

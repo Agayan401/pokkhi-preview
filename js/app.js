@@ -1271,8 +1271,6 @@ labels.forEach(label => {
 
 });
 
-
-});
 document.addEventListener("DOMContentLoaded", () => {
     loadBirds();
 });

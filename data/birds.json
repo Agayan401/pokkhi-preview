@@ -840,14 +840,6 @@
     "image": "images/birds/crimson-sunbird.avif"
   },
   {
-    "id": "common-hawk-cuckoo",
-    "name": "Common Hawk Cuckoo",
-    "assameseName": "শেন কুলি",
-    "iucnStatus": "LC",
-    "description": "Assam Seasonality: Active year-round resident or seasonal migrant in Assam's diverse floodplains and forest layers. The size of the bird is 32-34 cm. Distinctive local avian species with regional field marks. Dimorphism: Sexes vary; males frequently show brighter plumage during the spring breeding cycle.",
-    "image": "images/birds/common-hawk-cuckoo.avif"
-  },
-  {
     "id": "common-iora",
     "name": "Common Iora",
     "assameseName": "বিহুৱতী / কৃষ্ণচৰাই",

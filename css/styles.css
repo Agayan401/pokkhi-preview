@@ -1616,7 +1616,7 @@ p {
 .info-panel {
     flex: 0 0 430px;
     position: sticky;
-    top: 70px;
+    top: 0px;
     margin-top: -18px;
 
     background: white;

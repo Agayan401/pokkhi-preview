@@ -1560,12 +1560,12 @@
     "image": "images/birds/indian-pied-starling.avif"
   },
   {
-    "id": "indian-cormorent",
-    "name": "Indian Cormorent",
+    "id": "indian-cormorant",
+    "name": "Indian Cormorant",
     "assameseName": "কৈলাঙী",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Active year-round resident or seasonal migrant in Assam's diverse floodplains and forest layers. The size of the bird is 63-70 cm. Distinctive local avian species with regional field marks. Dimorphism: Sexes vary; males frequently show brighter plumage during the spring breeding cycle.",
-    "image": "images/birds/indian-cormorent.avif"
+    "image": "images/birds/indian-cormorant.avif"
   },
   {
     "id": "intermediate-egret",

@@ -3,26 +3,24 @@ name: Generate Bird Thumbnails
 on:
   workflow_dispatch:
 
-  push:
-    paths:
-      - "images/birds/**"
-
 jobs:
   test:
+
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
 
-      - name: Show ImageMagick version
+      - uses: actions/checkout@v4
+
+      - name: Install ImageMagick
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+
+      - name: Check ImageMagick
         run: |
           magick -version || convert -version
 
-      - name: Show libvips version
+      - name: Check AVIF support
         run: |
-          vips --version || true
-
-      - name: List bird images
-        run: |
-          find images/birds -maxdepth 2 -type f
+          magick -list format | grep AVIF || convert -list format | grep AVIF

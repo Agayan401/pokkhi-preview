@@ -1290,6 +1290,52 @@ labels.forEach(label => {
 
 });
 
+/* ==========================================
+   HERO SLIDESHOW
+========================================== */
+
+const heroImages = [
+
+    "images/hero/hero1.avif",
+    "images/hero/hero2.avif",
+    "images/hero/hero3.avif",
+    "images/hero/hero4.avif"
+
+];
+
+function initHeroSlideshow() {
+
+    const slideshow =
+        document.getElementById("heroSlideshow");
+
+    if (!slideshow) return;
+
+    heroImages.forEach((image, index) => {
+
+        const slide =
+            document.createElement("div");
+
+        slide.className = "hero-slide";
+
+        if (index === 0) {
+
+            slide.classList.add("active");
+
+        }
+
+        slide.style.backgroundImage =
+            `url("${image}")`;
+
+        slideshow.appendChild(slide);
+
+    });
+
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+
     loadBirds();
+
+    initHeroSlideshow();
+
 });

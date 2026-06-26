@@ -1451,7 +1451,7 @@ p {
 
     max-height: 90px;
 
-    max-width: 220px;
+    max-width: 240px;
 }
 
 .partner-logos img:hover {
@@ -1569,6 +1569,19 @@ p {
 
         font-size: 1.1rem;
     }
+    .hero-logo {
+
+    display: block;
+
+    width: 420px;
+
+    max-width: 85%;
+
+    margin: 0 auto 3rem;
+
+    filter:
+        drop-shadow(0 6px 20px rgba(0,0,0,.35));
+}
 
     .hero-text {
 

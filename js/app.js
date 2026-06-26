@@ -1023,11 +1023,11 @@ const anatomyInfo = {
         "images/breast.webp",
 
     caption:
-        "Breast of a White-breasted Waterhen.",
+        "Breast of a Yellow-breasted Bunting.",
 
     examples: [
-        "White-breasted Waterhen",
-        "Yellow-breasted Bunting"
+        "Yellow-breasted Bunting",
+        "White-breasted Waterhen"
     ]
 },
 

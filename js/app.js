@@ -337,7 +337,7 @@ function renderBirds(birdList) {
         <div class="bird-image">
 
             <img
-                src="${bird.image}"
+                src="images/birds/cards/${bird.id}.avif"
                 alt="${bird.name}"
                 onerror="this.src='images/placeholder.jpg'"
             >
@@ -693,7 +693,7 @@ function openModal(bird) {
         );
 
     image.src =
-    bird.image;
+    `images/birds/${bird.id}.avif`;
 
     image.onerror = () => {
 

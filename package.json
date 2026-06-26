@@ -1,6 +1,10 @@
 {
   "name": "pokkhi-preview",
+  "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "thumbnails": "node scripts/generate-thumbnails.js"
+  },
   "dependencies": {
     "sharp": "^0.34.3"
   }

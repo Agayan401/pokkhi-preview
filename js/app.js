@@ -1305,7 +1305,7 @@ const heroImages = [
     {
         src: "images/hero/hero2.avif",
         desktopPosition: "center center",
-        mobilePosition: "45% center"
+        mobilePosition: "60px center"
     },
 
     {

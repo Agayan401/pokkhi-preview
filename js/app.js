@@ -1322,7 +1322,7 @@ const heroImages = [
         src: "images/hero/hero5.webp",
         desktopPosition: "center center",
         mobilePosition: "65% center"
-    }
+    },
     {
         src: "images/hero/hero6.webp",
         desktopPosition: "center center",
@@ -1407,6 +1407,10 @@ function initHeroSlideshow() {
 
     const slides =
         slideshow.querySelectorAll(".hero-slide");
+
+    if (slides.length > 0) {
+    slides[0].classList.add("active");
+    }
 
     let current = 0;
 

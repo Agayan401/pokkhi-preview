@@ -1000,7 +1000,7 @@
     "image": "images/birds/eurasian-wigeon.avif"
   },
   {
-    "id": "eared-grebe-or-black-necked-grebe",
+    "id": "eared-grebe",
     "name": "Eared Grebe or Black-necked Grebe",
     "assameseName": "ক’লা ডিঙীয়া পানীডুবি",
     "iucnStatus": "LC",
@@ -1808,7 +1808,7 @@
     "image": "images/birds/little-ringed-plover.avif"
   },
   {
-    "id": "little-heron-striated-heron",
+    "id": "little-heron",
     "name": "Little Heron (Striated Heron)",
     "assameseName": "সৰু মুচৰি",
     "iucnStatus": "LC",

@@ -1299,19 +1299,19 @@ const heroImages = [
     {
         src: "images/hero/hero1.avif",
         desktopPosition: "center center",
-        mobilePosition: "0% center"
+        mobilePosition: "5% center"
     },
 
     {
         src: "images/hero/hero2.avif",
         desktopPosition: "center center",
-        mobilePosition: "35% center"
+        mobilePosition: "45% center"
     },
 
     {
         src: "images/hero/hero3.avif",
         desktopPosition: "center center",
-        mobilePosition: "65% center"
+        mobilePosition: "75% center"
     },
     {
         src: "images/hero/hero4.avif",
@@ -1321,7 +1321,7 @@ const heroImages = [
     {
         src: "images/hero/hero5.avif",
         desktopPosition: "center center",
-        mobilePosition: "35% center"
+        mobilePosition: "30% center"
     },
     {
         src: "images/hero/hero6.avif",
@@ -1331,12 +1331,12 @@ const heroImages = [
     {
         src: "images/hero/hero7.avif",
         desktopPosition: "center center",
-        mobilePosition: "100% center"
+        mobilePosition: "95% center"
     },
     {
         src: "images/hero/hero8.avif",
         desktopPosition: "center center",
-        mobilePosition: "0% center"
+        mobilePosition: "10% center"
     },
     {
         src: "images/hero/hero9.webp",
@@ -1346,12 +1346,12 @@ const heroImages = [
     {
         src: "images/hero/hero10.avif",
         desktopPosition: "center center",
-        mobilePosition: "20% center"
+        mobilePosition: "10% center"
     },
     {
         src: "images/hero/hero11.avif",
         desktopPosition: "center center",
-        mobilePosition: "0% center"
+        mobilePosition: "5% center"
     },
     {
         src: "images/hero/hero12.avif",
@@ -1361,17 +1361,17 @@ const heroImages = [
     {
         src: "images/hero/hero13.avif",
         desktopPosition: "center center",
-        mobilePosition: "100% center"
+        mobilePosition: "95% center"
     },
     {
         src: "images/hero/hero14.avif",
         desktopPosition: "center center",
-        mobilePosition: "20% center"
+        mobilePosition: "5% center"
     },
     {
         src: "images/hero/hero15.avif",
         desktopPosition: "center center",
-        mobilePosition: "20% center"
+        mobilePosition: "5% center"
     }
 
 ];

@@ -124,20 +124,13 @@ p {
 
 .hero {
 
+    position: relative;
+
     min-height: 78vh;
 
     height: 78vh;
 
-    background:
-        linear-gradient(
-            rgba(0,0,0,.10),
-            rgba(0,0,0,.10)
-        ),
-        url("../images/hero.avif");
-
-    background-size: cover;
-
-    background-position: center;
+    overflow: hidden;
 
     display: flex;
 
@@ -146,7 +139,57 @@ p {
     justify-content: center;
 }
 
+.hero-slideshow {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 0;
+}
+
+.hero-slide {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-size: cover;
+
+    background-position: center;
+
+    opacity: 0;
+
+    transition: opacity 1.5s ease;
+}
+
+.hero-slide.active {
+
+    opacity: 1;
+}
+
+.overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.18);
+
+    z-index: 1;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
 .hero-content {
+
+    position: relative;
+
+    z-index: 2;
 
     text-align: center;
 

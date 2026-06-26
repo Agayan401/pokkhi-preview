@@ -1538,14 +1538,12 @@ p {
 
 @media (max-width: 768px) {
 
-    .logo img {
+.logo img {
 
-        content: url("../images/logo_footer.png");
+    height: 58px;
 
-        height: 80px;
-
-        width: auto;
-    }
+    width: auto;
+}
 
     
     .navbar {

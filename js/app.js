@@ -1258,7 +1258,7 @@ function updateInfoPanel(part) {
 
         </div>
 
-        <h3>Examples in Pokhi</h3>
+        <h3>Examples in Pokkhi</h3>
 
         <ul>
 

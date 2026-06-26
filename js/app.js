@@ -657,10 +657,7 @@ filteredBirds =
                 (bird.iucnStatus || "")
                     === status;
 
-            return (
-                matchesSearch &&
-                matchesStatus
-            );
+            return matchesStatus;
         });
 visibleBirds = 12;
 

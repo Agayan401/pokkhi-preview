@@ -1674,6 +1674,10 @@ p {
     cursor: pointer;
 
     z-index: 1001;
+
+    justify-self: end;
+
+    transform: translateX(-15px);
 }
 
 .menu-toggle span {

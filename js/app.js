@@ -724,10 +724,14 @@ image.onerror = () => {
     ).textContent =
         bird.assameseName || "";
 
-    document.getElementById(
-        "modalStatus"
-    ).textContent =
+    const modalStatus =
+    document.getElementById("modalStatus");
+
+    modalStatus.textContent =
         `IUCN Status: ${bird.iucnStatus || ""}`;
+
+    modalStatus.className =
+        `status-badge ${getStatusClass(bird.iucnStatus)}`;
 
     document.getElementById(
         "modalDescription"

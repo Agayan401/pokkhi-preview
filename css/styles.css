@@ -1729,11 +1729,14 @@ p {
     filter: drop-shadow(0 6px 20px rgba(0,0,0,.35));
 }
 
-    .hero-text {
+.hero-text {
 
-        font-size: 1rem;
-        font-weight: 500;
-    }
+    font-size: 1rem;
+
+    font-weight: 500;
+
+    margin-top: 30px;
+}
 
     .summary-card {
 

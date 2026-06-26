@@ -537,10 +537,19 @@ function filterBirds() {
                 matchesStatus
             );
         });
-    visibleBirds = 12;
-    renderBirds(filteredBirds);
+visibleBirds = 12;
 
-    updateResultCount();
+const hasActiveFilter =
+    search !== "" || status !== "All";
+
+if (resetSearchBtn) {
+    resetSearchBtn.style.display =
+        hasActiveFilter ? "inline-block" : "none";
+}
+
+renderBirds(filteredBirds);
+
+updateResultCount();
 
     showSuggestions(
     heroSearch,

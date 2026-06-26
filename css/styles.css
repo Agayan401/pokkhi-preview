@@ -788,7 +788,9 @@ p {
 
     width: 100%;
 
-    padding: 14px 20px;
+    height: 52px;
+
+    padding: 0 20px;
 
     border: 1px solid #d1d5db;
 
@@ -798,8 +800,7 @@ p {
 
     background: white;
 
-    box-shadow:
-        0 2px 8px rgba(0,0,0,.05);
+    box-shadow: 0 2px 8px rgba(0,0,0,.05);
 
     transition: .2s;
 }
@@ -835,21 +836,38 @@ p {
 
 .reset-search-btn {
 
-    margin-bottom: 1.5rem;
+    height: 52px;
 
-    padding: 10px 18px;
+    padding: 0 24px;
 
     border: none;
 
-    border-radius: 10px;
+    border-radius: 12px;
 
     background: #14532d;
 
     color: white;
 
+    font-size: 1rem;
+
     font-weight: 700;
 
     cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    white-space: nowrap;
+
+    transition: .2s;
+}
+
+.reset-search-btn:hover {
+
+    opacity: .9;
 }
 #resultCount {
 

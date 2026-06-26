@@ -3,6 +3,10 @@ name: Generate Bird Thumbnails
 on:
   workflow_dispatch:
 
+  push:
+    paths:
+      - "images/birds/*.avif"
+
 jobs:
 
   thumbnails:

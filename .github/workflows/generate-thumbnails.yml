@@ -6,38 +6,21 @@ on:
       - "images/birds/**"
 
 jobs:
-  thumbnails:
+  test:
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: write
-
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install dependencies
+      - name: Show ImageMagick version
         run: |
-          pip install pillow pillow-avif-plugin
+          magick -version || convert -version
 
-      - name: Generate thumbnails
+      - name: Show libvips version
         run: |
-          python tools/generate_thumbnails.py
+          vips --version || true
 
-      - name: Commit generated thumbnails
+      - name: List bird images
         run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-
-          git add images/birds/cards
-
-          if git diff --cached --quiet; then
-            echo "No thumbnail changes."
-          else
-            git commit -m "Auto-generate bird thumbnails"
-            git push
-          fi
+          find images/birds -maxdepth 2 -type f

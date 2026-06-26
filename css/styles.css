@@ -28,15 +28,50 @@ p {
 /* =========================
    NAVBAR
 ========================= */
+
+
+.navbar {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background: rgba(20,83,45,.95);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 1rem 2rem;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 2px 10px rgba(0,0,0,.15);
+
+    position: sticky;
+}
+
+
+
 .navbar-title {
 
-    flex: 1;
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
 
     display: flex;
 
     justify-content: center;
 
     align-items: center;
+
+    pointer-events: none;
 }
 
 .navbar-title img {
@@ -48,39 +83,9 @@ p {
     opacity: .95;
 }
 
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 
-    background: rgba(20, 83, 45, 0.95);
-
-    display: grid;
-
-    grid-template-columns: auto 1fr auto;
-
-    align-items: center;
-
-    padding: 1rem 2rem;
-
-    backdrop-filter: blur(10px);
-
-    box-shadow: 0 2px 10px rgba(0,0,0,.15);
-}
-
-.logo {
-    justify-self: start;
-}
-
-.navbar-title {
-    justify-self: center;
-}
-
-.nav-links {
-    justify-self: end;
-}
 .menu-toggle {
-    justify-self: end;
+
     display: none;
 }
 

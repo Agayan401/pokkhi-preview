@@ -203,7 +203,121 @@ function buildSearchIndex(bird) {
     return index;
 
 }
+function scoreBird(bird, query) {
 
+    query = normalizeQuery(query);
+
+    if (!query) {
+        return 1;
+    }
+
+    let score = 0;
+
+    /* ==========================
+       ENGLISH FULL NAME
+    ========================== */
+
+    bird.searchIndex.english.full.forEach(name => {
+
+        if (name === query) {
+
+            score = Math.max(score, 100);
+
+        }
+
+        else if (name.startsWith(query)) {
+
+            score = Math.max(score, 90);
+
+        }
+
+        else if (name.includes(query)) {
+
+            score = Math.max(score, 50);
+
+        }
+
+    });
+
+    /* ==========================
+       ENGLISH WORDS
+    ========================== */
+
+    bird.searchIndex.english.words.forEach(word => {
+
+        if (word === query) {
+
+            score = Math.max(score, 80);
+
+        }
+
+        else if (word.startsWith(query)) {
+
+            score = Math.max(score, 70);
+
+        }
+
+        else if (word.includes(query)) {
+
+            score = Math.max(score, 40);
+
+        }
+
+    });
+
+    /* ==========================
+       COMPOUND WORDS
+    ========================== */
+
+    bird.searchIndex.english.compounds.forEach(word => {
+
+        if (word === query) {
+
+            score = Math.max(score, 75);
+
+        }
+
+        else if (word.startsWith(query)) {
+
+            score = Math.max(score, 65);
+
+        }
+
+        else if (word.includes(query)) {
+
+            score = Math.max(score, 35);
+
+        }
+
+    });
+
+    /* ==========================
+       ASSAMESE
+    ========================== */
+
+    bird.searchIndex.assamese.full.forEach(name => {
+
+        if (name.includes(query)) {
+
+            score = Math.max(score, 60);
+
+        }
+
+    });
+
+    bird.searchIndex.assamese.words.forEach(word => {
+
+        if (word.includes(query)) {
+
+            score = Math.max(score, 60);
+
+        }
+
+    });
+
+    return score;
+
+}
 function findMatchingBirds(query) {
 
     query = normalizeQuery(query);

@@ -855,14 +855,13 @@ p {
 
     inset: 0;
 
-    background:
-        rgba(0,0,0,.75);
+    background: rgba(0,0,0,.75);
 
     justify-content: center;
 
     align-items: center;
 
-    padding: 1rem;
+    padding: 2rem;
 
     z-index: 9999;
 }
@@ -871,48 +870,137 @@ p {
 
     background: white;
 
-    width: 100%;
-
-    max-width: 90vw;
+    width: min(1200px, 95vw);
 
     max-height: 90vh;
 
-    overflow-y: auto;
+    overflow: hidden;
 
     border-radius: 24px;
 
     position: relative;
 
-    box-shadow:
-        0 20px 50px rgba(0,0,0,.25);
+    box-shadow: 0 24px 60px rgba(0,0,0,.25);
 }
 
-.modal-content img {
-  width: 100%;
-  height: auto;
-  max-height: 80vh;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto;
+.modal-layout {
+
+    display: flex;
+
+    min-height: 650px;
+}
+
+.modal-image {
+
+    flex: 0 0 45%;
+
+    background: #f5f5f5;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.modal-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+.modal-details {
+
+    flex: 1;
+
+    padding: 2.5rem;
+
+    overflow-y: auto;
+}
+
+#modalName {
+
+    color: #14532d;
+
+    font-size: 2rem;
+
+    margin-bottom: .4rem;
+
+    padding: 0;
+}
+
+#modalAssamese {
+
+    color: #166534;
+
+    font-size: 1.15rem;
+
+    font-weight: 600;
+
+    margin-bottom: 1rem;
+
+    padding: 0;
+}
+
+#modalStatus {
+
+    display: inline-block;
+
+    padding: .5rem 1rem;
+
+    border-radius: 999px;
+
+    background: #eef7f0;
+
+    color: #14532d;
+
+    font-weight: 700;
+
+    margin-bottom: 1.5rem;
+
+    padding-left: 1rem;
+}
+
+.modal-details hr {
+
+    border: none;
+
+    border-top: 1px solid #e5e7eb;
+
+    margin: 1.5rem 0;
+}
+
+#modalDescription {
+
+    padding: 0;
+
+    line-height: 1.9;
+
+    color: #374151;
+
+    font-size: 1.05rem;
 }
 
 #closeModal {
 
     position: absolute;
 
-    top: 15px;
+    top: 18px;
 
-    right: 20px;
+    right: 24px;
 
     font-size: 2rem;
 
-    color: white;
+    color: #14532d;
 
     cursor: pointer;
 
-    z-index: 10;
-
-    transition: .2s;
+    z-index: 100;
 }
 
 #closeModal:hover {
@@ -920,38 +1008,47 @@ p {
     transform: scale(1.1);
 }
 
-#modalName {
+/* Mobile */
 
-    padding: 1.5rem 1.5rem .5rem;
+@media (max-width: 900px) {
 
-    color: #14532d;
-}
+    .modal-content {
 
-#modalAssamese {
+        width: 95vw;
 
-    padding: 0 1.5rem;
+        max-height: 90vh;
 
-    color: #166534;
+        overflow-y: auto;
+    }
 
-    font-weight: 600;
-}
+    .modal-layout {
 
-#modalStatus {
+        flex-direction: column;
+    }
 
-    padding: 1rem 1.5rem;
+    .modal-image {
 
-    font-weight: 700;
+        flex: none;
+    }
 
-    color: #374151;
-}
+    .modal-image img {
 
-#modalDescription {
+        width: 100%;
 
-    padding: 0 1.5rem 2rem;
+        height: auto;
 
-    line-height: 1.8;
+        max-height: 60vh;
+    }
 
-    color: #374151;
+    .modal-details {
+
+        padding: 1.5rem;
+    }
+
+    #modalName {
+
+        font-size: 1.6rem;
+    }
 }
 
 /* =========================

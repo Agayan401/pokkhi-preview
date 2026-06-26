@@ -1294,7 +1294,7 @@ labels.forEach(label => {
    HERO SLIDESHOW
 ========================================== */
 
-3500
+const heroImages = [
 
     "images/hero/hero1.avif",
     "images/hero/hero2.avif",
@@ -1309,8 +1309,7 @@ labels.forEach(label => {
     "images/hero/hero11.avif",
     "images/hero/hero12.avif",
     "images/hero/hero13.avif",
-    "images/hero/hero14.avif",
-    "images/hero/hero15.avif"
+    "images/hero/hero14.avif"
 
 ];
 
@@ -1329,13 +1328,10 @@ function initHeroSlideshow() {
         slide.className = "hero-slide";
 
         if (index === 0) {
-
             slide.classList.add("active");
-
         }
 
-        slide.style.backgroundImage =
-            `url("${image}")`;
+        slide.style.backgroundImage = `url("${image}")`;
 
         slideshow.appendChild(slide);
 
@@ -1350,8 +1346,7 @@ function initHeroSlideshow() {
 
         slides[current].classList.remove("active");
 
-        current =
-            (current + 1) % slides.length;
+        current = (current + 1) % slides.length;
 
         slides[current].classList.add("active");
 

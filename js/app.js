@@ -117,11 +117,35 @@ function splitCompoundWord(word) {
 
 function buildSearchIndex(bird) {
 
-    const tokens = new Set();
+    const index = {
 
-    /* =====================================
-       ENGLISH NAME
-    ===================================== */
+        english: {
+
+            full: [],
+            words: [],
+            compounds: []
+
+        },
+
+        assamese: {
+
+            full: [],
+            words: []
+
+        },
+
+        roman: {
+
+            words: [],
+            variants: []
+
+        }
+
+    };
+
+    /* ==========================
+       ENGLISH
+    ========================== */
 
     const english =
         normalizeQuery(
@@ -130,48 +154,31 @@ function buildSearchIndex(bird) {
 
     if (english) {
 
-        // Whole name
-        tokens.add(english);
-
-        // Remove hyphens
-        tokens.add(
-            english.replace(/-/g, "")
+        index.english.full.push(
+            english
         );
 
         const words =
             tokenize(english);
 
-        // Individual words
         words.forEach(word => {
 
-            tokens.add(word);
+            index.english.words.push(word);
 
-            // Split common compound words
             splitCompoundWord(word)
                 .forEach(part =>
-                    tokens.add(part)
+
+                    index.english.compounds.push(part)
+
                 );
 
         });
 
-        // Adjacent word pairs
-        for (
-            let i = 0;
-            i < words.length - 1;
-            i++
-        ) {
-
-            tokens.add(
-                words[i] + " " + words[i + 1]
-            );
-
-        }
-
     }
 
-    /* =====================================
+    /* ==========================
        ASSAMESE
-    ===================================== */
+    ========================== */
 
     const assamese =
         normalizeQuery(
@@ -180,16 +187,20 @@ function buildSearchIndex(bird) {
 
     if (assamese) {
 
-        tokens.add(assamese);
+        index.assamese.full.push(
+            assamese
+        );
 
         tokenize(assamese)
             .forEach(word =>
-                tokens.add(word)
+
+                index.assamese.words.push(word)
+
             );
 
     }
 
-    return [...tokens].join(" ");
+    return index;
 
 }
 
@@ -199,9 +210,39 @@ function findMatchingBirds(query) {
 
     if (!query) return birds;
 
-    return birds.filter(bird =>
-        bird.searchIndex.includes(query)
-    );
+    return birds.filter(bird => {
+
+    return (
+
+        bird.searchIndex.english.full.some(
+            item => item.includes(query)
+        )
+
+        ||
+
+        bird.searchIndex.english.words.some(
+            item => item.includes(query)
+        )
+
+        ||
+
+        bird.searchIndex.english.compounds.some(
+            item => item.includes(query)
+        )
+
+        ||
+
+        bird.searchIndex.assamese.full.some(
+            item => item.includes(query)
+        )
+
+        ||
+
+        bird.searchIndex.assamese.words.some(
+            item => item.includes(query)
+        );
+
+});
 
 }
 

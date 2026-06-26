@@ -1704,6 +1704,12 @@ p {
 
         height: 70vh;
     }
+    .hero-content {
+
+    padding-top: 110px;
+
+    padding-bottom: 40px;
+}
 
     .hero h1 {
 
@@ -1724,7 +1730,7 @@ p {
 
     margin: 0 auto 1.2rem;
 
-    transform: translateY(-200px);
+    transform: translateY(-30px);
 
     filter: drop-shadow(0 6px 20px rgba(0,0,0,.35));
 }
@@ -1735,7 +1741,12 @@ p {
 
     font-weight: 500;
 
-    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+.search-wrapper {
+
+    margin-top: 20px;
 }
 
     .summary-card {

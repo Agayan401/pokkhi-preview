@@ -1294,12 +1294,23 @@ labels.forEach(label => {
    HERO SLIDESHOW
 ========================================== */
 
-const heroImages = [
+3500
 
     "images/hero/hero1.avif",
     "images/hero/hero2.avif",
     "images/hero/hero3.avif",
-    "images/hero/hero4.avif"
+    "images/hero/hero4.avif",
+    "images/hero/hero5.avif",
+    "images/hero/hero6.avif",
+    "images/hero/hero7.avif",
+    "images/hero/hero8.avif",
+    "images/hero/hero9.avif",
+    "images/hero/hero10.avif",
+    "images/hero/hero11.avif",
+    "images/hero/hero12.avif",
+    "images/hero/hero13.avif",
+    "images/hero/hero14.avif",
+    "images/hero/hero15.avif"
 
 ];
 
@@ -1344,7 +1355,7 @@ function initHeroSlideshow() {
 
         slides[current].classList.add("active");
 
-    }, 3500);
+    }, 3000);
 
 }
 

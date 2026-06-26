@@ -194,6 +194,8 @@ p {
 
     margin: 0 auto 1.5rem;
 
+    transform: translateY(-25px);
+
     filter: drop-shadow(0 8px 24px rgba(0,0,0,.45));
 }
 

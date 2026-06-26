@@ -980,17 +980,10 @@ p {
 
     border-radius: 999px;
 
-    background: #eef7f0;
-
-    color: #14532d;
-
     font-weight: 700;
 
     margin-bottom: 1.5rem;
-
-    padding-left: 1rem;
 }
-
 .modal-details hr {
 
     border: none;

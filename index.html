@@ -444,7 +444,7 @@
             <div class="form-group">
 
                 <label>
-                    English Name
+                    English Name <span class="required">*</span>
                 </label>
 
                 <input
@@ -486,28 +486,34 @@
                     Notes (Optional)
                 </label>
 
-                <textarea
-                    id="notes"
-                    rows="4"
-                    placeholder="Any additional information...">
-                </textarea>
+            <textarea
+                id="notes"
+                rows="4"
+                placeholder="Any additional information..."></textarea>
 
             </div>
 
             <div class="form-group">
 
                 <label>
-                    Contributor Name
+                    Location <span class="required">*</span>
                 </label>
 
                 <input
                     type="text"
-                    id="contributorName"
-                    placeholder="Your name"
+                    id="location"
+                    placeholder="e.g. Tezpur"
                     required>
 
-            </div>
+                </div>
+        <p class="contribution-note">
 
+                <strong>Note:</strong>
+                Every submission is reviewed before publication.
+                Approved contributions, along with the contributor's name,
+                will be displayed on Pokhi.
+
+            </p>
             <button
                 type="submit"
                 class="contribute-btn">

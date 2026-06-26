@@ -319,7 +319,7 @@ function renderBirdOfDay() {
         );
 
     const availableBirds = birds.filter(
-    bird => !excludedBirds.has(bird.name)
+    bird => !excludedBirds.has(bird.id)
 );
 
 const bird =
@@ -874,14 +874,34 @@ document.addEventListener(
         if (
             !event.target.closest(
                 ".search-wrapper"
-            if(languageToggle){
-
-    languageToggle.style.display =
-        "none";
-
-}
             )
         ) {
+
+            if (languageToggle) {
+
+                languageToggle.style.display =
+                    "none";
+
+            }
+
+            if (suggestionsBox) {
+
+                suggestionsBox.style.display =
+                    "none";
+
+            }
+
+            if (directorySuggestionsBox) {
+
+                directorySuggestionsBox.style.display =
+                    "none";
+
+            }
+
+        }
+
+    }
+);
 
             if (suggestionsBox) {
 

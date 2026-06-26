@@ -929,7 +929,7 @@
   },
   {
     "id": "common-moorhen",
-    "name": "Common Moorhen",
+    "name": "Common Moorhen (Eurasian Moorhen)",
     "assameseName": "পানীডাউক",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Active year-round resident or seasonal migrant in Assam's diverse floodplains and forest layers. The size of the bird is 30-38 cm. Distinctive local avian species with regional field marks. Dimorphism: Sexes vary; males frequently show brighter plumage during the spring breeding cycle.",
@@ -1569,7 +1569,7 @@
   },
   {
     "id": "intermediate-egret",
-    "name": "Intermediate Egret",
+    "name": "Intermediate Egret (Medium Egret)",
     "assameseName": "মাজু বগ",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Common year-round resident; develops ornamental plumes in breeding season (May-Aug). The size of the bird is 56-72 cm. Long-legged, long-necked wading bird found around wetlands. Dimorphism: Sexes are generally identical.",
@@ -2553,7 +2553,7 @@
   },
   {
     "id": "slaty-bellied-tesia",
-    "name": "Slaty-Bellied Tesia",
+    "name": "Slaty-bellied Tesia",
     "assameseName": "মাটি চটচটী, মাটি টিপচী",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Altitudinal migrant; breeds in high montane forests, descending to foothills and damp ravines in winter. The size of the bird is 8-10 cm. Tiny, almost tail-less forest bird with bright olive-green upperparts and a dark slaty-grey belly. Dimorphism: Males have a striking golden-yellow crown; females have an olive-green crown matching the back.",
@@ -2852,7 +2852,7 @@
     "name": "White-winged Wood Duck",
     "assameseName": "দেও হাঁহ",
     "iucnStatus": "EN",
-    "description": "This is the state bird of Assam. Assam Seasonality: Highly endangered resident of primary tropical evergreen rainforests with secluded pools (e.g. Nameri, Dehing Patkai). The size of the bird is 66-81 cm. Large, heavy-bodied dark forest duck with a starkly white head heavily mottled with black, and prominent white wing coverts. Dimorphism: Sexes are generally similar, but males are significantly larger and heavier; females have more densely speckled heads and necks.",
+    "description": "The state bird of Assam. Assam Seasonality: Highly endangered resident of primary tropical evergreen rainforests with secluded pools (e.g. Nameri, Dehing Patkai). The size of the bird is 66-81 cm. Large, heavy-bodied dark forest duck with a starkly white head heavily mottled with black, and prominent white wing coverts. Dimorphism: Sexes are generally similar, but males are significantly larger and heavier; females have more densely speckled heads and necks.",
     "image": "images/birds/white-winged-wood-duck.avif"
   },
   {

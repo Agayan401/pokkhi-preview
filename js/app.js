@@ -1344,7 +1344,7 @@ function initHeroSlideshow() {
 
         slides[current].classList.add("active");
 
-    }, 5000);
+    }, 3500);
 
 }
 

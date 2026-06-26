@@ -1297,81 +1297,78 @@ labels.forEach(label => {
 const heroImages = [
 
     {
-        src: "images/hero/hero1.avif",
-        desktopPosition: "center center",
-        mobilePosition: "200px center"
+        desktop: "images/hero/hero1.avif",
+        mobile: "images/hero/hero1_mobile.avif"
     },
 
     {
-        src: "images/hero/hero2.avif",
-        desktopPosition: "center center",
-        mobilePosition: "60px center"
+        desktop: "images/hero/hero2.avif",
+        mobile: "images/hero/hero2_mobile.avif"
     },
 
     {
-        src: "images/hero/hero3.avif",
-        desktopPosition: "center center",
-        mobilePosition: "75% center"
+        desktop: "images/hero/hero3.avif",
+        mobile: "images/hero/hero3_mobile.avif"
     },
+
     {
-        src: "images/hero/hero4.avif",
-        desktopPosition: "center center",
-        mobilePosition: "35% center"
+        desktop: "images/hero/hero4.avif",
+        mobile: "images/hero/hero4_mobile.avif"
     },
+
     {
-        src: "images/hero/hero5.avif",
-        desktopPosition: "center center",
-        mobilePosition: "30% center"
+        desktop: "images/hero/hero5.avif",
+        mobile: "images/hero/hero5_mobile.avif"
     },
+
     {
-        src: "images/hero/hero6.avif",
-        desktopPosition: "center center",
-        mobilePosition: "65% center"
+        desktop: "images/hero/hero6.avif",
+        mobile: "images/hero/hero6_mobile.avif"
     },
+
     {
-        src: "images/hero/hero7.avif",
-        desktopPosition: "center center",
-        mobilePosition: "95% center"
+        desktop: "images/hero/hero7.avif",
+        mobile: "images/hero/hero7_mobile.avif"
     },
+
     {
-        src: "images/hero/hero8.avif",
-        desktopPosition: "center center",
-        mobilePosition: "10% center"
+        desktop: "images/hero/hero8.avif",
+        mobile: "images/hero/hero8_mobile.avif"
     },
+
     {
-        src: "images/hero/hero9.avif",
-        desktopPosition: "center center",
-        mobilePosition: "center center"
+        desktop: "images/hero/hero9.avif",
+        mobile: "images/hero/hero9_mobile.avif"
     },
+
     {
-        src: "images/hero/hero10.avif",
-        desktopPosition: "center center",
-        mobilePosition: "10% center"
+        desktop: "images/hero/hero10.avif",
+        mobile: "images/hero/hero10_mobile.avif"
     },
+
     {
-        src: "images/hero/hero11.avif",
-        desktopPosition: "center center",
-        mobilePosition: "5% center"
+        desktop: "images/hero/hero11.avif",
+        mobile: "images/hero/hero11_mobile.avif"
     },
+
     {
-        src: "images/hero/hero12.avif",
-        desktopPosition: "center center",
-        mobilePosition: "65% center"
+        desktop: "images/hero/hero12.avif",
+        mobile: "images/hero/hero12_mobile.avif"
     },
+
     {
-        src: "images/hero/hero13.avif",
-        desktopPosition: "center center",
-        mobilePosition: "95% center"
+        desktop: "images/hero/hero13.avif",
+        mobile: "images/hero/hero13_mobile.avif"
     },
+
     {
-        src: "images/hero/hero14.avif",
-        desktopPosition: "center center",
-        mobilePosition: "5% center"
+        desktop: "images/hero/hero14.avif",
+        mobile: "images/hero/hero14_mobile.avif"
     },
+
     {
-        src: "images/hero/hero15.avif",
-        desktopPosition: "center center",
-        mobilePosition: "5% center"
+        desktop: "images/hero/hero15.avif",
+        mobile: "images/hero/hero15_mobile.avif"
     }
 
 ];
@@ -1383,23 +1380,18 @@ function initHeroSlideshow() {
 
     if (!slideshow) return;
 
-    heroImages.forEach((image, index) => {
+    heroImages.forEach((image) => {
 
     const slide = document.createElement("div");
 
     slide.className = "hero-slide";
 
-    slide.style.backgroundImage = `url(${image.src})`;
+    const imagePath =
+        window.innerWidth <= 768
+            ? image.mobile
+            : image.desktop;
 
-    if (window.innerWidth <= 768) {
-
-        slide.style.backgroundPosition = image.mobilePosition;
-
-    } else {
-
-        slide.style.backgroundPosition = image.desktopPosition;
-
-    }
+    slide.style.backgroundImage = `url("${imagePath}")`;
 
     slideshow.appendChild(slide);
 
@@ -1427,16 +1419,17 @@ function initHeroSlideshow() {
 }
 function updateHeroImagePositions() {
 
-    const slides = document.querySelectorAll(".hero-slide");
+    const slides =
+        document.querySelectorAll(".hero-slide");
 
     slides.forEach((slide, index) => {
 
         const image = heroImages[index];
 
-        slide.style.backgroundPosition =
+        slide.style.backgroundImage =
             window.innerWidth <= 768
-                ? image.mobilePosition
-                : image.desktopPosition;
+                ? `url("${image.mobile}")`
+                : `url("${image.desktop}")`;
 
     });
 

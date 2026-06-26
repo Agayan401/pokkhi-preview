@@ -1344,15 +1344,19 @@ p {
 
     background: #f0fdf4;
 
-    border: 1px solid #cce8d2;
-
-    border-left: 5px solid #14532d;
+    border-left: 3px solid #14532d;
+    border-right: 3px solid #14532d;
 
     border-radius: 12px;
 
+    color: #374151;
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+
     text-align: center;
 }
-
 .contribution-note strong {
 
     color: #14532d;

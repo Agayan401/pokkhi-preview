@@ -1277,7 +1277,7 @@ p {
 
     max-width: 700px;
 
-    margin: 0 auto 2rem;
+    margin: 0 auto 2.75rem;
 }
 
 .form-group {
@@ -1327,7 +1327,7 @@ p {
 
 .contribution-note {
 
-    margin: 1.5rem 0;
+    margin:2rem 0 1.75rem;
 
     padding: 16px 18px;
 

@@ -892,7 +892,7 @@ p {
 
 .modal-image {
 
-    flex: 0 0 45%;
+    flex: 0 0 60%;
 
     background: #f5f5f5;
 
@@ -916,7 +916,7 @@ p {
 
 .modal-details {
 
-    flex: 1;
+    flex: 0 0 42%;
 
     padding: 2.5rem;
 

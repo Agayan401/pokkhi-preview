@@ -697,18 +697,22 @@ if (resetSearchBtn) {
 function openModal(bird) {
 
     const image =
-        document.getElementById(
-            "modalImage"
-        );
+    document.getElementById("modalImage");
 
-    image.src =
+const imageBlur =
+    document.getElementById("modalImageBlur");
+
+const imagePath =
     `images/birds/${bird.id}.avif`;
 
-    image.onerror = () => {
+image.src = imagePath;
+imageBlur.src = imagePath;
 
-        image.src =
-            "images/placeholder.jpg";
-    };
+image.onerror = () => {
+
+    image.src = "images/placeholder.jpg";
+    imageBlur.src = "images/placeholder.jpg";
+};
 
     document.getElementById(
         "modalName"

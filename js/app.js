@@ -59,28 +59,107 @@ function tokenize(text) {
 
 }
 
+function splitCompoundWord(word) {
+
+    const parts = [];
+
+    const endings = [
+
+        "fisher",
+        "bill",
+        "bird",
+        "pecker",
+        "throat",
+        "breasted",
+        "tailed",
+        "headed",
+        "backed",
+        "winged",
+        "bellied",
+        "crowned",
+        "naped",
+        "eared",
+        "eyed",
+        "footed"
+
+    ];
+
+    endings.forEach(ending => {
+
+        if (
+
+            word.length > ending.length &&
+            word.endsWith(ending)
+
+        ) {
+
+            const prefix =
+                word.slice(
+                    0,
+                    -ending.length
+                );
+
+            if (prefix.length > 1) {
+
+                parts.push(prefix);
+
+            }
+
+            parts.push(ending);
+
+        }
+
+    });
+
+    return parts;
+
+}
+
 function buildSearchIndex(bird) {
 
     const tokens = new Set();
 
-    /* ==========================
+    /* =====================================
        ENGLISH NAME
-    ========================== */
+    ===================================== */
 
     const english =
-        normalizeQuery(bird.name || "");
+        normalizeQuery(
+            bird.name || ""
+        );
 
     if (english) {
 
+        // Whole name
         tokens.add(english);
 
-        const words = tokenize(english);
+        // Remove hyphens
+        tokens.add(
+            english.replace(/-/g, "")
+        );
+
+        const words =
+            tokenize(english);
 
         // Individual words
-        words.forEach(word => tokens.add(word));
+        words.forEach(word => {
 
-        // Two-word combinations
-        for (let i = 0; i < words.length - 1; i++) {
+            tokens.add(word);
+
+            // Split common compound words
+            splitCompoundWord(word)
+                .forEach(part =>
+                    tokens.add(part)
+                );
+
+        });
+
+        // Adjacent word pairs
+        for (
+            let i = 0;
+            i < words.length - 1;
+            i++
+        ) {
 
             tokens.add(
                 words[i] + " " + words[i + 1]
@@ -88,34 +167,11 @@ function buildSearchIndex(bird) {
 
         }
 
-        // Hyphen removed
-        tokens.add(
-            english.replace(/-/g, "")
-        );
-
-        // "Kingfisher" → "king fisher"
-        words.forEach(word => {
-
-            if (
-                word.endsWith("fisher")
-            ) {
-
-                tokens.add(
-                    word.replace(
-                        "fisher",
-                        " fisher"
-                    )
-                );
-
-            }
-
-        });
-
     }
 
-    /* ==========================
+    /* =====================================
        ASSAMESE
-    ========================== */
+    ===================================== */
 
     const assamese =
         normalizeQuery(
@@ -127,8 +183,8 @@ function buildSearchIndex(bird) {
         tokens.add(assamese);
 
         tokenize(assamese)
-            .forEach(
-                word => tokens.add(word)
+            .forEach(word =>
+                tokens.add(word)
             );
 
     }

@@ -61,21 +61,79 @@ function tokenize(text) {
 
 function buildSearchIndex(bird) {
 
-    const tokens = [];
+    const tokens = new Set();
 
-    // English name
-    tokens.push(...tokenize(bird.name));
+    /* ==========================
+       ENGLISH NAME
+    ========================== */
 
-    // Whole English name
-    tokens.push(normalizeQuery(bird.name));
+    const english =
+        normalizeQuery(bird.name || "");
 
-    // Assamese name
-    tokens.push(...tokenize(bird.assameseName));
+    if (english) {
 
-    // Whole Assamese name
-    tokens.push(normalizeQuery(bird.assameseName));
+        tokens.add(english);
 
-    return [...new Set(tokens)].join(" ");
+        const words = tokenize(english);
+
+        // Individual words
+        words.forEach(word => tokens.add(word));
+
+        // Two-word combinations
+        for (let i = 0; i < words.length - 1; i++) {
+
+            tokens.add(
+                words[i] + " " + words[i + 1]
+            );
+
+        }
+
+        // Hyphen removed
+        tokens.add(
+            english.replace(/-/g, "")
+        );
+
+        // "Kingfisher" → "king fisher"
+        words.forEach(word => {
+
+            if (
+                word.endsWith("fisher")
+            ) {
+
+                tokens.add(
+                    word.replace(
+                        "fisher",
+                        " fisher"
+                    )
+                );
+
+            }
+
+        });
+
+    }
+
+    /* ==========================
+       ASSAMESE
+    ========================== */
+
+    const assamese =
+        normalizeQuery(
+            bird.assameseName || ""
+        );
+
+    if (assamese) {
+
+        tokens.add(assamese);
+
+        tokenize(assamese)
+            .forEach(
+                word => tokens.add(word)
+            );
+
+    }
+
+    return [...tokens].join(" ");
 
 }
 

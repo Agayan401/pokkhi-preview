@@ -903,21 +903,6 @@ document.addEventListener(
     }
 );
 
-            if (suggestionsBox) {
-
-    suggestionsBox.style.display =
-        "none";
-
-}
-
-if (directorySuggestionsBox) {
-
-    directorySuggestionsBox.style.display =
-        "none";
-}
-        }
-    }
-);
 
 if (loadMoreBtn) {
 

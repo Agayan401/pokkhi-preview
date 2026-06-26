@@ -326,37 +326,39 @@ function findMatchingBirds(query) {
 
     return birds.filter(bird => {
 
-    return (
+        return (
 
-        bird.searchIndex.english.full.some(
-            item => item.includes(query)
-        )
+            bird.searchIndex.english.full.some(
+                item => item.includes(query)
+            )
 
-        ||
+            ||
 
-        bird.searchIndex.english.words.some(
-            item => item.includes(query)
-        )
+            bird.searchIndex.english.words.some(
+                item => item.includes(query)
+            )
 
-        ||
+            ||
 
-        bird.searchIndex.english.compounds.some(
-            item => item.includes(query)
-        )
+            bird.searchIndex.english.compounds.some(
+                item => item.includes(query)
+            )
 
-        ||
+            ||
 
-        bird.searchIndex.assamese.full.some(
-            item => item.includes(query)
-        )
+            bird.searchIndex.assamese.full.some(
+                item => item.includes(query)
+            )
 
-        ||
+            ||
 
-        bird.searchIndex.assamese.words.some(
-            item => item.includes(query)
+            bird.searchIndex.assamese.words.some(
+                item => item.includes(query)
+            )
+
         );
 
-});
+    });
 
 }
 

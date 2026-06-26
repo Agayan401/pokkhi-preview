@@ -1547,15 +1547,6 @@ p {
         width: auto;
     }
 
-.hero-logo {
-
-    width: 80px;
-
-    max-width: 70%;
-
-    margin-bottom: 1rem;
-}
-
     
     .navbar {
 
@@ -1603,7 +1594,7 @@ p {
 
     display: block;
 
-    width: 260px;
+    width: 140px;
 
     max-width: 45%;
 

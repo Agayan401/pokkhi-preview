@@ -1297,44 +1297,44 @@ labels.forEach(label => {
 const heroImages = [
 
     {
-        src: "images/hero/hero1.webp",
+        src: "images/hero/hero1.avif",
         desktopPosition: "center center",
         mobilePosition: "100% center"
     },
 
     {
-        src: "images/hero/hero2.webp",
+        src: "images/hero/hero2.avif",
         desktopPosition: "center center",
         mobilePosition: "65% center"
     },
 
     {
-        src: "images/hero/hero3.webp",
+        src: "images/hero/hero3.avif",
         desktopPosition: "center center",
         mobilePosition: "65% center"
     },
     {
-        src: "images/hero/hero4.webp",
+        src: "images/hero/hero4.avif",
         desktopPosition: "center center",
         mobilePosition: "65% center"
     },
     {
-        src: "images/hero/hero5.webp",
+        src: "images/hero/hero5.avif",
         desktopPosition: "center center",
         mobilePosition: "65% center"
     },
     {
-        src: "images/hero/hero6.webp",
+        src: "images/hero/hero6.avif",
         desktopPosition: "center center",
         mobilePosition: "35% center"
     },
     {
-        src: "images/hero/hero7.webp",
+        src: "images/hero/hero7.avif",
         desktopPosition: "center center",
         mobilePosition: "0% center"
     },
     {
-        src: "images/hero/hero8.webp",
+        src: "images/hero/hero8.avif",
         desktopPosition: "center center",
         mobilePosition: "100% center"
     },
@@ -1344,32 +1344,32 @@ const heroImages = [
         mobilePosition: "50% center"
     },
     {
-        src: "images/hero/hero10.webp",
+        src: "images/hero/hero10.avif",
         desktopPosition: "center center",
         mobilePosition: "80% center"
     },
     {
-        src: "images/hero/hero11.webp",
+        src: "images/hero/hero11.avif",
         desktopPosition: "center center",
         mobilePosition: "100% center"
     },
     {
-        src: "images/hero/hero12.webp",
+        src: "images/hero/hero12.avif",
         desktopPosition: "center center",
         mobilePosition: "35% center"
     },
     {
-        src: "images/hero/hero13.webp",
+        src: "images/hero/hero13.avif",
         desktopPosition: "center center",
         mobilePosition: "0% center"
     },
     {
-        src: "images/hero/hero14.webp",
+        src: "images/hero/hero14.avif",
         desktopPosition: "center center",
         mobilePosition: "80% center"
     },
     {
-        src: "images/hero/hero15.webp",
+        src: "images/hero/hero15.avif",
         desktopPosition: "center center",
         mobilePosition: "80% center"
     }

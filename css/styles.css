@@ -135,6 +135,11 @@ p {
 
     opacity: .85;
 }
+.nav-links a.active {
+
+    color: #facc15;
+
+}
 
 /* =========================
    HERO

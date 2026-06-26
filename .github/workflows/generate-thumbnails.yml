@@ -1,0 +1,43 @@
+name: Generate Bird Thumbnails
+
+on:
+  push:
+    paths:
+      - "images/birds/**"
+
+jobs:
+  thumbnails:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install pillow pillow-avif-plugin
+
+      - name: Generate thumbnails
+        run: |
+          python tools/generate_thumbnails.py
+
+      - name: Commit generated thumbnails
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add images/birds/cards
+
+          if git diff --cached --quiet; then
+            echo "No thumbnail changes."
+          else
+            git commit -m "Auto-generate bird thumbnails"
+            git push
+          fi

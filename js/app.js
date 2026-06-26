@@ -1373,6 +1373,12 @@ const heroImages = [
 
 ];
 
+function isMobileView() {
+
+    return window.matchMedia("(max-width: 768px)").matches;
+
+}
+
 function initHeroSlideshow() {
 
     const slideshow =
@@ -1387,7 +1393,7 @@ function initHeroSlideshow() {
     slide.className = "hero-slide";
 
     const imagePath =
-        window.innerWidth <= 768
+        isMobileView()
             ? image.mobile
             : image.desktop;
 
@@ -1426,10 +1432,10 @@ function updateHeroImagePositions() {
 
         const image = heroImages[index];
 
-        slide.style.backgroundImage =
-            window.innerWidth <= 768
-                ? `url("${image.mobile}")`
-                : `url("${image.desktop}")`;
+    slide.style.backgroundImage =
+        isMobileView()
+            ? `url("${image.mobile}")`
+            : `url("${image.desktop}")`;
 
     });
 
@@ -1471,3 +1477,4 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 
 }
 window.addEventListener("resize", updateHeroImagePositions);
+

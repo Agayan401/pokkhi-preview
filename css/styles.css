@@ -148,7 +148,7 @@ p {
 
     height: 78vh;
 
-    overflow: hidden;
+    overflow: visible;
 
     display: flex;
 
@@ -156,7 +156,7 @@ p {
 
     justify-content: center;
 
-    z-index: 10;
+    z-index: 100;
 }
 
 .hero-slideshow {
@@ -288,6 +288,8 @@ p {
 
     position: relative;
 
+    z-index: 200;
+
     width: 100%;
 
     max-width: 820px;
@@ -375,6 +377,10 @@ p {
 ========================= */
 
 .directory-summary {
+
+    position: relative;
+
+    z-index: 1;
 
     max-width: 1200px;
 

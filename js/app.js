@@ -444,18 +444,16 @@ function showSuggestions(searchTerm, targetBox, targetInput) {
             bird.name;
 
         item.addEventListener(
-            "click",
-            () => {
+    "click",
+    () => {
 
-                targetInput.value =
-                    bird.name;
+        targetInput.value = bird.name;
 
-                targetBox.style.display =
-                    "none";
+        targetBox.style.display = "none";
 
-                filterBirds();
-            }
-        );
+        performSearch();
+    }
+);
 
         targetBox.appendChild(item);
     });

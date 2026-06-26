@@ -1296,20 +1296,83 @@ labels.forEach(label => {
 
 const heroImages = [
 
-    "images/hero/hero1.avif",
-    "images/hero/hero2.avif",
-    "images/hero/hero3.avif",
-    "images/hero/hero4.avif",
-    "images/hero/hero5.avif",
-    "images/hero/hero6.avif",
-    "images/hero/hero7.avif",
-    "images/hero/hero8.avif",
-    "images/hero/hero9.avif",
-    "images/hero/hero10.avif",
-    "images/hero/hero11.avif",
-    "images/hero/hero12.avif",
-    "images/hero/hero13.avif",
-    "images/hero/hero14.avif"
+    {
+        src: "images/hero/hero1.webp",
+        desktopPosition: "center center",
+        mobilePosition: "100% center"
+    },
+
+    {
+        src: "images/hero/hero2.webp",
+        desktopPosition: "center center",
+        mobilePosition: "65% center"
+    },
+
+    {
+        src: "images/hero/hero3.webp",
+        desktopPosition: "center center",
+        mobilePosition: "65% center"
+    },
+    {
+        src: "images/hero/hero4.webp",
+        desktopPosition: "center center",
+        mobilePosition: "65% center"
+    },
+    {
+        src: "images/hero/hero5.webp",
+        desktopPosition: "center center",
+        mobilePosition: "65% center"
+    }
+    {
+        src: "images/hero/hero6.webp",
+        desktopPosition: "center center",
+        mobilePosition: "35% center"
+    },
+    {
+        src: "images/hero/hero7.webp",
+        desktopPosition: "center center",
+        mobilePosition: "0% center"
+    },
+    {
+        src: "images/hero/hero8.webp",
+        desktopPosition: "center center",
+        mobilePosition: "100% center"
+    },
+    {
+        src: "images/hero/hero9.webp",
+        desktopPosition: "center center",
+        mobilePosition: "50% center"
+    },
+    {
+        src: "images/hero/hero10.webp",
+        desktopPosition: "center center",
+        mobilePosition: "80% center"
+    },
+    {
+        src: "images/hero/hero11.webp",
+        desktopPosition: "center center",
+        mobilePosition: "100% center"
+    },
+    {
+        src: "images/hero/hero12.webp",
+        desktopPosition: "center center",
+        mobilePosition: "35% center"
+    },
+    {
+        src: "images/hero/hero13.webp",
+        desktopPosition: "center center",
+        mobilePosition: "0% center"
+    },
+    {
+        src: "images/hero/hero14.webp",
+        desktopPosition: "center center",
+        mobilePosition: "80% center"
+    },
+    {
+        src: "images/hero/hero15.webp",
+        desktopPosition: "center center",
+        mobilePosition: "80% center"
+    }
 
 ];
 
@@ -1322,20 +1385,25 @@ function initHeroSlideshow() {
 
     heroImages.forEach((image, index) => {
 
-        const slide =
-            document.createElement("div");
+    const slide = document.createElement("div");
 
-        slide.className = "hero-slide";
+    slide.className = "hero-slide";
 
-        if (index === 0) {
-            slide.classList.add("active");
-        }
+    slide.style.backgroundImage = `url(${image.src})`;
 
-        slide.style.backgroundImage = `url("${image}")`;
+    if (window.innerWidth <= 768) {
 
-        slideshow.appendChild(slide);
+        slide.style.backgroundPosition = image.mobilePosition;
 
-    });
+    } else {
+
+        slide.style.backgroundPosition = image.desktopPosition;
+
+    }
+
+    slideshow.appendChild(slide);
+
+});
 
     const slides =
         slideshow.querySelectorAll(".hero-slide");
@@ -1351,6 +1419,22 @@ function initHeroSlideshow() {
         slides[current].classList.add("active");
 
     }, 5000);
+
+}
+function updateHeroImagePositions() {
+
+    const slides = document.querySelectorAll(".hero-slide");
+
+    slides.forEach((slide, index) => {
+
+        const image = heroImages[index];
+
+        slide.style.backgroundPosition =
+            window.innerWidth <= 768
+                ? image.mobilePosition
+                : image.desktopPosition;
+
+    });
 
 }
 
@@ -1389,3 +1473,4 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 });
 
 }
+window.addEventListener("resize", updateHeroImagePositions);

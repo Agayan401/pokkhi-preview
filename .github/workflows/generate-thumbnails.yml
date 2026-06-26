@@ -10,34 +10,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install libvips
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y libvips-tools
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
-      - name: Create cards folder
-        run: mkdir -p images/birds/cards
+      - run: npm install
 
-      - name: Generate thumbnails
-        shell: bash
-        run: |
-          find images/birds -maxdepth 1 -type f -iname "*.avif" | while read img; do
-
-            filename=$(basename "$img")
-            thumb="images/birds/cards/$filename"
-
-            if [ -f "$thumb" ] && [ "$thumb" -nt "$img" ]; then
-              echo "Skipping $filename"
-              continue
-            fi
-
-            echo "Generating $filename"
-
-            vipsthumbnail "$img" \
-              --size 480x320 \
-              --output "$thumb[Q=85,strip]"
-
-          done
+      - run: node scripts/generate-thumbnails.js
 
       - name: Commit thumbnails
         run: |

@@ -1724,7 +1724,7 @@ p {
 
     margin: 0 auto 1.2rem;
 
-    transform: translateY(-30px);
+    transform: translateY(-200px);
 
     filter: drop-shadow(0 6px 20px rgba(0,0,0,.35));
 }
@@ -1735,7 +1735,7 @@ p {
 
     font-weight: 500;
 
-    margin-top: 30px;
+    margin-top: 100px;
 }
 
     .summary-card {

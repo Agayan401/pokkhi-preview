@@ -226,7 +226,77 @@ function updateResultCount() {
             `Showing ${filteredBirds.length} birds`;
     }
 }
+const excludedBirds = new Set([
 
+"ashy-headed-green-pigeon",
+"asian-palm-swift",
+"bank-myna",
+"barn-owl",
+"barred-buttonquail",
+"bearded-vulture",
+"bengal-bushlark",
+"black-baza",
+"black-kite",
+"black-stork",
+"black-breasted-parrotbill",
+"black-capped-kingfisher",
+"black-headed-gull",
+"black-tailed-crake",
+"blue-breasted-quail",
+"brahminy-kite",
+"brown-fish-owl",
+"chestnut-capped-babbler",
+"cinereous-vulture",
+"clamorous-reed-warbler",
+"common-quail",
+"common-redshank",
+"crested-treeswift",
+"dusky-eagle-owl",
+"eurasian-curlew",
+"eurasian-hobby",
+"eurasian-spoonbill",
+"ferruginous-flycatcher",
+"finn's-weaver",
+"firethroat",
+"great-white-pelican",
+"greenish-warbler",
+"grey-nightjar",
+"grey-capped-pygmy-woodpecker",
+"grey-hooded-warbler",
+"indian-cormorant",
+"indian-grassbird",
+"jack-snipe",
+"jerdon-s-babbler",
+"jerdon-s-baza",
+"jerdon-s-bushchat",
+"lesser-fish-eagle",
+"long-legged-buzzard",
+"mandarin-duck",
+"marsh-babbler",
+"masked-finfoot",
+"mountain-hawk-eagle",
+"mountain-imperial-pigeon",
+"mountain-scops-owl",
+"orange-breasted-green-pigeon",
+"oriental-bay-owl",
+"oriental-hobby",
+"pin-tailed-snipe",
+"red-avadavat",
+"rufous-bellied-eagle",
+"sarus-crane",
+"slaty-legged-crake",
+"slender-billed-babbler",
+"slender-billed-vulture",
+"steppe-eagle",
+"striated-bulbul",
+"swamp-grass-babbler",
+"thick-billed-warbler",
+"tickell-s-leaf-warbler",
+"white-rumped-vulture",
+"white-spectacled-warbler",
+"yellow-eyed-warbler"
+
+]);
 function renderBirdOfDay() {
 
     const container =
@@ -244,10 +314,14 @@ function renderBirdOfDay() {
             (1000 * 60 * 60 * 12)
         );
 
-    const bird =
-        birds[
-            dayNumber % birds.length
-        ];
+    const availableBirds = birds.filter(
+    bird => !excludedBirds.has(bird.name)
+);
+
+const bird =
+    availableBirds[
+        dayNumber % availableBirds.length
+    ];
 
 container.innerHTML = `
     <div class="bird-card featured-bird">

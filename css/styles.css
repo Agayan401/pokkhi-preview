@@ -1730,7 +1730,7 @@ p {
 
     margin: 0 auto 1.2rem;
 
-    transform: translateY(-100px);
+    transform: translateY(-150px);
 
     filter: drop-shadow(0 6px 20px rgba(0,0,0,.35));
 }

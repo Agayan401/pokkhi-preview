@@ -1569,18 +1569,17 @@ p {
 
         font-size: 1.1rem;
     }
-    .hero-logo {
+.hero-logo {
 
     display: block;
 
-    width: 420px;
+    width: 260px;
 
-    max-width: 85%;
+    max-width: 45%;
 
-    margin: 0 auto 3rem;
+    margin: 0 auto 1.2rem;
 
-    filter:
-        drop-shadow(0 6px 20px rgba(0,0,0,.35));
+    filter: drop-shadow(0 6px 20px rgba(0,0,0,.35));
 }
 
     .hero-text {

@@ -9,6 +9,10 @@ const directorySearchInput =
     );
 const statusFilter = document.getElementById("statusFilter");
 const suggestionsBox = document.getElementById("suggestions");
+const languageToggle =
+    document.getElementById("languageToggle");
+
+let searchMode = "english";
 const directorySuggestionsBox =
     document.getElementById(
         "directorySuggestions"
@@ -647,24 +651,34 @@ if (searchInput) {
     );
 
     searchInput.addEventListener(
-        "focus",
-        () => {
+    "focus",
+    () => {
 
-            if (window.innerWidth <= 768) {
+        if(languageToggle){
 
-                setTimeout(() => {
-
-                    searchInput.scrollIntoView({
-                        behavior: "smooth",
-                        block: "center"
-                    });
-
-                }, 300);
-
-            }
+            languageToggle.style.display =
+                "inline-block";
 
         }
-    );
+
+        if (window.innerWidth <= 768) {
+
+            setTimeout(() => {
+
+                searchInput.scrollIntoView({
+
+                    behavior:"smooth",
+
+                    block:"center"
+
+                });
+
+            },300);
+
+        }
+
+    }
+);
 
 }
 
@@ -860,6 +874,12 @@ document.addEventListener(
         if (
             !event.target.closest(
                 ".search-wrapper"
+            if(languageToggle){
+
+    languageToggle.style.display =
+        "none";
+
+}
             )
         ) {
 
@@ -1551,3 +1571,37 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 
 }
 window.addEventListener("resize", updateHeroImagePositions);
+if(languageToggle){
+
+    languageToggle.addEventListener(
+        "click",
+        ()=>{
+
+            if(searchMode==="english"){
+
+                searchMode="assamese";
+
+                languageToggle.textContent=
+                    "Search English Names →";
+
+                searchInput.placeholder=
+                    "অসমীয়া নাম লিখক...";
+
+            }
+
+            else{
+
+                searchMode="english";
+
+                languageToggle.textContent=
+                    "অসমীয়াত সন্ধান কৰক →";
+
+                searchInput.placeholder=
+                    "Search birds...";
+
+            }
+
+        }
+    );
+
+}

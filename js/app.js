@@ -1299,7 +1299,7 @@ const heroImages = [
     {
         src: "images/hero/hero1.avif",
         desktopPosition: "center center",
-        mobilePosition: "5% center"
+        mobilePosition: "200px center"
     },
 
     {

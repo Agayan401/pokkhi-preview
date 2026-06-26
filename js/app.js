@@ -1339,7 +1339,7 @@ const heroImages = [
         mobilePosition: "10% center"
     },
     {
-        src: "images/hero/hero9.webp",
+        src: "images/hero/hero9.avif",
         desktopPosition: "center center",
         mobilePosition: "center center"
     },

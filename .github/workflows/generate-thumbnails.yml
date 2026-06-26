@@ -4,12 +4,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
+  thumbnails:
 
     runs-on: ubuntu-latest
 
     steps:
-
       - uses: actions/checkout@v4
 
       - name: Install ImageMagick
@@ -17,10 +16,31 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y imagemagick
 
-      - name: Check ImageMagick
-        run: |
-          magick -version || convert -version
+      - name: Create cards folder
+        run: mkdir -p images/birds/cards
 
-      - name: Check AVIF support
+      - name: Generate thumbnails
         run: |
-          magick -list format | grep AVIF || convert -list format | grep AVIF
+          find images/birds -maxdepth 1 -name "*.avif" | while read img; do
+            filename=$(basename "$img")
+            magick "$img" \
+              -resize 800x800\> \
+              -strip \
+              -quality 85 \
+              -define heic:speed=6 \
+              "images/birds/cards/$filename"
+          done
+
+      - name: Commit thumbnails
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add images/birds/cards
+
+          if git diff --cached --quiet; then
+            echo "No thumbnails changed."
+          else
+            git commit -m "Update bird thumbnails"
+            git push
+          fi

@@ -639,7 +639,24 @@ p {
 
     text-align: center;
 
-    margin-bottom: 2rem;
+    margin-bottom: 2.8rem;
+}
+
+.directory h2::after {
+
+    content: "";
+
+    display: block;
+
+    width: 80px;
+
+    height: 4px;
+
+    background: #14532d;
+
+    border-radius: 999px;
+
+    margin: 14px auto 0;
 }
 .directory-controls {
 
@@ -653,7 +670,7 @@ p {
 
     max-width: 1000px;
 
-    margin: 0 auto 1.5rem;
+    margin: 0 auto .6rem;
 }
 
 /* =========================
@@ -742,9 +759,13 @@ p {
 
     color: #6b7280;
 
-    margin-bottom: 2rem;
-
     font-size: 1rem;
+
+    font-weight: 500;
+
+    margin-top: .4rem;
+
+    margin-bottom: 2rem;
 }
 
 #birdGrid {

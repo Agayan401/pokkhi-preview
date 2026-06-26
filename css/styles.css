@@ -1562,7 +1562,7 @@ p {
 
     display: grid;
 
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: 60px 1fr 60px;
 
     align-items: center;
 
@@ -1571,11 +1571,17 @@ p {
     
 .navbar-title {
 
+    position: static;
+
+    transform: none;
+
     display: flex;
 
     justify-content: center;
 
     align-items: center;
+
+    pointer-events: auto;
 }
 
 .navbar-title img {

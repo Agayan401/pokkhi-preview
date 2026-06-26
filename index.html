@@ -306,59 +306,44 @@
     </h2>
 
 <div class="directory-controls">
-<div class="directory-search search-wrapper">
 
-    <input
-        type="text"
-        id="directorySearchInput"
-        placeholder="Search birds by English or Assamese name...">
+    <div class="directory-search search-wrapper">
 
-    <div
-        id="directorySuggestions"
-        class="suggestions">
+        <input
+            type="text"
+            id="directorySearchInput"
+            placeholder="Search birds by English or Assamese name...">
+
+        <div
+            id="directorySuggestions"
+            class="suggestions">
+        </div>
+
     </div>
 
+    <button
+        id="resetSearchBtn"
+        class="reset-search-btn"
+        style="display:none;">
+
+        Show All Birds
+
+    </button>
+
+    <select id="statusFilter">
+
+        <option value="All">All Status</option>
+        <option value="LC">Least Concern</option>
+        <option value="NT">Near Threatened</option>
+        <option value="VU">Vulnerable</option>
+        <option value="EN">Endangered</option>
+        <option value="CR">Critically Endangered</option>
+
+    </select>
+
 </div>
 
-    <p id="resultCount"></p>
-
-        <button
-            id="resetSearchBtn"
-            class="reset-search-btn"
-            style="display:none;">
-
-            Show All Birds
-
-        </button>
-
-        <select id="statusFilter">
-
-            <option value="All">
-                All Status
-            </option>
-
-            <option value="LC">
-                Least Concern
-            </option>
-
-            <option value="NT">
-                Near Threatened
-            </option>
-
-            <option value="VU">
-                Vulnerable
-            </option>
-
-            <option value="EN">
-                Endangered
-            </option>
-
-            <option value="CR">
-                Critically Endangered
-            </option>
-
-        </select>
-</div>
+<p id="resultCount"></p>
 
 <div id="birdGrid"></div>
 

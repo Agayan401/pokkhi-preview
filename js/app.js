@@ -26,7 +26,70 @@ const loadMoreBtn =
 
 let birdsPerPage = 12;
 
-let visibleBirds = 12;
+/* ==========================================
+   SEARCH ENGINE
+========================================== */
+
+function normalizeQuery(text) {
+
+    return (text || "")
+        .toLowerCase()
+        .trim();
+
+}
+
+function tokenize(text) {
+
+    return normalizeQuery(text)
+
+        // Replace separators with spaces
+        .replace(/[\/,()]/g, " ")
+
+        // Replace hyphens with spaces
+        .replace(/-/g, " ")
+
+        // Remove duplicate spaces
+        .replace(/\s+/g, " ")
+
+        // Split into words
+        .split(" ")
+
+        // Remove empty words
+        .filter(Boolean);
+
+}
+
+function buildSearchIndex(bird) {
+
+    const tokens = [];
+
+    // English name
+    tokens.push(...tokenize(bird.name));
+
+    // Whole English name
+    tokens.push(normalizeQuery(bird.name));
+
+    // Assamese name
+    tokens.push(...tokenize(bird.assameseName));
+
+    // Whole Assamese name
+    tokens.push(normalizeQuery(bird.assameseName));
+
+    return [...new Set(tokens)].join(" ");
+
+}
+
+function findMatchingBirds(query) {
+
+    query = normalizeQuery(query);
+
+    if (!query) return birds;
+
+    return birds.filter(bird =>
+        bird.searchIndex.includes(query)
+    );
+
+}
 
 function getStatusClass(status) {
 
@@ -67,12 +130,19 @@ async function loadBirds() {
 
         birds = await response.json();
 
-birds.sort((a, b) =>
-    a.name.localeCompare(
-        b.name,
-        "en",
-        { sensitivity: "base" }
-    )
+birds.forEach(bird => {
+
+    bird.searchIndex = buildSearchIndex(bird);
+
+});
+
+birds.sort(
+    (a, b) =>
+        a.name.localeCompare(
+            b.name,
+            "en",
+            { sensitivity: "base" }
+        )
 );
 
 filteredBirds = [...birds];
@@ -489,20 +559,8 @@ function showSuggestions(searchTerm, targetBox, targetInput) {
     }
 
     const matches =
-        birds
-            .filter(bird =>
-
-                (bird.name || "")
-                    .toLowerCase()
-                    .includes(searchTerm)
-
-                ||
-
-                (bird.assameseName || "")
-                    .toLowerCase()
-                    .includes(searchTerm)
-            )
-            .slice(0, 5);
+    findMatchingBirds(searchTerm)
+        .slice(0,5);
 
     if (!matches.length) {
 
@@ -584,20 +642,11 @@ function filterBirds() {
     const status =
         statusFilter.value;
 
-    filteredBirds =
-        birds.filter(bird => {
+    const matchingBirds =
+    findMatchingBirds(search);
 
-            const matchesSearch =
-
-                (bird.name || "")
-                    .toLowerCase()
-                    .includes(search)
-
-                ||
-
-                (bird.assameseName || "")
-                    .toLowerCase()
-                    .includes(search);
+filteredBirds =
+    matchingBirds.filter(bird => {
 
             const matchesStatus =
 

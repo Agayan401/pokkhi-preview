@@ -2404,3 +2404,33 @@ teamModal.onclick=(e)=>{
     }
 
 };
+/* ==========================================
+   SCROLL TO HASH AFTER PAGE LOAD
+========================================== */
+
+window.addEventListener("load", () => {
+
+    if (!window.location.hash) return;
+
+    const target = document.querySelector(window.location.hash);
+
+    if (!target) return;
+
+    setTimeout(() => {
+
+        const y =
+            target.getBoundingClientRect().top +
+            window.pageYOffset -
+            100;
+
+        window.scrollTo({
+
+            top: y,
+
+            behavior: "smooth"
+
+        });
+
+    }, 300);
+
+});

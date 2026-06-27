@@ -966,6 +966,8 @@ p {
     transition:
         transform .25s ease,
         box-shadow .25s ease;
+    
+    scroll-margin-top: 90px;
 }
 
 .bird-card:hover {
@@ -2397,6 +2399,43 @@ p {
         padding:4px 8px;
 
         border-width:1.5px;
+    }
+
+}
+.search-focus{
+
+    animation: searchPulse 1.5s ease;
+
+}
+
+@keyframes searchPulse{
+
+    0%{
+
+        transform: scale(1);
+
+        box-shadow:
+            0 8px 24px rgba(0,0,0,.08);
+
+    }
+
+    35%{
+
+        transform: scale(1.02);
+
+        box-shadow:
+            0 0 0 6px rgba(20,83,45,.18),
+            0 16px 40px rgba(0,0,0,.16);
+
+    }
+
+    100%{
+
+        transform: scale(1);
+
+        box-shadow:
+            0 8px 24px rgba(0,0,0,.08);
+
     }
 
 }

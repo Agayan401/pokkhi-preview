@@ -417,6 +417,31 @@ p {
 
     color: #111827;
 }
+.suggestion-title{
+
+    font-weight:600;
+
+    color:#111827;
+
+}
+
+.suggestion-assamese{
+
+    margin-top:4px;
+
+    font-size:.88rem;
+
+    color:#166534;
+
+}
+
+.search-highlight{
+
+    color:#d97706;
+
+    font-weight:700;
+
+}
 
 /* =========================
    DIRECTORY SUMMARY

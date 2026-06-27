@@ -1307,10 +1307,10 @@ function performSearch() {
 
     }
 
-    requestAnimationFrame(() => {
+    setTimeout(() => {
 
         const firstCard =
-            document.querySelector(".bird-card");
+            birdGrid.querySelector(".bird-card");
 
         if (firstCard) {
 
@@ -1322,21 +1322,17 @@ function performSearch() {
 
             });
 
-            firstCard.classList.add(
-                "search-focus"
-            );
+            firstCard.classList.add("search-focus");
 
             setTimeout(() => {
 
-                firstCard.classList.remove(
-                    "search-focus"
-                );
+                firstCard.classList.remove("search-focus");
 
             }, 1500);
 
         }
 
-    });
+    }, 100);
 
     setTimeout(() => {
 

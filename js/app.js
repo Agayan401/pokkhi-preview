@@ -323,43 +323,40 @@ function findMatchingBirds(query) {
 
     query = normalizeQuery(query);
 
-    if (!query) return birds;
+    if (!query) {
+        return birds;
+    }
 
-    return birds.filter(bird => {
+    return birds
 
-        return (
+        .map(bird => ({
 
-            bird.searchIndex.english.full.some(
-                item => item.includes(query)
-            )
+            bird: bird,
 
-            ||
+            score: scoreBird(bird, query)
 
-            bird.searchIndex.english.words.some(
-                item => item.includes(query)
-            )
+        }))
 
-            ||
+        .filter(result => result.score > 0)
 
-            bird.searchIndex.english.compounds.some(
-                item => item.includes(query)
-            )
+        .sort((a, b) => {
 
-            ||
+            if (b.score !== a.score) {
 
-            bird.searchIndex.assamese.full.some(
-                item => item.includes(query)
-            )
+                return b.score - a.score;
 
-            ||
+            }
 
-            bird.searchIndex.assamese.words.some(
-                item => item.includes(query)
-            )
+            // Alphabetical if scores are equal
+            return a.bird.name.localeCompare(
+                b.bird.name,
+                "en",
+                { sensitivity: "base" }
+            );
 
-        );
+        })
 
-    });
+        .map(result => result.bird);
 
 }
 

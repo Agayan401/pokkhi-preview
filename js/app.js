@@ -88,14 +88,29 @@ function hideLoaderIfReady() {
 
         const loader =
             document.getElementById("loader");
+const logo = document.querySelector(".loader-logo");
 
+if (logo) {
+
+    logo.style.animation = "none";
+
+    logo.style.transform = "scale(1)";
+
+}
         loader.classList.add("loader-hidden");
+
+// Always start from the top
+window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "instant"
+});
 
 setTimeout(() => {
 
     initHeroSlideshow();
 
-}, 700);
+}, 1000);
 
     }
 

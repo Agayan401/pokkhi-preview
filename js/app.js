@@ -404,7 +404,11 @@ if (roman) {
     tokenize(roman)
         .forEach(word =>
 
-            index.roman.words.push(word)
+            index.roman.words.push(
+
+    normalizeRoman(word)
+
+);
 
         );
 
@@ -415,7 +419,11 @@ if (roman) {
 }
 function scoreBird(bird, query) {
 
-    query = normalizeQuery(query);
+    query = normalizeRoman(
+
+    normalizeQuery(query)
+
+);
 
     if (!query) {
         return 1;

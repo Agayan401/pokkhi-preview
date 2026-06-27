@@ -1304,9 +1304,10 @@ function performSearch() {
 
         resetSearchBtn.style.display =
             "inline-block";
+
     }
 
-    setTimeout(() => {
+    requestAnimationFrame(() => {
 
         const firstCard =
             document.querySelector(".bird-card");
@@ -1335,7 +1336,7 @@ function performSearch() {
 
         }
 
-    }, 50);
+    });
 
     setTimeout(() => {
 

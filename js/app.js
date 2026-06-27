@@ -2337,4 +2337,70 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 
 }
 window.addEventListener("resize", updateHeroImagePositions);
+const teamData = {
 
+    chirantanu:{
+
+        name:"Crirantanu Saikia",
+
+        image:"images/chirantanu.avif",
+
+        bio:
+        "test"
+
+    },
+
+    friend:{
+
+        name:"Abhilash Gayan",
+
+        image:"images/abhilash.jpg",
+
+        bio:
+        "test"
+
+    }
+
+};
+
+const teamModal=document.getElementById("teamModal");
+
+const teamPhoto=document.getElementById("teamPhoto");
+
+const teamName=document.getElementById("teamName");
+
+const teamBio=document.getElementById("teamBio");
+
+document.querySelectorAll(".team-member").forEach(member=>{
+
+    member.addEventListener("click",()=>{
+
+        const person=teamData[member.dataset.member];
+
+        teamPhoto.src=person.image;
+
+        teamName.textContent=person.name;
+
+        teamBio.textContent=person.bio;
+
+        teamModal.style.display="flex";
+
+    });
+
+});
+
+document.getElementById("closeTeamModal").onclick=()=>{
+
+    teamModal.style.display="none";
+
+};
+
+teamModal.onclick=(e)=>{
+
+    if(e.target===teamModal){
+
+        teamModal.style.display="none";
+
+    }
+
+};

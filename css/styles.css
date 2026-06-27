@@ -2439,3 +2439,159 @@ p {
     }
 
 }
+/*==========================
+TEAM
+==========================*/
+
+.footer-team{
+
+    text-align:left;
+
+}
+
+.team-tagline{
+
+    font-style:italic;
+
+    color:rgba(255,255,255,.9);
+
+    margin-bottom:18px;
+
+    line-height:1.7;
+
+}
+
+.team-text{
+
+    color:rgba(255,255,255,.85);
+
+    line-height:1.8;
+
+}
+
+.team-member{
+
+    color:white;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    border-bottom:1px dotted rgba(255,255,255,.5);
+
+    transition:.2s;
+
+}
+
+.team-member:hover{
+
+    color:#fde68a;
+
+}
+/*==========================
+TEAM MODAL
+==========================*/
+
+.team-modal{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.65);
+
+    backdrop-filter:blur(5px);
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:10000;
+
+}
+
+.team-modal-content{
+
+    width:360px;
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:32px;
+
+    text-align:center;
+
+    position:relative;
+
+    animation:popup .25s ease;
+
+}
+
+.team-modal-content img{
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    margin-bottom:20px;
+
+}
+
+.team-modal-content h2{
+
+    color:#14532d;
+
+    margin-bottom:12px;
+
+}
+
+.team-modal-content p{
+
+    color:#555;
+
+    line-height:1.8;
+
+    text-align:center;
+
+}
+
+#closeTeamModal{
+
+    position:absolute;
+
+    right:18px;
+
+    top:12px;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+}
+
+@keyframes popup{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.92);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}

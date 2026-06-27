@@ -1,3 +1,42 @@
+/* ==========================
+   LOADER
+========================== */
+
+let animationFinished = false;
+
+let pageLoaded = false;
+
+let slideshowLoaded = false;
+
+const loaderSteps = [
+
+{
+action:"Exploring...",
+place:"the forests of Assam"
+},
+
+{
+action:"Scanning...",
+place:"the wetlands of Assam"
+},
+
+{
+action:"Listening...",
+place:"the grasslands of Assam"
+},
+
+{
+action:"Discovering...",
+place:"the tea gardens of Assam"
+},
+
+{
+action:"Identifying...",
+place:"333 species ready."
+}
+
+];
+
 let birds = [];
 let filteredBirds = [];
 

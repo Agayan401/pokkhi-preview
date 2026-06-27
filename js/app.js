@@ -2339,9 +2339,9 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 window.addEventListener("resize", updateHeroImagePositions);
 const teamData = {
 
-    chirantanu:{
+   "chirantanu-saikia":{
 
-        name:"Crirantanu Saikia",
+        name:"Chirantanu Saikia",
 
         image:"images/chirantanu.avif",
 
@@ -2350,7 +2350,7 @@ const teamData = {
 
     },
 
-    friend:{
+    "abhilash-gayan":{
 
         name:"Abhilash Gayan",
 

@@ -3,10 +3,8 @@
 ========================== */
 
 let animationFinished = false;
-
-let pageLoaded = false;
-
-let slideshowLoaded = false;
+let birdsLoaded = false;
+let heroImagesLoaded = false;
 
 const loaderSteps = [
 
@@ -36,6 +34,109 @@ place:"333 species ready."
 }
 
 ];
+const preloadImages = [
+    "images/hero1.avif",
+    "images/hero2.avif",
+    "images/hero3.avif",
+    "images/hero4.avif"
+];
+function preloadHeroImages() {
+
+    return Promise.all(
+
+        preloadImages.map(src =>
+
+            new Promise(resolve => {
+
+                const img = new Image();
+
+                img.onload = resolve;
+                img.onerror = resolve;
+
+                img.src = src;
+
+            })
+
+        )
+
+    );
+
+}
+
+function hideLoaderIfReady() {
+
+    if (
+
+        animationFinished &&
+        birdsLoaded &&
+        heroImagesLoaded
+
+    ) {
+
+        const loader =
+            document.getElementById("loader");
+
+        loader.classList.add("loader-hidden");
+
+    }
+
+}
+
+function startLoaderAnimation() {
+
+    const action =
+        document.getElementById("loaderAction");
+
+    const place =
+        document.getElementById("loaderPlace");
+
+    const progress =
+        document.getElementById("loaderProgress");
+
+    let step = 0;
+
+    function nextStep() {
+
+        if (step >= loaderSteps.length) {
+
+    clearInterval(interval);
+
+    animationFinished = true;
+
+    hideLoaderIfReady();
+
+    return;
+
+}
+
+        action.classList.add("loader-fade");
+        place.classList.add("loader-fade");
+
+        setTimeout(() => {
+
+            action.textContent =
+                loaderSteps[step].action;
+
+            place.textContent =
+                loaderSteps[step].place;
+
+            progress.style.width =
+                ((step + 1) / loaderSteps.length) * 100 + "%";
+
+            action.classList.remove("loader-fade");
+            place.classList.remove("loader-fade");
+
+            step++;
+
+        },250);
+
+    }
+
+    nextStep();
+
+const interval = setInterval(nextStep,800);
+
+}
 
 let birds = [];
 let filteredBirds = [];
@@ -779,6 +880,9 @@ if (document.getElementById("birdGrid")) {
     renderBirds(filteredBirds);
     updateResultCount();
 }
+
+birdsLoaded = true;
+hideLoaderIfReady();
 
     } catch (error) {
 
@@ -2341,6 +2445,16 @@ function updateHeroImagePositions() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+
+    startLoaderAnimation();
+
+    preloadHeroImages().then(() => {
+
+        heroImagesLoaded = true;
+
+        hideLoaderIfReady();
+
+    });
 
     loadBirds();
 

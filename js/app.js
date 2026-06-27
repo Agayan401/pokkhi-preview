@@ -510,7 +510,11 @@ birds.forEach(bird => {
 
 });
 
-console.log(birds[0].searchIndex);
+console.log(
+    birds[0].name,
+    birds[0].assameseName,
+    birds[0].searchIndex.roman.words
+);
 
 birds.sort(
     (a, b) =>

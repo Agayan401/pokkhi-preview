@@ -198,8 +198,6 @@ function normalizeRoman(text) {
     if (!text) return "";
 
     return text
-
-        // lowercase
         .toLowerCase()
 
         // vowels
@@ -207,19 +205,19 @@ function normalizeRoman(text) {
         .replace(/ee/g, "i")
         .replace(/ii/g, "i")
         .replace(/oo/g, "u")
-        .replace(/ou/g, "ou")
+        .replace(/o/g, "a")
 
-        // aspirated consonants
+        // consonants
         .replace(/kh/g, "k")
         .replace(/gh/g, "g")
         .replace(/chh/g, "ch")
         .replace(/jh/g, "j")
         .replace(/th/g, "t")
         .replace(/dh/g, "d")
-        .replace(/ph/g, "f")
         .replace(/bh/g, "b")
+        .replace(/ph/g, "f")
 
-        // Assamese spelling variations
+        // Assamese spelling
         .replace(/sh/g, "h")
         .replace(/x/g, "h")
         .replace(/s/g, "h")
@@ -532,6 +530,32 @@ function scoreBird(bird, query) {
         }
 
     });
+
+    /* ==========================
+   ROMAN ASSAMESE
+========================== */
+
+bird.searchIndex.roman.words.forEach(word => {
+
+    if (word === query) {
+
+        score = Math.max(score, 85);
+
+    }
+
+    else if (word.startsWith(query)) {
+
+        score = Math.max(score, 75);
+
+    }
+
+    else if (word.includes(query)) {
+
+        score = Math.max(score, 45);
+
+    }
+
+});
 
     return score;
 

@@ -2614,3 +2614,328 @@ TEAM MODAL
     }
 
 }
+/*====================================================
+                    POKKHI LOADER
+====================================================*/
+
+#loader{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:999999;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    background:#edf5ef;
+
+    transition:
+        opacity .7s ease,
+        visibility .7s ease;
+
+}
+
+#loader.loader-hidden{
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+
+}
+
+/*---------------------------------------
+BACKGROUND
+---------------------------------------*/
+
+.loader-gradient{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        180deg,
+
+        #edf6ef 0%,
+
+        #f7f7f0 50%,
+
+        #fffdf8 100%
+
+    );
+
+    animation:
+
+        loaderSunrise 18s ease-in-out infinite alternate;
+
+}
+
+@keyframes loaderSunrise{
+
+    from{
+
+        filter:brightness(1);
+
+    }
+
+    to{
+
+        filter:brightness(1.05);
+
+    }
+
+}
+
+/*---------------------------------------
+MIST
+---------------------------------------*/
+
+.loader-mist{
+
+    position:absolute;
+
+    inset:-15%;
+
+    opacity:.18;
+
+    background:
+
+        radial-gradient(
+
+            ellipse at 20% 50%,
+
+            rgba(255,255,255,.9),
+
+            transparent 45%
+
+        ),
+
+        radial-gradient(
+
+            ellipse at 75% 35%,
+
+            rgba(255,255,255,.8),
+
+            transparent 40%
+
+        ),
+
+        radial-gradient(
+
+            ellipse at 60% 75%,
+
+            rgba(255,255,255,.8),
+
+            transparent 45%
+
+        );
+
+    animation:
+
+        driftMist 35s linear infinite;
+
+}
+
+@keyframes driftMist{
+
+    from{
+
+        transform:
+
+            translateX(-8%);
+
+    }
+
+    to{
+
+        transform:
+
+            translateX(8%);
+
+    }
+
+}
+
+/*---------------------------------------
+CONTENT
+---------------------------------------*/
+
+.loader-content{
+
+    position:relative;
+
+    z-index:10;
+
+    text-align:center;
+
+    width:min(90%,500px);
+
+}
+
+.loader-logo{
+
+    width:200px;
+
+    margin-bottom:45px;
+
+    animation:
+
+        breathe 4s ease-in-out infinite;
+
+}
+
+@keyframes breathe{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.03);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+#loaderAction{
+
+    font-size:15px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    color:#7b7b7b;
+
+    margin-bottom:16px;
+
+    transition:.45s;
+
+}
+
+.loader-text-wrapper{
+
+    height:42px;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+#loaderPlace{
+
+    position:absolute;
+
+    width:100%;
+
+    left:0;
+
+    font-size:30px;
+
+    font-weight:500;
+
+    color:#215e37;
+
+    transition:
+
+        opacity .45s,
+
+        transform .45s;
+
+}
+
+.loader-fade{
+
+    opacity:0;
+
+    transform:
+
+        translateY(-15px);
+
+}
+
+/*---------------------------------------
+PROGRESS BAR
+---------------------------------------*/
+
+.loader-progress{
+
+    width:240px;
+
+    height:3px;
+
+    background:
+
+        rgba(0,0,0,.08);
+
+    margin:
+
+        45px auto 0;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+}
+
+#loaderProgress{
+
+    width:0%;
+
+    height:100%;
+
+    background:#215e37;
+
+    transition:
+
+        width .5s ease;
+
+}
+
+/*---------------------------------------
+MOBILE
+---------------------------------------*/
+
+@media(max-width:768px){
+
+.loader-logo{
+
+    width:150px;
+
+}
+
+#loaderPlace{
+
+    font-size:22px;
+
+}
+
+.loader-progress{
+
+    width:180px;
+
+}
+
+}

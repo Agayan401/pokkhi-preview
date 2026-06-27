@@ -510,6 +510,8 @@ birds.forEach(bird => {
 
 });
 
+console.log(birds[0].searchIndex);
+
 birds.sort(
     (a, b) =>
         a.name.localeCompare(

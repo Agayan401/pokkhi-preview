@@ -5,6 +5,7 @@
 let animationFinished = false;
 let birdsLoaded = false;
 let heroImagesLoaded = false;
+let slideshowStarted = false;
 
 const loaderSteps = [
 
@@ -64,6 +65,13 @@ function preloadHeroImages() {
 }
 
 function hideLoaderIfReady() {
+   if (!slideshowStarted) {
+
+    slideshowStarted = true;
+
+    initHeroSlideshow();
+
+}
 
     if (
 
@@ -77,6 +85,12 @@ function hideLoaderIfReady() {
             document.getElementById("loader");
 
         loader.classList.add("loader-hidden");
+
+setTimeout(() => {
+
+    initHeroSlideshow();
+
+}, 700);
 
     }
 
@@ -101,9 +115,13 @@ function startLoaderAnimation() {
 
     clearInterval(interval);
 
+setTimeout(() => {
+
     animationFinished = true;
 
     hideLoaderIfReady();
+
+}, 800);
 
     return;
 
@@ -134,7 +152,7 @@ function startLoaderAnimation() {
 
     nextStep();
 
-const interval = setInterval(nextStep,800);
+const interval = setInterval(nextStep,1400);
 
 }
 
@@ -2458,7 +2476,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     loadBirds();
 
-    initHeroSlideshow();
 
 });
 /* ==========================================

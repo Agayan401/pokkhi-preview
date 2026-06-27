@@ -35,7 +35,7 @@ place:"the birds of Assam"
 },
 
 {
-action:"",
+action:" ",
 place:"Welcome to Pokkhi."
 }
 
@@ -153,16 +153,7 @@ const currentStep = loaderSteps[step];
 action.textContent = currentStep.action;
 place.textContent = currentStep.place;
 
-// Hide the action line if it's empty
-if (currentStep.action === "") {
 
-    action.style.opacity = "0";
-
-} else {
-
-    action.style.opacity = "1";
-
-}
 
             progress.style.width =
                 ((step + 1) / loaderSteps.length) * 100 + "%";

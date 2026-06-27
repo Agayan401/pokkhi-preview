@@ -227,25 +227,6 @@ function buildSearchIndex(bird) {
             variants: []
 
         }
-    /* ==========================
-       ASSAMESE
-       ========================== */
-        const roman =
-    romanizeAssamese(
-        bird.assameseName || ""
-    );
-
-if (roman) {
-
-    tokenize(roman)
-
-        .forEach(word =>
-
-            index.roman.words.push(word)
-
-        );
-
-}
 
     };
 
@@ -305,6 +286,25 @@ if (roman) {
             );
 
     }
+    /* ==========================
+   ROMAN ASSAMESE
+========================== */
+
+const roman =
+    romanizeAssamese(
+        bird.assameseName || ""
+    );
+
+if (roman) {
+
+    tokenize(roman)
+        .forEach(word =>
+
+            index.roman.words.push(word)
+
+        );
+
+}
 
     return index;
 

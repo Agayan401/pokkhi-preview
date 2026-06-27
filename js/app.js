@@ -2343,10 +2343,10 @@ const teamData = {
 
         name:"Chirantanu Saikia",
 
-        image:"images/chirantanu.avif",
+        image:"images/chirantanu-saikia.avif",
 
         bio:
-        "test"
+        "An acclaimed wildlife photographer and avid birder with a deep interest in documenting the region's avian diversity. His field observations, photographs and species knowledge form the foundation of Pokkhi's bird directory."
 
     },
 
@@ -2354,10 +2354,10 @@ const teamData = {
 
         name:"Abhilash Gayan",
 
-        image:"images/abhilash.jpg",
+        image:"images/abhilash-gayan.avif",
 
         bio:
-        "test"
+        "A Ph.D. scholar at the Microwave Engineering Lab, Tezpur University. He is wildlife enthusiast and photographer with a passion for nature, technology, and conservation."
 
     }
 

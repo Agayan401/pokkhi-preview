@@ -400,17 +400,9 @@ const roman =
 
 if (roman) {
 
-    tokenize(roman).forEach(word => {
-
-        index.roman.words.push(
-            normalizeRoman(word)
-        );
-
-    });
-
-}
-
-        );
+    tokenize(roman).forEach(word =>
+        index.roman.words.push(normalizeRoman(word))
+    );
 
 }
 

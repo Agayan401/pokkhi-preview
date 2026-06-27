@@ -1109,9 +1109,53 @@ function showSuggestions(searchTerm, targetBox, targetInput) {
         return;
     }
 
-    const matches =
-    findMatchingBirds(searchTerm)
-        .slice(0,5);
+    let matches =
+    findMatchingBirds(searchTerm);
+
+const query =
+    normalizeRoman(
+        normalizeQuery(searchTerm)
+    );
+
+matches.sort((a, b) => {
+
+    const aEnglish =
+        normalizeRoman(a.name)
+            .includes(query);
+
+    const bEnglish =
+        normalizeRoman(b.name)
+            .includes(query);
+
+    if (aEnglish !== bEnglish) {
+
+        return bEnglish - aEnglish;
+
+    }
+
+    const aStarts =
+    normalizeRoman(a.name)
+        .startsWith(query);
+
+const bStarts =
+    normalizeRoman(b.name)
+        .startsWith(query);
+
+if (aStarts !== bStarts) {
+
+    return bStarts - aStarts;
+
+}
+
+return a.name.localeCompare(
+    b.name,
+    "en",
+    { sensitivity: "base" }
+);
+
+});
+
+matches = matches.slice(0,5);
 
     if (!matches.length) {
 

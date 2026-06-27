@@ -38,6 +38,92 @@ function normalizeQuery(text) {
         .trim();
 
 }
+function romanizeAssamese(text) {
+
+    if (!text) return "";
+
+    const map = {
+
+        "অ":"o",
+        "আ":"a",
+        "ই":"i",
+        "ঈ":"i",
+        "উ":"u",
+        "ঊ":"u",
+        "এ":"e",
+        "ঐ":"oi",
+        "ও":"o",
+        "ঔ":"ou",
+
+        "ক":"k",
+        "খ":"kh",
+        "গ":"g",
+        "ঘ":"gh",
+        "ঙ":"ng",
+
+        "চ":"ch",
+        "ছ":"chh",
+        "জ":"j",
+        "ঝ":"jh",
+        "ঞ":"n",
+
+        "ট":"t",
+        "ঠ":"th",
+        "ড":"d",
+        "ঢ":"dh",
+        "ণ":"n",
+
+        "ত":"t",
+        "থ":"th",
+        "দ":"d",
+        "ধ":"dh",
+        "ন":"n",
+
+        "প":"p",
+        "ফ":"ph",
+        "ব":"b",
+        "ভ":"bh",
+        "ম":"m",
+
+        "য":"j",
+        "য়":"y",
+        "ৰ":"r",
+        "ল":"l",
+
+        "শ":"sh",
+        "ষ":"sh",
+        "স":"s",
+        "হ":"h",
+
+        "ং":"ng",
+        "ঃ":"h",
+        "ঁ":"n",
+
+        "া":"a",
+        "ি":"i",
+        "ী":"i",
+        "ু":"u",
+        "ূ":"u",
+        "ে":"e",
+        "ৈ":"oi",
+        "ো":"o",
+        "ৌ":"ou",
+
+        "্":""
+
+    };
+
+    let result = "";
+
+    for (const ch of text) {
+
+        result += map[ch] || ch;
+
+    }
+
+    return normalizeQuery(result);
+
+}
 
 function tokenize(text) {
 
@@ -141,6 +227,25 @@ function buildSearchIndex(bird) {
             variants: []
 
         }
+    /* ==========================
+       ASSAMESE
+       ========================== */
+        const roman =
+    romanizeAssamese(
+        bird.assameseName || ""
+    );
+
+if (roman) {
+
+    tokenize(roman)
+
+        .forEach(word =>
+
+            index.roman.words.push(word)
+
+        );
+
+}
 
     };
 

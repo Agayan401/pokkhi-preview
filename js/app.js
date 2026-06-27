@@ -193,6 +193,42 @@ function romanizeAssamese(text) {
 
 }
 
+function normalizeRoman(text) {
+
+    if (!text) return "";
+
+    return text
+
+        // lowercase
+        .toLowerCase()
+
+        // vowels
+        .replace(/aa/g, "a")
+        .replace(/ee/g, "i")
+        .replace(/ii/g, "i")
+        .replace(/oo/g, "u")
+        .replace(/ou/g, "ou")
+
+        // aspirated consonants
+        .replace(/kh/g, "k")
+        .replace(/gh/g, "g")
+        .replace(/chh/g, "ch")
+        .replace(/jh/g, "j")
+        .replace(/th/g, "t")
+        .replace(/dh/g, "d")
+        .replace(/ph/g, "f")
+        .replace(/bh/g, "b")
+
+        // Assamese spelling variations
+        .replace(/sh/g, "h")
+        .replace(/x/g, "h")
+        .replace(/s/g, "h")
+
+        // repeated letters
+        .replace(/(.)\1+/g, "$1");
+
+}
+
 function tokenize(text) {
 
     return normalizeQuery(text)

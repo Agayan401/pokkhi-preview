@@ -41,10 +41,10 @@ place:"Welcome to Pokkhi."
 
 ];
 const preloadImages = [
+    "images/hero15.avif",
     "images/hero1.avif",
     "images/hero2.avif",
-    "images/hero3.avif",
-    "images/hero4.avif"
+    "images/hero3.avif"
 ];
 function preloadHeroImages() {
 
@@ -2333,6 +2333,11 @@ labels.forEach(label => {
 const heroImages = [
 
     {
+        desktop: "images/hero/hero15.avif",
+        mobile: "images/hero/hero15_mobile.avif"
+    },
+
+    {
         desktop: "images/hero/hero1.avif",
         mobile: "images/hero/hero1_mobile.avif"
     },
@@ -2400,11 +2405,6 @@ const heroImages = [
     {
         desktop: "images/hero/hero14.avif",
         mobile: "images/hero/hero14_mobile.avif"
-    },
-
-    {
-        desktop: "images/hero/hero15.avif",
-        mobile: "images/hero/hero15_mobile.avif"
     }
 
 ];

@@ -639,7 +639,42 @@ function highlightMatch(text, query) {
     );
 
 }
+function highlightRomanAssamese(text, query) {
 
+    if (!text || !query)
+        return text;
+
+    const roman =
+        romanizeAssamese(text);
+
+    const normalizedQuery =
+        normalizeRoman(query);
+
+    const words =
+        text.split(" ");
+
+    return words.map(word => {
+
+        const romanWord =
+            normalizeRoman(
+                romanizeAssamese(word)
+            );
+
+        if (
+            romanWord.includes(
+                normalizedQuery
+            )
+        ) {
+
+            return `<span class="search-highlight">${word}</span>`;
+
+        }
+
+        return word;
+
+    }).join(" ");
+
+}
 function getStatusClass(status) {
 
     switch (status) {
@@ -1194,7 +1229,10 @@ let assameseHighlighted =
 if (showRomanHighlight) {
 
     assameseHighlighted =
-        `<strong>${assameseHighlighted}</strong>`;
+        highlightRomanAssamese(
+            bird.assameseName,
+            searchTerm
+        );
 
 }
 
@@ -1328,12 +1366,7 @@ if (searchInput) {
     "focus",
     () => {
 
-        if(languageToggle){
-
-            languageToggle.style.display =
-                "inline-block";
-
-        }
+        
 
         if (window.innerWidth <= 768) {
 
@@ -2250,37 +2283,4 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 
 }
 window.addEventListener("resize", updateHeroImagePositions);
-if(languageToggle){
 
-    languageToggle.addEventListener(
-        "click",
-        ()=>{
-
-            if(searchMode==="english"){
-
-                searchMode="assamese";
-
-                languageToggle.textContent=
-                    "Search English Names →";
-
-                searchInput.placeholder=
-                    "অসমীয়া নাম লিখক...";
-
-            }
-
-            else{
-
-                searchMode="english";
-
-                languageToggle.textContent=
-                    "অসমীয়াত সন্ধান কৰক →";
-
-                searchInput.placeholder=
-                    "Search birds...";
-
-            }
-
-        }
-    );
-
-}

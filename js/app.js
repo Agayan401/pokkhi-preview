@@ -41,10 +41,10 @@ place:"Welcome to Pokkhi."
 
 ];
 const preloadImages = [
-    "images/hero15.avif",
     "images/hero1.avif",
     "images/hero2.avif",
-    "images/hero3.avif"
+    "images/hero3.avif",
+    "images/hero4.avif"
 ];
 function preloadHeroImages() {
 
@@ -70,13 +70,6 @@ function preloadHeroImages() {
 }
 
 function hideLoaderIfReady() {
-   if (!slideshowStarted) {
-
-    slideshowStarted = true;
-
-    initHeroSlideshow();
-
-}
 
     if (
 
@@ -86,31 +79,34 @@ function hideLoaderIfReady() {
 
     ) {
 
+        const logo = document.querySelector(".loader-logo");
+
+        if (logo) {
+
+            logo.style.animation = "none";
+            logo.style.transform = "scale(1)";
+
+        }
+
         const loader =
             document.getElementById("loader");
-const logo = document.querySelector(".loader-logo");
 
-if (logo) {
-
-    logo.style.animation = "none";
-
-    logo.style.transform = "scale(1)";
-
-}
         loader.classList.add("loader-hidden");
 
-// Always start from the top
-window.scrollTo({
-    top: 0,
-    left: 0,
-    behavior: "instant"
-});
+        // Always start from the top
+        window.scrollTo(0,0);
 
-setTimeout(() => {
+        if (!slideshowStarted) {
 
-    initHeroSlideshow();
+            slideshowStarted = true;
 
-}, 1000);
+            setTimeout(() => {
+
+                initHeroSlideshow();
+
+            },700);
+
+        }
 
     }
 
@@ -2347,10 +2343,6 @@ labels.forEach(label => {
 
 const heroImages = [
 
-    {
-        desktop: "images/hero/hero15.avif",
-        mobile: "images/hero/hero15_mobile.avif"
-    },
 
     {
         desktop: "images/hero/hero1.avif",
@@ -2420,6 +2412,10 @@ const heroImages = [
     {
         desktop: "images/hero/hero14.avif",
         mobile: "images/hero/hero14_mobile.avif"
+    },
+    {
+        desktop: "images/hero/hero15.avif",
+        mobile: "images/hero/hero15_mobile.avif"
     }
 
 ];

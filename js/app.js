@@ -206,6 +206,7 @@ function normalizeRoman(text) {
         .replace(/ii/g, "i")
         .replace(/oo/g, "u")
         .replace(/o/g, "a")
+        .replace(/e/g, "i")
 
         // consonants
         .replace(/kh/g, "k")
@@ -399,14 +400,15 @@ const roman =
 
 if (roman) {
 
-    tokenize(roman)
-        .forEach(word =>
+    tokenize(roman).forEach(word => {
 
-            index.roman.words.push(
+        index.roman.words.push(
+            normalizeRoman(word)
+        );
 
-    normalizeRoman(word)
+    });
 
-);
+}
 
         );
 

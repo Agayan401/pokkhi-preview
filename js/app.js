@@ -2357,7 +2357,7 @@ const teamData = {
         image:"images/abhilash-gayan.avif",
 
         bio:
-        "A Ph.D. scholar at the Microwave Engineering Lab, Tezpur University. He is wildlife enthusiast and photographer with a passion for nature, technology, and conservation."
+        "A Ph.D. scholar at the Microwave Engineering Lab, Tezpur University. He is a wildlife enthusiast and a photographer with passion for nature, technology, and conservation."
 
     }
 

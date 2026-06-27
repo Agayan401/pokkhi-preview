@@ -1482,22 +1482,26 @@ directorySearchInput.addEventListener(
 if (searchInput) {
 
     searchInput.addEventListener(
-        "keydown",
-        event => {
+    "keydown",
+    event => {
 
-            if (event.key === "Enter") {
+        if (event.key === "Enter") {
 
-                if (suggestionsBox) {
+            event.preventDefault();
 
-                    suggestionsBox.style.display =
-                        "none";
+            if (suggestionsBox) {
 
-                }
+                suggestionsBox.style.display =
+                    "none";
 
-                performSearch();
             }
+
+            performSearch();
+
         }
-    );
+
+    }
+);
 
 }
 

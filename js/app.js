@@ -9,10 +9,7 @@ const directorySearchInput =
     );
 const statusFilter = document.getElementById("statusFilter");
 const suggestionsBox = document.getElementById("suggestions");
-const languageToggle =
-    document.getElementById("languageToggle");
 
-let searchMode = "english";
 const directorySuggestionsBox =
     document.getElementById(
         "directorySuggestions"
@@ -1268,12 +1265,6 @@ function performSearch() {
 
     filterBirds();
 
-    document
-        .querySelector(".directory")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
-
     if (resetSearchBtn) {
 
         resetSearchBtn.style.display =
@@ -1282,9 +1273,41 @@ function performSearch() {
 
     setTimeout(() => {
 
-    searchInput.value = "";
+        const firstCard =
+            document.querySelector(".bird-card");
 
-}, 500);
+        if (firstCard) {
+
+            firstCard.scrollIntoView({
+
+                behavior: "smooth",
+
+                block: "start"
+
+            });
+
+            firstCard.classList.add(
+                "search-focus"
+            );
+
+            setTimeout(() => {
+
+                firstCard.classList.remove(
+                    "search-focus"
+                );
+
+            }, 1500);
+
+        }
+
+    }, 50);
+
+    setTimeout(() => {
+
+        searchInput.value = "";
+
+    }, 500);
+
 }
 
 function filterBirds() {
@@ -1584,12 +1607,7 @@ document.addEventListener(
             )
         ) {
 
-            if (languageToggle) {
-
-                languageToggle.style.display =
-                    "none";
-
-            }
+            
 
             if (suggestionsBox) {
 

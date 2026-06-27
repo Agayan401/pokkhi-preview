@@ -2836,7 +2836,7 @@ CONTENT
 
 .loader-text-wrapper{
 
-    height:42px;
+    min-height:70px;
 
     overflow:hidden;
 

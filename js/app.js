@@ -617,6 +617,29 @@ function findMatchingBirds(query) {
 
 }
 
+function highlightMatch(text, query) {
+
+    if (!text || !query) return text;
+
+    const escaped =
+        query.replace(
+            /[.*+?^${}()|[\]\\]/g,
+            "\\$&"
+        );
+
+    const regex =
+        new RegExp(
+            `(${escaped})`,
+            "ig"
+        );
+
+    return text.replace(
+        regex,
+        '<span class="search-highlight">$1</span>'
+    );
+
+}
+
 function getStatusClass(status) {
 
     switch (status) {
@@ -1103,9 +1126,42 @@ function showSuggestions(searchTerm, targetBox, targetInput) {
 
         item.className =
             "suggestion-item";
+    const romanQuery =
+    normalizeRoman(
+        romanizeAssamese(
+            bird.assameseName || ""
+        )
+    );
 
-        item.textContent =
-            bird.name;
+const queryRoman =
+    normalizeRoman(searchTerm);
+
+const showRomanHighlight =
+    romanQuery.includes(queryRoman);
+        const englishHighlighted =
+    highlightMatch(
+        bird.name,
+        searchTerm
+    );
+
+let assameseHighlighted =
+    bird.assameseName || "";
+
+if (showRomanHighlight) {
+
+    assameseHighlighted =
+        `<strong>${assameseHighlighted}</strong>`;
+
+}
+
+item.innerHTML = `
+<div class="suggestion-title">
+    ${englishHighlighted}
+</div>
+<div class="suggestion-assamese">
+    ${assameseHighlighted}
+</div>
+`;
 
         item.addEventListener(
     "click",

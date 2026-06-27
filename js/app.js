@@ -1059,10 +1059,11 @@ function renderBirds(birdList) {
     birdsToShow.forEach(bird => {
 
         const card =
-            document.createElement("div");
+    document.createElement("div");
 
-        card.className =
-            "bird-card";
+card.className = "bird-card";
+
+card.dataset.birdId = bird.id;
 
         card.innerHTML = `
         <div class="bird-image">
@@ -1250,7 +1251,41 @@ item.innerHTML = `
 
         targetBox.style.display = "none";
 
-        performSearch();
+        filterBirds();
+
+        requestAnimationFrame(() => {
+
+            const selectedCard =
+                document.querySelector(
+                    `[data-bird-id="${bird.id}"]`
+                );
+
+            if (selectedCard) {
+
+                selectedCard.scrollIntoView({
+
+                    behavior: "smooth",
+
+                    block: "start"
+
+                });
+
+                selectedCard.classList.add(
+                    "search-focus"
+                );
+
+                setTimeout(() => {
+
+                    selectedCard.classList.remove(
+                        "search-focus"
+                    );
+
+                }, 1500);
+
+            }
+
+        });
+
     }
 );
 

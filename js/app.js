@@ -42,18 +42,7 @@ function romanizeAssamese(text) {
 
     if (!text) return "";
 
-    const map = {
-
-        "অ":"o",
-        "আ":"a",
-        "ই":"i",
-        "ঈ":"i",
-        "উ":"u",
-        "ঊ":"u",
-        "এ":"e",
-        "ঐ":"oi",
-        "ও":"o",
-        "ঔ":"ou",
+    const consonants = {
 
         "ক":"k",
         "খ":"kh",
@@ -93,11 +82,26 @@ function romanizeAssamese(text) {
         "শ":"sh",
         "ষ":"sh",
         "স":"s",
-        "হ":"h",
+        "হ":"h"
 
-        "ং":"ng",
-        "ঃ":"h",
-        "ঁ":"n",
+    };
+
+    const vowels = {
+
+        "অ":"a",
+        "আ":"a",
+        "ই":"i",
+        "ঈ":"i",
+        "উ":"u",
+        "ঊ":"u",
+        "এ":"e",
+        "ঐ":"oi",
+        "ও":"o",
+        "ঔ":"ou"
+
+    };
+
+    const vowelSigns = {
 
         "া":"a",
         "ি":"i",
@@ -107,17 +111,81 @@ function romanizeAssamese(text) {
         "ে":"e",
         "ৈ":"oi",
         "ো":"o",
-        "ৌ":"ou",
-
-        "্":""
+        "ৌ":"ou"
 
     };
 
     let result = "";
 
-    for (const ch of text) {
+    for (let i = 0; i < text.length; i++) {
 
-        result += map[ch] || ch;
+        const ch = text[i];
+
+        /* Independent vowels */
+
+        if (vowels[ch]) {
+
+            result += vowels[ch];
+            continue;
+
+        }
+
+        /* Consonants */
+
+        if (consonants[ch]) {
+
+            let roman = consonants[ch];
+
+            const next = text[i + 1];
+
+            if (vowelSigns[next]) {
+
+                roman += vowelSigns[next];
+                i++;
+
+            }
+
+            else if (next === "্") {
+
+                i++;
+
+            }
+
+            else {
+
+                roman += "a";
+
+            }
+
+            result += roman;
+            continue;
+
+        }
+
+        /* Nasals */
+
+        if (ch === "ং") {
+
+            result += "ng";
+            continue;
+
+        }
+
+        if (ch === "ঁ") {
+
+            result += "n";
+            continue;
+
+        }
+
+        if (ch === "ঃ") {
+
+            result += "h";
+            continue;
+
+        }
+
+        result += ch;
 
     }
 

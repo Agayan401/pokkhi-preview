@@ -230,7 +230,9 @@ function normalizeRoman(text) {
 
 function tokenize(text) {
 
-    return normalizeQuery(text)
+    return normalizeRoman(
+    normalizeQuery(text)
+)
 
         // Replace separators with spaces
         .replace(/[\/,()]/g, " ")
@@ -326,10 +328,10 @@ function buildSearchIndex(bird) {
 
         roman: {
 
-            words: [],
-            variants: []
+    full: [],
+    words: []
 
-        }
+}
 
     };
 
@@ -345,24 +347,27 @@ function buildSearchIndex(bird) {
     if (english) {
 
         index.english.full.push(
-            english
-        );
+    normalizeRoman(english)
+);
 
         const words =
             tokenize(english);
 
         words.forEach(word => {
 
-            index.english.words.push(word);
+    const normalized = normalizeRoman(word);
 
-            splitCompoundWord(word)
-                .forEach(part =>
+    index.english.words.push(normalized);
 
-                    index.english.compounds.push(part)
+    splitCompoundWord(word).forEach(part => {
 
-                );
+        index.english.compounds.push(
+            normalizeRoman(part)
+        );
 
-        });
+    });
+
+});
 
     }
 
@@ -397,6 +402,9 @@ const roman =
     romanizeAssamese(
         bird.assameseName || ""
     );
+index.roman.full.push(
+    normalizeRoman(roman)
+);
 
 if (roman) {
 
@@ -524,7 +532,27 @@ function scoreBird(bird, query) {
         }
 
     });
+bird.searchIndex.roman.full.forEach(name => {
 
+    if (name === query) {
+
+        score = Math.max(score, 95);
+
+    }
+
+    else if (name.startsWith(query)) {
+
+        score = Math.max(score, 88);
+
+    }
+
+    else if (name.includes(query)) {
+
+        score = Math.max(score, 60);
+
+    }
+
+});
     /* ==========================
    ROMAN ASSAMESE
 ========================== */
@@ -556,7 +584,9 @@ bird.searchIndex.roman.words.forEach(word => {
 }
 function findMatchingBirds(query) {
 
-    query = normalizeQuery(query);
+    query = normalizeRoman(
+    normalizeQuery(query)
+);
 
     if (!query) {
         return birds;

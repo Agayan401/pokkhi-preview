@@ -2443,9 +2443,17 @@ p {
 TEAM
 ==========================*/
 
-.footer-team{
+.footer-about-team{
 
-    text-align:left;
+    max-width:900px;
+
+    margin:0 auto;
+
+    padding:2.5rem 1rem;
+
+    text-align:center;
+
+    border-top:1px solid rgba(255,255,255,.15);
 
 }
 
@@ -2453,11 +2461,13 @@ TEAM
 
     font-style:italic;
 
-    color:rgba(255,255,255,.9);
+    color:rgba(255,255,255,.95);
 
-    margin-bottom:18px;
+    font-size:1.15rem;
 
-    line-height:1.7;
+    line-height:1.8;
+
+    margin-bottom:1rem;
 
 }
 
@@ -2465,15 +2475,17 @@ TEAM
 
     color:rgba(255,255,255,.85);
 
-    line-height:1.8;
+    font-size:1rem;
+
+    line-height:2;
 
 }
 
 .team-member{
 
-    color:white;
-
     font-weight:700;
+
+    color:white;
 
     cursor:pointer;
 

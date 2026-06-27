@@ -355,15 +355,11 @@ function buildSearchIndex(bird) {
 
         words.forEach(word => {
 
-    const normalized = normalizeRoman(word);
-
-    index.english.words.push(normalized);
+    index.english.words.push(word);
 
     splitCompoundWord(word).forEach(part => {
 
-        index.english.compounds.push(
-            normalizeRoman(part)
-        );
+        index.english.compounds.push(part);
 
     });
 
@@ -419,11 +415,7 @@ if (roman) {
 }
 function scoreBird(bird, query) {
 
-    query = normalizeRoman(
-
-    normalizeQuery(query)
-
-);
+    // query is already normalized
 
     if (!query) {
         return 1;
@@ -670,11 +662,7 @@ birds.forEach(bird => {
 
 });
 
-console.log(
-    birds[0].name,
-    birds[0].assameseName,
-    birds[0].searchIndex.roman.words
-);
+
 
 birds.sort(
     (a, b) =>

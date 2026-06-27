@@ -2782,6 +2782,11 @@ CONTENT
 
     width:min(90%,500px);
 
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    min-height:380px;
 }
 
 .loader-logo{
@@ -2836,12 +2841,17 @@ CONTENT
 
 .loader-text-wrapper{
 
-    min-height:70px;
+    height:70px;
+
+    width:100%;
 
     overflow:hidden;
 
     position:relative;
 
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
 #loaderPlace{

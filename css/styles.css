@@ -2459,26 +2459,33 @@ TEAM
 
 .team-tagline{
 
-    font-style:italic;
+    font-style: italic;
 
-    color:rgba(255,255,255,.95);
+    color: rgba(255,255,255,.95);
 
-    font-size:1.15rem;
+    font-size: 1.15rem;
 
-    line-height:1.8;
+    line-height: 1.8;
 
-    margin-bottom:1rem;
+    margin: 0 auto 1rem;
 
+    text-align: center;
 }
-
 .team-text{
 
-    color:rgba(255,255,255,.85);
+    color: rgba(255,255,255,.85);
 
-    font-size:1rem;
+    font-size: 1rem;
 
-    line-height:2;
+    line-height: 2;
 
+    text-align: center;
+
+    text-wrap: balance;
+
+    max-width: 850px;
+
+    margin: 0 auto;
 }
 
 .team-member{

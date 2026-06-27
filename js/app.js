@@ -31,7 +31,12 @@ place:"the tea gardens of Assam"
 
 {
 action:"Identifying...",
-place:"333 species ready."
+place:"the birds of Assam"
+},
+
+{
+action:"",
+place:"Welcome to Pokkhi."
 }
 
 ];
@@ -111,17 +116,17 @@ function startLoaderAnimation() {
 
     function nextStep() {
 
-        if (step >= loaderSteps.length) {
+if (step >= loaderSteps.length) {
 
     clearInterval(interval);
 
-setTimeout(() => {
+    setTimeout(() => {
 
-    animationFinished = true;
+        animationFinished = true;
 
-    hideLoaderIfReady();
+        hideLoaderIfReady();
 
-}, 800);
+    }, 1000);
 
     return;
 
@@ -132,11 +137,21 @@ setTimeout(() => {
 
         setTimeout(() => {
 
-            action.textContent =
-                loaderSteps[step].action;
+const currentStep = loaderSteps[step];
 
-            place.textContent =
-                loaderSteps[step].place;
+action.textContent = currentStep.action;
+place.textContent = currentStep.place;
+
+// Hide the action line if it's empty
+if (currentStep.action === "") {
+
+    action.style.opacity = "0";
+
+} else {
+
+    action.style.opacity = "1";
+
+}
 
             progress.style.width =
                 ((step + 1) / loaderSteps.length) * 100 + "%";

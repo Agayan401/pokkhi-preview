@@ -25,6 +25,7 @@ const loadMoreBtn =
     );
 
 let birdsPerPage = 12;
+let visibleBirds = 12;
 
 /* ==========================================
    SEARCH ENGINE
@@ -417,7 +418,7 @@ birds.sort(
 );
 
 filteredBirds = [...birds];
-
+visibleBirds = birdsPerPage;
 updateStatistics();
 
 if (document.getElementById("birdOfDay")) {

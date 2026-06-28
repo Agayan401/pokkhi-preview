@@ -562,12 +562,11 @@ p {
 
     margin: 0 auto;
 
-    padding: 1rem 1rem 4rem;
+    padding: 1rem 1rem 2rem;
 
     display: grid;
 
-    grid-template-columns:
-        1.4fr 1fr;
+    grid-template-columns: 1.4fr 1fr;
 
     gap: 2rem;
 }
@@ -766,7 +765,7 @@ p {
 
     margin: auto;
 
-    padding: 4rem 1rem;
+    padding: 2.5rem 1rem 4rem;
 }
 
 .directory h2 {

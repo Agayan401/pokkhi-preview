@@ -173,19 +173,26 @@ p {
     z-index: 0;
 }
 
-.hero-slide {
+.hero-slide{
 
-    position: absolute;
+    position:absolute;
 
-    inset: 0;
+    inset:0;
 
-    background-size: cover;
+    background-size:cover;
 
-    background-position: center;
+    background-position:center;
 
-    opacity: 0;
+    opacity:0;
 
-    transition: opacity 1s ease-in-out;
+    transition:opacity 1s ease-in-out;
+
+    will-change: opacity;
+
+    transform: translateZ(0);
+
+    backface-visibility: hidden;
+
 }
 
 .hero-slide.active {
@@ -1465,20 +1472,20 @@ p {
     color: white;
 }
 
-.footer-content {
+.footer-content{
 
-    max-width: 1200px;
+    max-width:1200px;
 
-    margin: 0 auto;
+    margin:0 auto;
 
-    padding: 3rem 1rem;
+    padding:3rem 1rem;
 
-    display: grid;
+    display:grid;
 
     grid-template-columns:
-        2fr 1fr 1fr;
+        2fr 1fr 1fr 1fr;
 
-    gap: 3rem;
+    gap:3rem;
 }
 
 .footer-brand img {
@@ -2947,5 +2954,101 @@ MOBILE
     width:180px;
 
 }
+
+}
+/* ==========================================
+   LEGAL PAGE
+========================================== */
+
+#privacy,
+#terms,
+#disclaimer,
+#contact{
+
+    max-width:900px;
+
+    margin:0 auto;
+
+    padding:2rem 0;
+
+}
+
+#privacy h2,
+#terms h2,
+#disclaimer h2,
+#contact h2{
+
+    color:#14532d;
+
+    margin-bottom:1rem;
+
+}
+
+#privacy p,
+#terms p,
+#disclaimer p,
+#contact p{
+
+    line-height:1.9;
+
+    color:#374151;
+
+}
+/* ==========================
+   LEGAL PAGE MOBILE FIX
+========================== */
+
+@media (max-width: 768px) {
+
+    #privacy,
+    #terms,
+    #disclaimer,
+    #contact {
+
+        padding: 1.5rem 0;
+
+    }
+
+    #privacy h2,
+    #terms h2,
+    #disclaimer h2,
+    #contact h2 {
+
+        font-size: 1.5rem;
+
+    }
+
+    #privacy p,
+    #terms p,
+    #disclaimer p,
+    #contact p {
+
+        font-size: 1rem;
+
+        line-height: 1.8;
+
+    }
+
+}
+
+/* ==========================================
+   IMAGE PROTECTION
+========================================== */
+
+.hero-logo,
+.loader-logo,
+.footer-brand img,
+.partner-logos img,
+.team-modal-content img,
+.featured-image-wrapper img,
+.bird-image img,
+.modal-image-main,
+.modal-image-blur{
+
+    -webkit-user-drag: none;
+
+    -webkit-touch-callout: none;
+
+    user-select: none;
 
 }

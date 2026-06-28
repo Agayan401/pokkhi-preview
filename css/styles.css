@@ -1854,14 +1854,18 @@ p {
 
     align-items: center;
 
-    padding: 95px 20px 40px;
+    padding: 250px 20px 40px;
 }
 
 .hero-logo {
+    position: absolute;
+    top: 60px;          /* adjust later if needed */
+    left: 50%;
+    transform: translateX(-50%);
+
     width: 130px;
     max-width: 42%;
-    margin: -50px 0 40px;
-    transform: none;
+
     filter: drop-shadow(0 6px 20px rgba(0,0,0,.35));
 }
 

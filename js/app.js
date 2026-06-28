@@ -49,10 +49,12 @@ function hideLoaderIfReady() {
         loader.classList.add("loader-hidden");
         startHeroSlideshow();
 
-        // Always start from the top
-        if (!window.location.hash) {
-            window.scrollTo(0, 0);
-        }
+        // Start from the top only if no pending scroll was requested
+const params = new URLSearchParams(window.location.search);
+
+if (!window.location.hash && !params.has("scroll")) {
+    window.scrollTo(0, 0);
+}
     }
 }
 
@@ -394,6 +396,7 @@ async function loadBirds() {
 
         birdsLoaded = true;
         hideLoaderIfReady();
+        handlePendingScroll();
     } catch (error) {
         console.error("Error loading bird data:", error);
     }
@@ -1038,7 +1041,7 @@ if (sessionStorage.getItem("loaderShown")) {
 startHeroSlideshow();
 
 loadBirds();
-   handlePendingScroll();
+   
 
 } else {
 

@@ -1858,15 +1858,10 @@ p {
 }
 
 .hero-logo {
-
     width: 130px;
-
     max-width: 42%;
-
-    margin: 0 0 40px;
-
+    margin: -50px 0 40px;
     transform: none;
-
     filter: drop-shadow(0 6px 20px rgba(0,0,0,.35));
 }
 
